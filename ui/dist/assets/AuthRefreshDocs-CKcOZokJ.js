@@ -12,7 +12,7 @@ import{S as Ue,i as xe,s as Ke,V as Qe,W as Ne,X as K,h as s,z as k,j as p,c as 
         console.log(pb.authStore.token);
         console.log(pb.authStore.record.id);
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${r[3]}');
 
@@ -46,7 +46,7 @@ import{S as Ue,i as xe,s as Ke,V as Qe,W as Ne,X as K,h as s,z as k,j as p,c as 
         console.log(pb.authStore.token);
         console.log(pb.authStore.record.id);
     `),t&9&&(c.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${e[3]}');
 

@@ -8,13 +8,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/mails"
-	"github.com/pocketbase/pocketbase/tools/router"
-	"github.com/pocketbase/pocketbase/tools/routine"
-	"github.com/pocketbase/pocketbase/tools/search"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/mails"
+	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPBls/routine"
+	"github.com/hanzoai/backendPBls/search"
+	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/dbx"
 )
 
 const (

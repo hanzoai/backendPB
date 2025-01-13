@@ -1,8 +1,6 @@
 package core
 
-import (
-	"github.com/pocketbase/dbx"
-)
+import "github.com/hanzoai/dbx"
 
 // FindAllExternalAuthsByRecord returns all ExternalAuth models
 // linked to the provided auth record.

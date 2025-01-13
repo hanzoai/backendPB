@@ -6,9 +6,9 @@ import (
 	"strings"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/router"
-	"github.com/pocketbase/pocketbase/tools/search"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tools/router"
+	"github.com/hanzoai/backendPB/tools/search"
 )
 
 // bindCollectionApi registers the collection api endpoints and the corresponding handlers.

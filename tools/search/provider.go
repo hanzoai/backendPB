@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/tools/inflector"
+	"github.com/hanzoai/backendPB/tools/inflector"
+	"github.com/hanzoai/dbx"
 	"golang.org/x/sync/errgroup"
 )
 

@@ -74,7 +74,7 @@
         await pb.collection('${collection?.name}').delete('RECORD_ID');
     `}
     dart={`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${backendAbsUrl}');
 

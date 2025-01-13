@@ -18,7 +18,7 @@ const record = await pb.collection('${(at=a[0])==null?void 0:at.name}').create(d
 // (optional) send an email verification request
 await pb.collection('${(st=a[0])==null?void 0:st.name}').requestVerification('test@example.com');
 `:""),dart:`
-import 'package:pocketbase/pocketbase.dart';
+import 'package:hanzoai/backendPB.dart';
 
 final pb = PocketBase('${a[5]}');
 
@@ -35,7 +35,7 @@ await pb.collection('${(rt=a[0])==null?void 0:rt.name}').requestVerification('te
         <code>multipart/form-data</code>.`,M=p(),I=s("p"),I.innerHTML=`File upload is supported only via <code>multipart/form-data</code>.
         <br/>
         For more info and examples you could check the detailed
-        <a href="https://pocketbase.io/docs/files-handling" target="_blank" rel="noopener noreferrer">Files upload and handling docs
+        <a href="https://hanzo.ai/docs/files-handling" target="_blank" rel="noopener noreferrer">Files upload and handling docs
         </a>.`,J=p(),$e(S.$$.fragment),Q=p(),L=s("h6"),L.textContent="API details",q=p(),k=s("div"),P=s("strong"),P.textContent="POST",te=p(),Y=s("div"),U=s("p"),re=_("/api/collections/"),G=s("strong"),X=_(K),fe=_("/records"),le=p(),D&&D.c(),E=p(),Z=s("div"),Z.textContent="Body Parameters",x=p(),F=s("table"),y=s("thead"),y.innerHTML='<tr><th>Param</th> <th>Type</th> <th width="50%">Description</th></tr>',C=p(),V=s("tbody"),B&&B.c(),W=p();for(let n=0;n<H.length;n+=1)H[n].c();Oe=p(),pe=s("div"),pe.textContent="Query parameters",Me=p(),ne=s("table"),Le=s("thead"),Le.innerHTML='<tr><th>Param</th> <th>Type</th> <th width="60%">Description</th></tr>',De=p(),me=s("tbody"),ie=s("tr"),Pe=s("td"),Pe.textContent="expand",Je=p(),Fe=s("td"),Fe.innerHTML='<span class="label">String</span>',Ee=p(),j=s("td"),Ie=_(`Auto expand relations when returning the created record. Ex.:
                 `),$e(de.$$.fragment),Ue=_(`
                 Supports up to 6-levels depth nested relations expansion. `),ze=s("br"),Qe=_(`
@@ -57,7 +57,7 @@ const record = await pb.collection('${(dt=n[0])==null?void 0:dt.name}').create(d
 // (optional) send an email verification request
 await pb.collection('${(ct=n[0])==null?void 0:ct.name}').requestVerification('test@example.com');
 `:"")),o&51&&(v.dart=`
-import 'package:pocketbase/pocketbase.dart';
+import 'package:hanzoai/backendPB.dart';
 
 final pb = PocketBase('${n[5]}');
 

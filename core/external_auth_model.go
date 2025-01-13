@@ -5,9 +5,9 @@ import (
 	"errors"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/tools/auth"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/hanzoai/backendPB/tools/auth"
+	"github.com/hanzoai/backendPBls/hook"
+	"github.com/hanzoai/backendPBls/types"
 )
 
 var (

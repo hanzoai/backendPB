@@ -35,7 +35,7 @@ import{S as le,i as ne,s as ie,X as F,h as m,j as y,z as M,k as v,n as b,o as d,
 
         await pb.collection('${(G=s[0])==null?void 0:G.name}').confirmVerification('VERIFICATION_TOKEN');
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${s[2]}');
 
@@ -63,7 +63,7 @@ import{S as le,i as ne,s as ie,X as F,h as m,j as y,z as M,k as v,n as b,o as d,
 
         await pb.collection('${(ae=n[0])==null?void 0:ae.name}').confirmVerification('VERIFICATION_TOKEN');
     `),w&5&&(S.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${n[2]}');
 

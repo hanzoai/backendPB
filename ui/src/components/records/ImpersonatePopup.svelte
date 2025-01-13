@@ -93,7 +93,7 @@
                 pb.authStore.save(token, null);
             `}
             dart={`
-                import 'package:pocketbase/pocketbase.dart';
+                import 'package:hanzoai/backendPB.dart';
 
                 final token = "...";
 

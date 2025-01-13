@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/hanzoai/backendPB/tools/security"
 )
 
 func TestEncrypt(t *testing.T) {

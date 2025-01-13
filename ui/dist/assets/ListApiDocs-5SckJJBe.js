@@ -28,7 +28,7 @@ import{S as el,i as ll,s as sl,h as e,j as s,L as ol,k as a,n as m,q as nl,I as 
             expand: 'relField1,relField2.subRelField',
         });
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${r[3]}');
 
@@ -99,7 +99,7 @@ import{S as el,i as ll,s as sl,h as e,j as s,L as ol,k as a,n as m,q as nl,I as 
             expand: 'relField1,relField2.subRelField',
         });
     `),c&9&&(w.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${l[3]}');
 

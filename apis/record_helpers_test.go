@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/router"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/hanzoai/backendPB/apis"
+	"github.com/hanzoai/backendPBe"
+	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPBls/types"
 )
 
 func TestEnrichRecords(t *testing.T) {

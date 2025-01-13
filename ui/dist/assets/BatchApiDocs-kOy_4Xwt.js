@@ -14,7 +14,7 @@ import{S as St,i as Lt,s as jt,V as At,W as It,X as Z,h as o,z as _,j as i,c as 
 
         const result = await batch.send();
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${a[2]}');
 
@@ -87,7 +87,7 @@ import{S as St,i as Lt,s as jt,V as At,W as It,X as Z,h as o,z as _,j as i,c as 
 
         const result = await batch.send();
     `),l&5&&(m.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${e[2]}');
 

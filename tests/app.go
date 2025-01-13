@@ -9,10 +9,10 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/hook"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBls/hook"
 
-	_ "github.com/pocketbase/pocketbase/migrations"
+	_ "github.com/hanzoai/backendPBrations"
 )
 
 // TestApp is a wrapper app instance used for testing.

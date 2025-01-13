@@ -39,7 +39,7 @@
         await pb.collection('${collection?.name}').confirmVerification('VERIFICATION_TOKEN');
     `}
     dart={`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${backendAbsUrl}');
 

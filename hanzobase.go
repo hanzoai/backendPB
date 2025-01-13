@@ -1,4 +1,4 @@
-package pocketbase
+package hanzobase
 
 import (
 	"io"
@@ -10,17 +10,17 @@ import (
 	"time"
 
 	"github.com/fatih/color"
-	"github.com/pocketbase/pocketbase/cmd"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/routine"
+	"github.com/hanzoai/backendPB/cmd"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/list"
+	"github.com/hanzoai/backendPB/tools/routine"
 	"github.com/spf13/cobra"
 
-	_ "github.com/pocketbase/pocketbase/migrations"
+	_ "github.com/hanzoai/backendPB/migrations"
 )
 
-var _ core.App = (*PocketBase)(nil)
+var _ core.App = (*HanzoBase)(nil)
 
 // Version of PocketBase
 var Version = "(untracked)"
@@ -29,7 +29,7 @@ var Version = "(untracked)"
 //
 // It implements [core.App] via embedding and all of the app interface methods
 // could be accessed directly through the instance (eg. PocketBase.DataDir()).
-type PocketBase struct {
+type HanzoBase struct {
 	core.App
 
 	devFlag           bool
@@ -42,7 +42,7 @@ type PocketBase struct {
 	RootCmd *cobra.Command
 }
 
-// Config is the PocketBase initialization config struct.
+// Config is the HanzoBase initialization config struct.
 type Config struct {
 	// hide the default console server info on app startup
 	HideStartBanner bool
@@ -61,15 +61,15 @@ type Config struct {
 	DBConnect        core.DBConnectFunc // default to core.dbConnect
 }
 
-// New creates a new PocketBase instance with the default configuration.
+// New creates a new HanzoBase instance with the default configuration.
 // Use [NewWithConfig] if you want to provide a custom configuration.
 //
 // Note that the application will not be initialized/bootstrapped yet,
 // aka. DB connections, migrations, app settings, etc. will not be accessible.
-// Everything will be initialized when [PocketBase.Start] is executed.
-// If you want to initialize the application before calling [PocketBase.Start],
-// then you'll have to manually call [PocketBase.Bootstrap].
-func New() *PocketBase {
+// Everything will be initialized when [HanzoBase.Start] is executed.
+// If you want to initialize the application before calling [HanzoBase.Start],
+// then you'll have to manually call [HanzoBase.Bootstrap].
+func New() *HanzoBase {
 	_, isUsingGoRun := inspectRuntime()
 
 	return NewWithConfig(Config{
@@ -77,18 +77,18 @@ func New() *PocketBase {
 	})
 }
 
-// NewWithConfig creates a new PocketBase instance with the provided config.
+// NewWithConfig creates a new HanzoBase instance with the provided config.
 //
 // Note that the application will not be initialized/bootstrapped yet,
 // aka. DB connections, migrations, app settings, etc. will not be accessible.
-// Everything will be initialized when [PocketBase.Start] is executed.
-// If you want to initialize the application before calling [PocketBase.Start],
-// then you'll have to manually call [PocketBase.Bootstrap].
-func NewWithConfig(config Config) *PocketBase {
+// Everything will be initialized when [HanzoBase.Start] is executed.
+// If you want to initialize the application before calling [HanzoBase.Start],
+// then you'll have to manually call [HanzoBase.Bootstrap].
+func NewWithConfig(config Config) *HanzoBase {
 	// initialize a default data directory based on the executable baseDir
 	if config.DefaultDataDir == "" {
 		baseDir, _ := inspectRuntime()
-		config.DefaultDataDir = filepath.Join(baseDir, "pb_data")
+		config.DefaultDataDir = filepath.Join(baseDir, "hb_data")
 	}
 
 	if config.DefaultQueryTimeout == 0 {
@@ -97,7 +97,7 @@ func NewWithConfig(config Config) *PocketBase {
 
 	executableName := filepath.Base(os.Args[0])
 
-	pb := &PocketBase{
+	hb := &HanzoBase{
 		RootCmd: &cobra.Command{
 			Use:     executableName,
 			Short:   executableName + " CLI",
@@ -117,18 +117,18 @@ func NewWithConfig(config Config) *PocketBase {
 	}
 
 	// replace with a colored stderr writer
-	pb.RootCmd.SetErr(newErrWriter())
+	hb.RootCmd.SetErr(newErrWriter())
 
 	// parse base flags
 	// (errors are ignored, since the full flags parsing happens on Execute())
-	pb.eagerParseFlags(&config)
+	hb.eagerParseFlags(&config)
 
 	// initialize the app instance
-	pb.App = core.NewBaseApp(core.BaseAppConfig{
-		IsDev:            pb.devFlag,
-		DataDir:          pb.dataDirFlag,
-		EncryptionEnv:    pb.encryptionEnvFlag,
-		QueryTimeout:     time.Duration(pb.queryTimeout) * time.Second,
+	hb.App = core.NewBaseApp(core.BaseAppConfig{
+		IsDev:            hb.devFlag,
+		DataDir:          hb.dataDirFlag,
+		EncryptionEnv:    hb.encryptionEnvFlag,
+		QueryTimeout:     time.Duration(hb.queryTimeout) * time.Second,
 		DataMaxOpenConns: config.DataMaxOpenConns,
 		DataMaxIdleConns: config.DataMaxIdleConns,
 		AuxMaxOpenConns:  config.AuxMaxOpenConns,
@@ -137,9 +137,9 @@ func NewWithConfig(config Config) *PocketBase {
 	})
 
 	// hide the default help command (allow only `--help` flag)
-	pb.RootCmd.SetHelpCommand(&cobra.Command{Hidden: true})
+	hb.RootCmd.SetHelpCommand(&cobra.Command{Hidden: true})
 
-	// https://github.com/pocketbase/pocketbase/issues/6136
+	// https://github.com/hanzoai/backendPB/issues/6136
 	pb.OnBootstrap().Bind(&hook.Handler[*core.BootstrapEvent]{
 		Id: ModerncDepsCheckHookId,
 		Func: func(be *core.BootstrapEvent) error {
@@ -251,8 +251,8 @@ func (pb *PocketBase) eagerParseFlags(config *Config) error {
 // - is the default help command
 // - is the default version command
 //
-// https://github.com/pocketbase/pocketbase/issues/404
-// https://github.com/pocketbase/pocketbase/discussions/1267
+// https://github.com/hanzoissues/404
+// https://github.com/hanzodiscussions/1267
 func (pb *PocketBase) skipBootstrap() bool {
 	flags := []string{
 		"-h",

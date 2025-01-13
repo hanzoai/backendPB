@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/auth"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPBls/auth"
 	"golang.org/x/oauth2"
 )
 

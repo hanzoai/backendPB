@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/fatih/color"
-	"github.com/pocketbase/pocketbase/tools/logger"
-	"github.com/pocketbase/pocketbase/tools/store"
+	"github.com/hanzoai/backendPB/tools/logger"
+	"github.com/hanzoai/backendPBls/store"
 	"github.com/spf13/cast"
 )
 

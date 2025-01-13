@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/router"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPBls/router"
 )
 
 const CollectionNameSuperusers = "_superusers"

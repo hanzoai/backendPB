@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/store"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/store"
 )
 
 const (

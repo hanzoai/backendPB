@@ -9,11 +9,11 @@ import (
 	"strings"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core/validators"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/hanzoai/backendPB/core/validators"
+	"github.com/hanzoai/backendPBls/filesystem"
+	"github.com/hanzoai/backendPBls/list"
+	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/dbx"
 	"github.com/spf13/cast"
 )
 

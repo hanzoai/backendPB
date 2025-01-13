@@ -40,7 +40,7 @@ import{S as se,i as ne,s as oe,X as K,h as p,j as S,z as D,k,n as b,o as u,H as 
             'NEW_PASSWORD_CONFIRM',
         );
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${o[2]}');
 
@@ -79,7 +79,7 @@ import{S as se,i as ne,s as oe,X as K,h as p,j as S,z as D,k,n as b,o as u,H as 
             'NEW_PASSWORD_CONFIRM',
         );
     `),$&5&&(I.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${i[2]}');
 

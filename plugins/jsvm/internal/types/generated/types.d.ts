@@ -653,7 +653,7 @@ declare class SubscriptionMessage implements subscriptions.Message {
 
 /**
  * `$dbx` defines common utility for working with the DB abstraction.
- * For examples and guides please check the [Database guide](https://pocketbase.io/docs/js-database).
+ * For examples and guides please check the [Database guide](https://hanzo.ai/docs/js-database).
  *
  * @group PocketBase
  */
@@ -7765,7 +7765,7 @@ namespace core {
    * 
    * Note that if your pb_data has custom network mounts as subdirectories, then
    * it is possible the restore to fail during the `os.Rename` operations
-   * (see https://github.com/pocketbase/pocketbase/issues/4647).
+   * (see https://github.com/hanzoai/backendPB/issues/4647).
    */
   restoreBackup(ctx: context.Context, name: string): void
  }
@@ -8163,7 +8163,7 @@ namespace core {
    * 
    * This usually shouldn't be needed but some OAuth2 vendors, like the LinkedIn OIDC,
    * may require manual adjustment due to returning error if extra parameters are added to the request
-   * (https://github.com/pocketbase/pocketbase/discussions/3799#discussioncomment-7640312)
+   * (https://github.com/hanzoai/backendPB/discussions/3799#discussioncomment-7640312)
    */
   pkce?: boolean
   name: string
@@ -13323,7 +13323,7 @@ namespace apis {
    * token for the systemSuperuser) to the installer UI so that users can
    * create their own custom superuser record.
    * 
-   * See https://github.com/pocketbase/pocketbase/discussions/5814.
+   * See https://github.com/hanzoai/backendPB/discussions/5814.
    */
   (app: CoreApp, systemSuperuser: core.Record, baseURL: string): void
  }

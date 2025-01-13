@@ -3,8 +3,8 @@ package core
 import (
 	"time"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/hanzoai/backendPB/tools/types"
+	"github.com/hanzoai/dbx"
 )
 
 // LogQuery returns a new Log select query.

@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/fatih/color"
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/osutils"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tools/osutils"
+	"github.com/hanzoai/dbx"
 )
 
 // DefaultInstallerFunc is the default PocketBase installer function.
@@ -20,7 +20,7 @@ import (
 // token for the systemSuperuser) to the installer UI so that users can
 // create their own custom superuser record.
 //
-// See https://github.com/pocketbase/pocketbase/discussions/5814.
+// See https://github.com/hanzoai/backendPBcussions/5814.
 func DefaultInstallerFunc(app core.App, systemSuperuser *core.Record, baseURL string) error {
 	token, err := systemSuperuser.NewStaticAuthToken(30 * time.Minute)
 	if err != nil {

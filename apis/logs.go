@@ -3,10 +3,10 @@ package apis
 import (
 	"net/http"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/router"
-	"github.com/pocketbase/pocketbase/tools/search"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPBls/search"
+	"github.com/hanzoai/dbx"
 )
 
 // bindLogsApi registers the request logs api endpoints.

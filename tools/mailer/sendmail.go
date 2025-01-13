@@ -8,7 +8,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/pocketbase/pocketbase/tools/hook"
+	"github.com/hanzoai/backendPB/tools/hook"
 )
 
 var _ Mailer = (*Sendmail)(nil)

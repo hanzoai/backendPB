@@ -21,7 +21,7 @@ import{S as Ee,i as Je,s as xe,V as ze,W as Ve,X as Q,h as o,z as _,j as h,c as 
         // "logout"
         pb.authStore.clear();
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
         import 'package:url_launcher/url_launcher.dart';
 
         final pb = PocketBase('${s[3]}');
@@ -46,7 +46,7 @@ import{S as Ee,i as Je,s as xe,V as ze,W as Ve,X as Q,h as o,z as _,j as h,c as 
         // "logout"
         pb.authStore.clear();
     `}}),C=new Ve({props:{content:"?expand=relField1,relField2.subRelField"}}),q=new Ye({props:{prefix:"record."}});let N=Q(s[2]);const Me=e=>e[5].code;for(let e=0;e<N.length;e+=1){let t=He(s,N,e),u=Me(t);Re.set(u,$[e]=Le(u,t))}let j=Q(s[2]);const We=e=>e[5].code;for(let e=0;e<j.length;e+=1){let t=Fe(s,j,e),u=We(t);Pe.set(u,w[e]=je(u,t))}return{c(){l=o("h3"),n=_("Auth with OAuth2 ("),f=_(i),g=_(")"),d=h(),b=o("div"),b.innerHTML=`<p>Authenticate with an OAuth2 provider and returns a new auth token and record data.</p> <p>For more details please check the
-        <a href="https://pocketbase.io/docs/authentication#authenticate-with-oauth2" target="_blank" rel="noopener noreferrer">OAuth2 integration documentation
+        <a href="https://hanzo.ai/docs/authentication#authenticate-with-oauth2" target="_blank" rel="noopener noreferrer">OAuth2 integration documentation
         </a>.</p>`,k=h(),G(v.$$.fragment),O=h(),D=o("h6"),D.textContent="API details",Y=h(),A=o("div"),J=o("strong"),J.textContent="POST",be=h(),x=o("div"),P=o("p"),me=_("/api/collections/"),Z=o("strong"),ee=_(z),fe=_("/auth-with-oauth2"),te=h(),M=o("div"),M.textContent="Body Parameters",ae=h(),W=o("table"),W.innerHTML=`<thead><tr><th>Param</th> <th>Type</th> <th width="50%">Description</th></tr></thead> <tbody><tr><td><div class="inline-flex"><span class="label label-success">Required</span> <span>provider</span></div></td> <td><span class="label">String</span></td> <td>The name of the OAuth2 client provider (eg. &quot;google&quot;).</td></tr> <tr><td><div class="inline-flex"><span class="label label-success">Required</span> <span>code</span></div></td> <td><span class="label">String</span></td> <td>The authorization code returned from the initial request.</td></tr> <tr><td><div class="inline-flex"><span class="label label-success">Required</span> <span>codeVerifier</span></div></td> <td><span class="label">String</span></td> <td>The code verifier sent with the initial request as part of the code_challenge.</td></tr> <tr><td><div class="inline-flex"><span class="label label-success">Required</span> <span>redirectURL</span></div></td> <td><span class="label">String</span></td> <td>The redirect url sent with the initial request.</td></tr> <tr><td><div class="inline-flex"><span class="label label-warning">Optional</span> <span>createData</span></div></td> <td><span class="label">Object</span></td> <td><p>Optional data that will be used when creating the auth record on OAuth2 sign-up.</p> <p>The created auth record must comply with the same requirements and validations in the
                     regular <strong>create</strong> action.
                     <br/> <em>The data can only be in <code>json</code>, aka. <code>multipart/form-data</code> and files
@@ -79,7 +79,7 @@ import{S as Ee,i as Je,s as xe,V as ze,W as Ve,X as Q,h as o,z as _,j as h,c as 
         // "logout"
         pb.authStore.clear();
     `),t&9&&(u.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
         import 'package:url_launcher/url_launcher.dart';
 
         final pb = PocketBase('${e[3]}');

@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tests"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBts"
 )
 
 func TestRecordAuthRefresh(t *testing.T) {

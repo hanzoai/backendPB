@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/mailer"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPBls/mailer"
 )
 
 func TestSettingsDelete(t *testing.T) {

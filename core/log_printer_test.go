@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/logger"
+	"github.com/hanzoai/backendPB/tools/list"
+	"github.com/hanzoai/backendPBls/logger"
+	"github.com/hanzoai/dbx"
 )
 
 func TestBaseAppLoggerLevelDevPrint(t *testing.T) {

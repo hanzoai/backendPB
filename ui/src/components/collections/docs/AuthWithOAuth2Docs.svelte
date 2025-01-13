@@ -88,7 +88,7 @@
         pb.authStore.clear();
     `}
     dart={`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
         import 'package:url_launcher/url_launcher.dart';
 
         final pb = PocketBase('${backendAbsUrl}');

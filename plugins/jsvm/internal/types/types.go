@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/plugins/jsvm"
-	"github.com/pocketbase/pocketbase/tools/list"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBgins/jsvm"
+	"github.com/hanzoai/backendPBls/list"
 	"github.com/pocketbase/tygoja"
 )
 
@@ -669,7 +669,7 @@ declare class SubscriptionMessage implements subscriptions.Message {
 
 /**
  * ` + "`$dbx`" + ` defines common utility for working with the DB abstraction.
- * For examples and guides please check the [Database guide](https://pocketbase.io/docs/js-database).
+ * For examples and guides please check the [Database guide](https://hanzo.ai/docs/js-database).
  *
  * @group PocketBase
  */
@@ -1096,19 +1096,19 @@ func main() {
 
 	gen := tygoja.New(tygoja.Config{
 		Packages: map[string][]string{
-			"github.com/go-ozzo/ozzo-validation/v4":             {"Error"},
-			"github.com/pocketbase/dbx":                         {"*"},
-			"github.com/pocketbase/pocketbase/tools/security":   {"*"},
-			"github.com/pocketbase/pocketbase/tools/filesystem": {"*"},
-			"github.com/pocketbase/pocketbase/tools/template":   {"*"},
-			"github.com/pocketbase/pocketbase/mails":            {"*"},
-			"github.com/pocketbase/pocketbase/apis":             {"*"},
-			"github.com/pocketbase/pocketbase/core":             {"*"},
-			"github.com/pocketbase/pocketbase/forms":            {"*"},
-			"github.com/pocketbase/pocketbase":                  {"*"},
-			"path/filepath":                                     {"*"},
-			"os":                                                {"*"},
-			"os/exec":                                           {"Command"},
+			"github.com/go-ozzo/ozzo-validation/v4":         {"Error"},
+			"github.com/hanzoai/dbx":                        {"*"},
+			"github.com/hanzoai/backendPB/tools/security":   {"*"},
+			"github.com/hanzoai/backendPB/tools/filesystem": {"*"},
+			"github.com/hanzoai/backendPB/tools/template":   {"*"},
+			"github.com/hanzoai/backendPB/mails":            {"*"},
+			"github.com/hanzoai/backendPB/apis":             {"*"},
+			"github.com/hanzoai/backendPB/core":             {"*"},
+			"github.com/hanzoai/backendPB/forms":            {"*"},
+			"github.com/hanzoai/backendPB":                  {"*"},
+			"path/filepath":                                 {"*"},
+			"os":                                            {"*"},
+			"os/exec":                                       {"Command"},
 		},
 		FieldNameFormatter: func(s string) string {
 			return mapper.FieldName(nil, reflect.StructField{Name: s})

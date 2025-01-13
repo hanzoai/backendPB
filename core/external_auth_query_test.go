@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tests"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/dbx"
 )
 
 func TestFindAllExternalAuthsByRecord(t *testing.T) {

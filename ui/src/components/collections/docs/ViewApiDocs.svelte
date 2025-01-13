@@ -64,7 +64,7 @@
         });
     `}
     dart={`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${backendAbsUrl}');
 

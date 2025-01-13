@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPBls/hook"
+	"github.com/hanzoai/backendPBls/types"
 )
 
 func TestAutodateFieldBaseMethods(t *testing.T) {

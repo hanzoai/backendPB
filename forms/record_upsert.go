@@ -7,10 +7,10 @@ import (
 	"slices"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/core/validators"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBe/validators"
+	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/dbx"
 	"github.com/spf13/cast"
 )
 

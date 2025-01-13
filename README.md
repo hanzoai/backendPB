@@ -1,23 +1,23 @@
 <p align="center">
-    <a href="https://pocketbase.io" target="_blank" rel="noopener">
+    <a href="https://hanzo.ai" target="_blank" rel="noopener">
         <img src="https://i.imgur.com/5qimnm5.png" alt="PocketBase - open source backend in 1 file" />
     </a>
 </p>
 
 <p align="center">
-    <a href="https://github.com/pocketbase/pocketbase/actions/workflows/release.yaml" target="_blank" rel="noopener"><img src="https://github.com/pocketbase/pocketbase/actions/workflows/release.yaml/badge.svg" alt="build" /></a>
-    <a href="https://github.com/pocketbase/pocketbase/releases" target="_blank" rel="noopener"><img src="https://img.shields.io/github/release/pocketbase/pocketbase.svg" alt="Latest releases" /></a>
-    <a href="https://pkg.go.dev/github.com/pocketbase/pocketbase" target="_blank" rel="noopener"><img src="https://godoc.org/github.com/pocketbase/pocketbase?status.svg" alt="Go package documentation" /></a>
+    <a href="https://github.com/hanzoai/backendPB/actions/workflows/release.yaml" target="_blank" rel="noopener"><img src="https://github.com/hanzoai/backendPB/actions/workflows/release.yaml/badge.svg" alt="build" /></a>
+    <a href="https://github.com/hanzoai/backendPB/releases" target="_blank" rel="noopener"><img src="https://img.shields.io/github/release/hanzoai/backendPB.svg" alt="Latest releases" /></a>
+    <a href="https://pkg.go.dev/github.com/hanzoai/backendPB" target="_blank" rel="noopener"><img src="https://godoc.org/github.com/hanzoai/backendPB?status.svg" alt="Go package documentation" /></a>
 </p>
 
-[PocketBase](https://pocketbase.io) is an open source Go backend that includes:
+[PocketBase](https://hanzo.ai) is an open source Go backend that includes:
 
 - embedded database (_SQLite_) with **realtime subscriptions**
 - built-in **files and users management**
 - convenient **Admin dashboard UI**
 - and simple **REST-ish API**
 
-**For documentation and examples, please visit https://pocketbase.io/docs.**
+**For documentation and examples, please visit https://hanzo.ai/docs.**
 
 > [!WARNING]
 > Please keep in mind that PocketBase is still under active development
@@ -27,20 +27,20 @@
 
 The easiest way to interact with the PocketBase Web APIs is to use one of the official SDK clients:
 
-- **JavaScript - [pocketbase/js-sdk](https://github.com/pocketbase/js-sdk)** (_Browser, Node.js, React Native_)
-- **Dart - [pocketbase/dart-sdk](https://github.com/pocketbase/dart-sdk)** (_Web, Mobile, Desktop, CLI_)
+- **JavaScript - [pocketbase/js-sdk](https://github.com/hanzoai/js-sdk)** (_Browser, Node.js, React Native_)
+- **Dart - [pocketbase/dart-sdk](https://github.com/hanzoai/dart-sdk)** (_Web, Mobile, Desktop, CLI_)
 
-You could also check the recommendations in https://pocketbase.io/docs/how-to-use/.
+You could also check the recommendations in https://hanzo.ai/docs/how-to-use/.
 
 
 ## Overview
 
 ### Use as standalone app
 
-You could download the prebuilt executable for your platform from the [Releases page](https://github.com/pocketbase/pocketbase/releases).
+You could download the prebuilt executable for your platform from the [Releases page](https://github.com/hanzoai/backendPB/releases).
 Once downloaded, extract the archive and run `./pocketbase serve` in the extracted directory.
 
-The prebuilt executables are based on the [`examples/base/main.go` file](https://github.com/pocketbase/pocketbase/blob/master/examples/base/main.go) and comes with the JS VM plugin enabled by default which allows to extend PocketBase with JavaScript (_for more details please refer to [Extend with JavaScript](https://pocketbase.io/docs/js-overview/)_).
+The prebuilt executables are based on the [`examples/base/main.go` file](https://github.com/hanzoai/backendPB/blob/master/examples/base/main.go) and comes with the JS VM plugin enabled by default which allows to extend PocketBase with JavaScript (_for more details please refer to [Extend with JavaScript](https://hanzo.ai/docs/js-overview/)_).
 
 ### Use as a Go framework/toolkit
 
@@ -58,8 +58,8 @@ Here is a minimal example:
     import (
         "log"
 
-        "github.com/pocketbase/pocketbase"
-        "github.com/pocketbase/pocketbase/core"
+        "github.com/hanzoai/backendPB"
+        "github.com/hanzoai/backendPB/core"
     )
 
     func main() {
@@ -86,7 +86,7 @@ Here is a minimal example:
 
 4. To build a statically linked executable, you can run `CGO_ENABLED=0 go build` and then start the created executable with `./myapp serve`.
 
-_For more details please refer to [Extend with Go](https://pocketbase.io/docs/go-overview/)._
+_For more details please refer to [Extend with Go](https://hanzo.ai/docs/go-overview/)._
 
 ### Building and running the repo main.go example
 
@@ -126,11 +126,11 @@ To run them, use the standard `go test` command:
 go test ./...
 ```
 
-Check also the [Testing guide](http://pocketbase.io/docs/testing) to learn how to write your own custom application tests.
+Check also the [Testing guide](http://hanzo.ai/docs/testing) to learn how to write your own custom application tests.
 
 ## Security
 
-If you discover a security vulnerability within PocketBase, please send an e-mail to **support at pocketbase.io**.
+If you discover a security vulnerability within PocketBase, please send an e-mail to **support at hanzo.ai**.
 
 All reports will be promptly addressed and you'll be credited in the fix release notes.
 
@@ -142,7 +142,7 @@ You are free to do whatever you want with it, even offering it as a paid service
 You could help continuing its development by:
 
 - [Contribute to the source code](CONTRIBUTING.md)
-- [Suggest new features and report issues](https://github.com/pocketbase/pocketbase/issues)
+- [Suggest new features and report issues](https://github.com/hanzoai/backendPB/issues)
 
 PRs for new OAuth2 providers, bug fixes, code optimizations and documentation improvements are more than welcome.
 

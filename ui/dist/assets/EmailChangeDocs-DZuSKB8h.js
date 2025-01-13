@@ -53,7 +53,7 @@ import{S as se,i as oe,s as ie,X as I,h as p,j as C,z as U,k as b,n as g,o as u,
             'YOUR_PASSWORD',
         );
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${n[2]}');
 
@@ -96,7 +96,7 @@ import{S as se,i as oe,s as ie,X as I,h as p,j as C,z as U,k as b,n as g,o as u,
             'YOUR_PASSWORD',
         );
     `),y&5&&(G.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${o[2]}');
 

@@ -8,10 +8,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/security"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/dbx"
 	"github.com/spf13/cast"
 	"golang.org/x/crypto/bcrypt"
 )

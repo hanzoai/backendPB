@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/domodwyer/mailyak/v3"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPBls/security"
 )
 
 var _ Mailer = (*SMTPClient)(nil)

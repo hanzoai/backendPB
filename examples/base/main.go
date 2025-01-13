@@ -7,17 +7,16 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/pocketbase/pocketbase"
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/plugins/ghupdate"
-	"github.com/pocketbase/pocketbase/plugins/jsvm"
-	"github.com/pocketbase/pocketbase/plugins/migratecmd"
-	"github.com/pocketbase/pocketbase/tools/hook"
+	"github.com/hanzoai/backendPB/apis"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/plugins/ghupdate"
+	"github.com/hanzoai/backendPB/plugins/jsvm"
+	"github.com/hanzoai/backendPB/plugins/migratecmd"
+	"github.com/hanzoai/backendPB/tools/hook"
 )
 
 func main() {
-	app := pocketbase.New()
+	app := hanzobase.New()
 
 	// ---------------------------------------------------------------
 	// Optional plugin flags:

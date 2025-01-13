@@ -4,7 +4,7 @@ import (
 	"io"
 	"net/mail"
 
-	"github.com/pocketbase/pocketbase/tools/hook"
+	"github.com/hanzoai/backendPB/tools/hook"
 )
 
 // Message defines a generic email message struct.

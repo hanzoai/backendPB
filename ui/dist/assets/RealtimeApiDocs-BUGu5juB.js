@@ -25,7 +25,7 @@ import{S as re,i as ae,s as be,V as pe,W as ue,J as P,h as p,z as y,j as a,c as 
         pb.collection('${(L=o[0])==null?void 0:L.name}').unsubscribe('*'); // remove all '*' topic subscriptions
         pb.collection('${(A=o[0])==null?void 0:A.name}').unsubscribe(); // remove all subscriptions in the collection
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${o[1]}');
 
@@ -82,7 +82,7 @@ import{S as re,i as ae,s as be,V as pe,W as ue,J as P,h as p,z as y,j as a,c as 
         pb.collection('${(K=e[0])==null?void 0:K.name}').unsubscribe('*'); // remove all '*' topic subscriptions
         pb.collection('${(Q=e[0])==null?void 0:Q.name}').unsubscribe(); // remove all subscriptions in the collection
     `),t&3&&(O.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${e[1]}');
 

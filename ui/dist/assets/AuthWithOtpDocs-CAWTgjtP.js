@@ -58,7 +58,7 @@ import{S as be,i as _e,s as ve,W as ge,X as V,h as d,j as T,z as R,c as x,k as g
         // "logout"
         pb.authStore.clear();
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${a[2]}');
 
@@ -109,7 +109,7 @@ import{S as be,i as _e,s as ve,W as ge,X as V,h as d,j as T,z as R,c as x,k as g
         // "logout"
         pb.authStore.clear();
     `),$&5&&(P.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${o[2]}');
 

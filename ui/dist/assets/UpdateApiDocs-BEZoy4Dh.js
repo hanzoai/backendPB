@@ -22,7 +22,7 @@ const data = ${JSON.stringify(Object.assign({},d[4],x.dummyCollectionSchemaData(
 
 const record = await pb.collection('${(ct=d[0])==null?void 0:ct.name}').update('RECORD_ID', data);
     `,dart:`
-import 'package:pocketbase/pocketbase.dart';
+import 'package:hanzoai/backendPB.dart';
 
 final pb = PocketBase('${d[5]}');
 
@@ -36,7 +36,7 @@ final record = await pb.collection('${(ut=d[0])==null?void 0:ut.name}').update('
         <code>multipart/form-data</code>.`,D=f(),J=i("p"),J.innerHTML=`File upload is supported only via <code>multipart/form-data</code>.
         <br/>
         For more info and examples you could check the detailed
-        <a href="https://pocketbase.io/docs/files-handling" target="_blank" rel="noopener noreferrer">Files upload and handling docs
+        <a href="https://hanzo.ai/docs/files-handling" target="_blank" rel="noopener noreferrer">Files upload and handling docs
         </a>.`,I=f(),N&&N.c(),$=f(),ve(R.$$.fragment),L=f(),g=i("h6"),g.textContent="API details",v=f(),w=i("div"),z=i("strong"),z.textContent="PATCH",Q=f(),F=i("div"),_=i("p"),C=h("/api/collections/"),le=i("strong"),ne=h(W),Ue=h("/records/"),Oe=i("strong"),Oe.textContent=":id",Ve=f(),A&&A.c(),Se=f(),oe=i("div"),oe.textContent="Path parameters",Me=f(),re=i("table"),re.innerHTML='<thead><tr><th>Param</th> <th>Type</th> <th width="60%">Description</th></tr></thead> <tbody><tr><td>id</td> <td><span class="label">String</span></td> <td>ID of the record to update.</td></tr></tbody>',$e=f(),ce=i("div"),ce.textContent="Body Parameters",qe=f(),Y=i("table"),Re=i("thead"),Re.innerHTML='<tr><th>Param</th> <th>Type</th> <th width="50%">Description</th></tr>',xe=f(),G=i("tbody"),P&&P.c(),He=f();for(let l=0;l<U.length;l+=1)U[l].c();De=f(),ue=i("div"),ue.textContent="Query parameters",Le=f(),K=i("table"),Pe=i("thead"),Pe.innerHTML='<tr><th>Param</th> <th>Type</th> <th width="60%">Description</th></tr>',Qe=f(),pe=i("tbody"),X=i("tr"),Fe=i("td"),Fe.textContent="expand",We=f(),je=i("td"),je.innerHTML='<span class="label">String</span>',Ye=f(),j=i("td"),Ge=h(`Auto expand relations when returning the updated record. Ex.:
                 `),ve(ae.$$.fragment),Ke=h(`
                 Supports up to 6-levels depth nested relations expansion. `),Xe=i("br"),Ze=h(`
@@ -54,7 +54,7 @@ const data = ${JSON.stringify(Object.assign({},l[4],x.dummyCollectionSchemaData(
 
 const record = await pb.collection('${(pt=l[0])==null?void 0:pt.name}').update('RECORD_ID', data);
     `),s&49&&(y.dart=`
-import 'package:pocketbase/pocketbase.dart';
+import 'package:hanzoai/backendPB.dart';
 
 final pb = PocketBase('${l[5]}');
 

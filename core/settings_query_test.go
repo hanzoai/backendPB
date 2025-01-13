@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPBls/types"
 )
 
 func TestReloadSettings(t *testing.T) {

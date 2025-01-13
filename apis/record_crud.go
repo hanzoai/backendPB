@@ -9,15 +9,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/router"
-	"github.com/pocketbase/pocketbase/tools/search"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/forms"
+	"github.com/hanzoai/backendPBls/filesystem"
+	"github.com/hanzoai/backendPBls/inflector"
+	"github.com/hanzoai/backendPBls/list"
+	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPBls/search"
+	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/dbx"
 )
 
 // bindRecordCrudApi registers the record crud api endpoints and

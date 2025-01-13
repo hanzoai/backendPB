@@ -8,10 +8,10 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/mails"
-	"github.com/pocketbase/pocketbase/tools/routine"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBls"
+	"github.com/hanzoai/backendPBls/routine"
+	"github.com/hanzoai/backendPBls/security"
 )
 
 func recordRequestOTP(e *core.RequestEvent) error {

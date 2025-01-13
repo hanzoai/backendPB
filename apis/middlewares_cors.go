@@ -19,8 +19,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/hook"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBls/hook"
 )
 
 const (

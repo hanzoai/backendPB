@@ -1,6 +1,6 @@
 ## v0.24.3
 
-- Fixed incorrectly reported unique validator error for fields starting with name of another field ([#6281](https://github.com/pocketbase/pocketbase/pull/6281); thanks @svobol13).
+- Fixed incorrectly reported unique validator error for fields starting with name of another field ([#6281](https://github.com/hanzoai/backendPB/pull/6281); thanks @svobol13).
 
 - Reload the created/edited records data in the RecordsPicker UI.
 
@@ -9,7 +9,7 @@
 
 ## v0.24.2
 
-- Fixed display fields extraction when there are multiple "Presentable" `relation` fields in a single related collection ([#6229](https://github.com/pocketbase/pocketbase/issues/6229)).
+- Fixed display fields extraction when there are multiple "Presentable" `relation` fields in a single related collection ([#6229](https://github.com/hanzoai/backendPB/issues/6229)).
 
 
 ## v0.24.1
@@ -22,7 +22,7 @@
 ## v0.24.0
 
 - ⚠️ Removed the "dry submit" when executing the collections Create API rule
-    (you can find more details why this change was introduced and how it could affect your app in https://github.com/pocketbase/pocketbase/discussions/6073).
+    (you can find more details why this change was introduced and how it could affect your app in https://github.com/hanzoai/backendPB/discussions/6073).
     For most users it should be non-breaking change, BUT if you have Create API rules that uses self-references or view counters you may have to adjust them manually.
     With this change the "multi-match" operators are also normalized in case the targeted collection doesn't have any records
     (_or in other words, `@collection.example.someField != "test"` will result to `true` if `example` collection has no records because it satisfies the condition that all available "example" records mustn't have `someField` equal to "test"_).
@@ -39,7 +39,7 @@
 
 - Added cache for the JSVM `arrayOf(m)`, `DynamicModel`, etc. dynamic `reflect` created types.
 
-- Added auth collection select for the settings "Send test email" popup ([#6166](https://github.com/pocketbase/pocketbase/issues/6166)).
+- Added auth collection select for the settings "Send test email" popup ([#6166](https://github.com/hanzoai/backendPB/issues/6166)).
 
 - Added `record.SetRandomPassword()` to simplify random password generation usually used in the OAuth2 or OTP record creation flows.
     _The generated ~30 chars random password is assigned directly as bcrypt hash and ignores the `password` field plain value validators like min/max length or regex pattern._
@@ -54,20 +54,20 @@
 
 - Added `tests.NewTestAppWithConfig(config)` helper if you need more control over the test configurations like `IsDev`, the number of allowed connections, etc.
 
-- Invalidate all record tokens when the auth record email is changed programmatically or by a superuser ([#5964](https://github.com/pocketbase/pocketbase/issues/5964)).
+- Invalidate all record tokens when the auth record email is changed programmatically or by a superuser ([#5964](https://github.com/hanzoai/backendPB/issues/5964)).
 
 - Eagerly interrupt waiting for the email alert send in case it takes longer than 15s.
 
 - Normalized the hidden fields filter checks and allow targetting hidden fields in the List API rule.
 
-- Fixed "Unique identify fields" input not refreshing on unique indexes change ([#6184](https://github.com/pocketbase/pocketbase/issues/6184)).
+- Fixed "Unique identify fields" input not refreshing on unique indexes change ([#6184](https://github.com/hanzoai/backendPB/issues/6184)).
 
 
 ## v0.23.12
 
-- Added warning logs in case of mismatched `modernc.org/sqlite` and `modernc.org/libc` versions ([#6136](https://github.com/pocketbase/pocketbase/issues/6136#issuecomment-2556336962)).
+- Added warning logs in case of mismatched `modernc.org/sqlite` and `modernc.org/libc` versions ([#6136](https://github.com/hanzoai/backendPB/issues/6136#issuecomment-2556336962)).
 
-- Skipped the default body size limit middleware for the backup upload endpoint ([#6152](https://github.com/pocketbase/pocketbase/issues/6152)).
+- Skipped the default body size limit middleware for the backup upload endpoint ([#6152](https://github.com/hanzoai/backendPB/issues/6152)).
 
 
 ## v0.23.11
@@ -78,7 +78,7 @@
 
 ## v0.23.10
 
-- Renew the superuser file token cache when clicking on the thumb preview or download link ([#6137](https://github.com/pocketbase/pocketbase/discussions/6137)).
+- Renew the superuser file token cache when clicking on the thumb preview or download link ([#6137](https://github.com/hanzoai/backendPB/discussions/6137)).
 
 - Upgraded `modernc.org/sqlite` to 1.34.3 to fix "disk io" error on arm64 systems.
     _If you are extending PocketBase with Go and upgrading with `go get -u` make sure to manually set in your go.mod the `modernc.org/libc` indirect dependency to v1.55.3, aka. the exact same version the driver is using._
@@ -86,28 +86,28 @@
 
 ## v0.23.9
 
-- Replaced `strconv.Itoa` with `strconv.FormatInt` to avoid the int64->int conversion overflow on 32-bit platforms ([#6132](https://github.com/pocketbase/pocketbase/discussions/6132)).
+- Replaced `strconv.Itoa` with `strconv.FormatInt` to avoid the int64->int conversion overflow on 32-bit platforms ([#6132](https://github.com/hanzoai/backendPB/discussions/6132)).
 
 
 ## v0.23.8
 
-- Fixed Model->Record and Model->Collection hook events sync for nested and/or inner-hook transactions ([#6122](https://github.com/pocketbase/pocketbase/discussions/6122)).
+- Fixed Model->Record and Model->Collection hook events sync for nested and/or inner-hook transactions ([#6122](https://github.com/hanzoai/backendPB/discussions/6122)).
 
 - Other minor improvements (updated Go and npm deps, added extra escaping for the default mail record params in case the emails are stored as html files, fixed code comment typos, etc.).
 
 
 ## v0.23.7
 
-- Fixed JSVM exception -> Go error unwrapping when throwing errors from non-request hooks ([#6102](https://github.com/pocketbase/pocketbase/discussions/6102)).
+- Fixed JSVM exception -> Go error unwrapping when throwing errors from non-request hooks ([#6102](https://github.com/hanzoai/backendPB/discussions/6102)).
 
 
 ## v0.23.6
 
-- Fixed `$filesystem.fileFromURL` documentation and generated type ([#6058](https://github.com/pocketbase/pocketbase/issues/6058)).
+- Fixed `$filesystem.fileFromURL` documentation and generated type ([#6058](https://github.com/hanzoai/backendPB/issues/6058)).
 
-- Fixed `X-Forwarded-For` header typo in the suggested UI "Common trusted proxy" headers ([#6063](https://github.com/pocketbase/pocketbase/pull/6063)).
+- Fixed `X-Forwarded-For` header typo in the suggested UI "Common trusted proxy" headers ([#6063](https://github.com/hanzoai/backendPB/pull/6063)).
 
-- Updated the `text` field max length validator error message to make it more clear ([#6066](https://github.com/pocketbase/pocketbase/issues/6066)).
+- Updated the `text` field max length validator error message to make it more clear ([#6066](https://github.com/hanzoai/backendPB/issues/6066)).
 
 - Other minor fixes (updated Go deps, skipped unnecessary validator check when the default primary key pattern is used, updated JSVM types, etc.).
 
@@ -116,7 +116,7 @@
 
 - Fixed UI logs search not properly accounting for the "Include requests by superusers" toggle when multiple search expressions are used.
 
-- Fixed `text` field max validation error message ([#6053](https://github.com/pocketbase/pocketbase/issues/6053)).
+- Fixed `text` field max validation error message ([#6053](https://github.com/hanzoai/backendPB/issues/6053)).
 
 - Other minor fixes (comment typos, JSVM types update).
 
@@ -125,11 +125,11 @@
 
 ## v0.23.4
 
-- Fixed `autodate` fields not refreshing when calling `Save` multiple times on the same `Record` instance ([#6000](https://github.com/pocketbase/pocketbase/issues/6000)).
+- Fixed `autodate` fields not refreshing when calling `Save` multiple times on the same `Record` instance ([#6000](https://github.com/hanzoai/backendPB/issues/6000)).
 
-- Added more descriptive test OTP id and failure log message ([#5982](https://github.com/pocketbase/pocketbase/discussions/5982)).
+- Added more descriptive test OTP id and failure log message ([#5982](https://github.com/hanzoai/backendPB/discussions/5982)).
 
-- Moved the default UI CSP from meta tag to response header ([#5995](https://github.com/pocketbase/pocketbase/discussions/5995)).
+- Moved the default UI CSP from meta tag to response header ([#5995](https://github.com/hanzoai/backendPB/discussions/5995)).
 
 - Updated Go and npm dependencies.
 
@@ -138,12 +138,12 @@
 
 - Fixed Gzip middleware not applying when serving static files.
 
-- Fixed `Record.Fresh()`/`Record.Clone()` methods not properly cloning `autodate` fields ([#5973](https://github.com/pocketbase/pocketbase/discussions/5973)).
+- Fixed `Record.Fresh()`/`Record.Clone()` methods not properly cloning `autodate` fields ([#5973](https://github.com/hanzoai/backendPB/discussions/5973)).
 
 
 ## v0.23.2
 
-- Fixed `RecordQuery()` custom struct scanning ([#5958](https://github.com/pocketbase/pocketbase/discussions/5958)).
+- Fixed `RecordQuery()` custom struct scanning ([#5958](https://github.com/hanzoai/backendPB/discussions/5958)).
 
 - Fixed `--dev` log query print formatting.
 
@@ -155,7 +155,7 @@
 
 ## v0.23.1
 
-- Added `RequestEvent.Blob(status, contentType, bytes)` response write helper ([#5940](https://github.com/pocketbase/pocketbase/discussions/5940)).
+- Added `RequestEvent.Blob(status, contentType, bytes)` response write helper ([#5940](https://github.com/hanzoai/backendPB/discussions/5940)).
 
 - Added more descriptive error messages.
 
@@ -178,20 +178,20 @@
 > Existing `pb_data` will be automatically upgraded with the start of the new executable,
 > but custom Go or JSVM (`pb_hooks`, `pb_migrations`) and JS/Dart SDK code will have to be migrated manually.
 > Please refer to the below upgrade guides:
-> - Go:   https://pocketbase.io/v023upgrade/go/.
-> - JSVM: https://pocketbase.io/v023upgrade/jsvm/.
+> - Go:   https://hanzo.ai/v023upgrade/go/.
+> - JSVM: https://hanzo.ai/v023upgrade/jsvm/.
 >
 > If you had already switched to some of the earlier `<v0.23.0-rc14` versions and have generated a full collections snapshot migration (aka. `./pocketbase migrate collections`), then you may have to regenerate the migration file to ensure that it includes the latest changes.
 
 PocketBase v0.23.0 is a major refactor of the internals with the overall goal of making PocketBase an easier to use Go framework.
 There are a lot of changes but to highlight some of the most notable ones:
 
-- New and more [detailed documentation](https://pocketbase.io/docs/).
-  _The old documentation could be accessed at [pocketbase.io/old](https://pocketbase.io/old/)._
+- New and more [detailed documentation](https://hanzo.ai/docs/).
+  _The old documentation could be accessed at [hanzo.ai/old](https://hanzo.ai/old/)._
 - Replaced `echo` with a new router built on top of the Go 1.22 `net/http` mux enhancements.
 - Merged `daos` packages in `core.App` to simplify the DB operations (_the `models` package structs are also migrated in `core`_).
 - Option to specify custom `DBConnect` function as part of the app configuration to allow different `database/sql` SQLite drivers (_turso/libsql, sqlcipher, etc._) and custom builds.
-  _Note that we no longer loads the `mattn/go-sqlite3` driver by default when building with `CGO_ENABLED=1` to avoid `multiple definition` linker errors in case different CGO SQLite drivers or builds are used. You can find an example how to enable it back if you want to in the [new documentation](https://pocketbase.io/docs/go-overview/#github-commattngo-sqlite3)._
+  _Note that we no longer loads the `mattn/go-sqlite3` driver by default when building with `CGO_ENABLED=1` to avoid `multiple definition` linker errors in case different CGO SQLite drivers or builds are used. You can find an example how to enable it back if you want to in the [new documentation](https://hanzo.ai/docs/go-overview/#github-commattngo-sqlite3)._
 - New hooks allowing better control over the execution chain and error handling (_including wrapping an entire hook chain in a single DB transaction_).
 - Various `Record` model improvements (_support for get/set modifiers, simplfied file upload by treating the file(s) as regular field value like `record.Set("document", file)`, etc._).
 - Dedicated fields structs with safer defaults to make it easier creating/updating collections programmatically.
@@ -205,11 +205,11 @@ There are a lot of changes but to highlight some of the most notable ones:
 - One-Time Password (OTP) auth method (_via email code_).
 - Multi-Factor Authentication (MFA) support (_currently requires any 2 different auth methods to be used_).
 - Support for Record "proxy/projection" in preparation for the planned autogeneration of typed Go record models.
-- Linear OAuth2 provider ([#5909](https://github.com/pocketbase/pocketbase/pull/5909); thanks @chnfyi).
-- WakaTime OAuth2 provider ([#5829](https://github.com/pocketbase/pocketbase/pull/5829); thanks @tigawanna).
-- Notion OAuth2 provider ([#4999](https://github.com/pocketbase/pocketbase/pull/4999); thanks @s-li1).
-- monday.com OAuth2 provider ([#5346](https://github.com/pocketbase/pocketbase/pull/5346); thanks @Jaytpa01).
-- New Instagram provider compatible with the new Instagram Login APIs ([#5588](https://github.com/pocketbase/pocketbase/pull/5588); thanks @pnmcosta).
+- Linear OAuth2 provider ([#5909](https://github.com/hanzoai/backendPB/pull/5909); thanks @chnfyi).
+- WakaTime OAuth2 provider ([#5829](https://github.com/hanzoai/backendPB/pull/5829); thanks @tigawanna).
+- Notion OAuth2 provider ([#4999](https://github.com/hanzoai/backendPB/pull/4999); thanks @s-li1).
+- monday.com OAuth2 provider ([#5346](https://github.com/hanzoai/backendPB/pull/5346); thanks @Jaytpa01).
+- New Instagram provider compatible with the new Instagram Login APIs ([#5588](https://github.com/hanzoai/backendPB/pull/5588); thanks @pnmcosta).
     _The provider key is `instagram2` to prevent conflicts with existing linked users._
 - Option to retrieve the OIDC OAuth2 user info from the `id_token` payload for the cases when the provider doesn't have a dedicated user info endpoint.
 - Various minor UI improvements (_recursive `Presentable` view, slightly different collection options organization, zoom/pan for the logs chart, etc._)
@@ -217,8 +217,8 @@ There are a lot of changes but to highlight some of the most notable ones:
 
 #### Go/JSVM APIs changes
 
-> - Go:   https://pocketbase.io/v023upgrade/go/.
-> - JSVM: https://pocketbase.io/v023upgrade/jsvm/.
+> - Go:   https://hanzo.ai/v023upgrade/go/.
+> - JSVM: https://hanzo.ai/v023upgrade/jsvm/.
 
 #### SDKs changes
 
@@ -253,9 +253,9 @@ There are a lot of changes but to highlight some of the most notable ones:
 
 - ⚠️ Removed `GET /records/{id}/external-auths` and `DELETE /records/{id}/external-auths/{provider}` endpoints because this is now handled by sending list and delete requests to the `_externalAuths` collection.
 
-- ⚠️ Changes to the app settings model fields and response (+new options such as `trustedProxy`, `rateLimits`, `batch`, etc.). The app settings Web APIs are mostly used by the Dashboard UI and rarely by the end users, but if you want to check all settings changes please refer to the [Settings Go struct](https://github.com/pocketbase/pocketbase/blob/develop/core/settings_model.go#L121).
+- ⚠️ Changes to the app settings model fields and response (+new options such as `trustedProxy`, `rateLimits`, `batch`, etc.). The app settings Web APIs are mostly used by the Dashboard UI and rarely by the end users, but if you want to check all settings changes please refer to the [Settings Go struct](https://github.com/hanzoai/backendPB/blob/develop/core/settings_model.go#L121).
 
-- ⚠️ New flatten Collection model and fields structure. The Collection model Web APIs are mostly used by the Dashboard UI and rarely by the end users, but if you want to check all changes please refer to the [Collection Go struct](https://github.com/pocketbase/pocketbase/blob/develop/core/collection_model.go#L308).
+- ⚠️ New flatten Collection model and fields structure. The Collection model Web APIs are mostly used by the Dashboard UI and rarely by the end users, but if you want to check all changes please refer to the [Collection Go struct](https://github.com/hanzoai/backendPB/blob/develop/core/collection_model.go#L308).
 
 - ⚠️ The top level error response `code` key was renamed to `status` for consistency with the Go APIs.
     The error field key remains `code`:

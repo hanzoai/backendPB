@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/router"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tools/router"
 )
 
 // StaticWildcardParam is the name of Static handler wildcard parameter.

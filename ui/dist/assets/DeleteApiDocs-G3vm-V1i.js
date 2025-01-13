@@ -7,7 +7,7 @@ import{S as Re,i as Ee,s as Pe,V as Te,X as U,h as c,z as y,j as k,c as De,k as 
 
         await pb.collection('${(fe=a[0])==null?void 0:fe.name}').delete('RECORD_ID');
     `,dart:`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${a[3]}');
 
@@ -23,7 +23,7 @@ import{S as Re,i as Ee,s as Pe,V as Te,X as U,h as c,z as y,j as k,c as De,k as 
 
         await pb.collection('${(be=e[0])==null?void 0:be.name}').delete('RECORD_ID');
     `),t&9&&(u.dart=`
-        import 'package:pocketbase/pocketbase.dart';
+        import 'package:hanzoai/backendPB.dart';
 
         final pb = PocketBase('${e[3]}');
 

@@ -7,11 +7,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/dbutils"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/backendPBls/dbutils"
+	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/dbx"
 )
 
 func TestNewCollection(t *testing.T) {

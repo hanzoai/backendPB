@@ -9,12 +9,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/tools/dbutils"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/search"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/hanzoai/backendPB/tools/dbutils"
+	"github.com/hanzoai/backendPBls/inflector"
+	"github.com/hanzoai/backendPBls/list"
+	"github.com/hanzoai/backendPBls/search"
+	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/dbx"
 	"github.com/spf13/cast"
 )
 
@@ -761,7 +761,7 @@ func (r *runner) processLastProp(collection *Collection, prop string) (*search.R
 
 	// wrap in json_extract to ensure that top-level primitives
 	// stored as json work correctly when compared to their SQL equivalent
-	// (https://github.com/pocketbase/pocketbase/issues/4068)
+	// (https://github.com/hanzoai/backendPBues/4068)
 	if field.Type() == FieldTypeJSON {
 		result.NoCoalesce = true
 		result.Identifier = dbutils.JSONExtract(r.activeTableAlias+"."+cleanFieldName, "")

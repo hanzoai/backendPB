@@ -4,9 +4,9 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/router"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPBls/hook"
+	"github.com/hanzoai/backendPBls/router"
 )
 
 var ErrRequestEntityTooLarge = router.NewApiError(http.StatusRequestEntityTooLarge, "Request entity too large", nil)

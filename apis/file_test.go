@@ -10,10 +10,10 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/hanzoai/backendPB/apis"
+	"github.com/hanzoai/backendPBe"
+	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPBls/types"
 )
 
 func TestFileToken(t *testing.T) {

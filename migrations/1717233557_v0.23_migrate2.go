@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	"github.com/pocketbase/pocketbase/core"
+	"github.com/hanzoai/backendPB/core"
 )
 
 // note: this migration will be deleted in future version

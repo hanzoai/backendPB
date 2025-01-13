@@ -8,13 +8,13 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/tools/cron"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/mailer"
-	"github.com/pocketbase/pocketbase/tools/store"
-	"github.com/pocketbase/pocketbase/tools/subscriptions"
+	"github.com/hanzoai/backendPB/tools/cron"
+	"github.com/hanzoai/backendPBls/filesystem"
+	"github.com/hanzoai/backendPBls/hook"
+	"github.com/hanzoai/backendPBls/mailer"
+	"github.com/hanzoai/backendPBls/store"
+	"github.com/hanzoai/backendPBls/subscriptions"
+	"github.com/hanzoai/dbx"
 )
 
 // App defines the main PocketBase app interface.
