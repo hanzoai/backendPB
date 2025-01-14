@@ -14,7 +14,7 @@ import (
 	"github.com/hanzoai/dbx"
 )
 
-// DefaultInstallerFunc is the default PocketBase installer function.
+// DefaultInstallerFunc is the default HanzoBase installer function.
 //
 // It will attempt to open a link in the browser (with a short-lived auth
 // token for the systemSuperuser) to the installer UI so that users can

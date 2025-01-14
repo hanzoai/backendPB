@@ -80,7 +80,7 @@ func TestReloadSettingsWithEncryption(t *testing.T) {
 	app, _ := tests.NewTestApp()
 	defer app.Cleanup()
 
-	os.Setenv("pb_test_env", strings.Repeat("a", 32))
+	os.Setenv("hb_test_env", strings.Repeat("a", 32))
 
 	// cleanup all stored settings
 	// ---

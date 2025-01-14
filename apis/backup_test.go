@@ -150,7 +150,7 @@ func TestBackupsCreate(t *testing.T) {
 					t.Fatalf("Expected 1 backup file, got %d", total)
 				}
 
-				expected := "pb_backup_"
+				expected := "hb_backup_"
 				if !strings.HasPrefix(files[0].Key, expected) {
 					t.Fatalf("Expected backup file with prefix %q, got %q", expected, files[0].Key)
 				}

@@ -1,5 +1,5 @@
 // Package ghupdate implements a new command to selfupdate the current
-// PocketBase executable with the latest GitHub release.
+// HanzoBase executable with the latest GitHub release.
 //
 // Example usage:
 //
@@ -36,14 +36,14 @@ type HttpClient interface {
 //
 // NB! This plugin is considered experimental and its config options may change in the future.
 type Config struct {
-	// Owner specifies the account owner of the repository (default to "pocketbase").
+	// Owner specifies the account owner of the repository (default to "hanzobase").
 	Owner string
 
-	// Repo specifies the name of the repository (default to "pocketbase").
+	// Repo specifies the name of the repository (default to "hanzobase").
 	Repo string
 
 	// ArchiveExecutable specifies the name of the executable file in the release archive
-	// (default to "pocketbase"; an additional ".exe" check is also performed as a fallback).
+	// (default to "hanzobase"; an additional ".exe" check is also performed as a fallback).
 	ArchiveExecutable string
 
 	// Optional context to use when fetching and downloading the latest release.
@@ -71,15 +71,15 @@ func Register(app core.App, rootCmd *cobra.Command, config Config) error {
 	}
 
 	if p.config.Owner == "" {
-		p.config.Owner = "pocketbase"
+		p.config.Owner = "hanzobase"
 	}
 
 	if p.config.Repo == "" {
-		p.config.Repo = "pocketbase"
+		p.config.Repo = "hanzobase"
 	}
 
 	if p.config.ArchiveExecutable == "" {
-		p.config.ArchiveExecutable = "pocketbase"
+		p.config.ArchiveExecutable = "hanzobase"
 	}
 
 	if p.config.HttpClient == nil {

@@ -15,7 +15,7 @@ const (
 	RequestEventKeyInfoContext = "infoContext"
 )
 
-// RequestEvent defines the PocketBase router handler event.
+// RequestEvent defines the HanzoBase router handler event.
 type RequestEvent struct {
 	App App
 

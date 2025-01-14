@@ -26,7 +26,7 @@
     For most users it should be non-breaking change, BUT if you have Create API rules that uses self-references or view counters you may have to adjust them manually.
     With this change the "multi-match" operators are also normalized in case the targeted collection doesn't have any records
     (_or in other words, `@collection.example.someField != "test"` will result to `true` if `example` collection has no records because it satisfies the condition that all available "example" records mustn't have `someField` equal to "test"_).
-    As a side-effect of all of the above minor changes, the record create API performance has been also improved ~4x times in high concurrent scenarios (500 concurrent clients inserting total of 50k records - [old (58.409064001s)](https://github.com/pocketbase/benchmarks/blob/54140be5fb0102f90034e1370c7f168fbcf0ddf0/results/hetzner_cax41_cgo.md#creating-50000-posts100k-reqs50000-conc500-rulerequestauthid----requestdatapublicisset--true) vs [new (13.580098262s)](https://github.com/pocketbase/benchmarks/blob/7df0466ac9bd62fe0a1056270d20ef82012f0234/results/hetzner_cax41_cgo.md#creating-50000-posts100k-reqs50000-conc500-rulerequestauthid----requestbodypublicisset--true)).
+    As a side-effect of all of the above minor changes, the record create API performance has been also improved ~4x times in high concurrent scenarios (500 concurrent clients inserting total of 50k records - [old (58.409064001s)](https://github.com/hanzobase/benchmarks/blob/54140be5fb0102f90034e1370c7f168fbcf0ddf0/results/hetzner_cax41_cgo.md#creating-50000-posts100k-reqs50000-conc500-rulerequestauthid----requestdatapublicisset--true) vs [new (13.580098262s)](https://github.com/hanzobase/benchmarks/blob/7df0466ac9bd62fe0a1056270d20ef82012f0234/results/hetzner_cax41_cgo.md#creating-50000-posts100k-reqs50000-conc500-rulerequestauthid----requestbodypublicisset--true)).
 
 - ⚠️ Changed the type definition of `store.Store[T any]` to `store.Store[K comparable, T any]` to allow support for custom store key types.
     For most users it should be non-breaking change, BUT if you are calling `store.New[any](nil)` instances you'll have to specify the store key type, aka. `store.New[string, any](nil)`.
@@ -48,7 +48,7 @@
 
 - Added extra validators for the collection field `int64` options (e.g. `FileField.MaxSize`) restricting them to the max safe JSON number (2^53-1).
 
-- Added option to unset/overwrite the default PocketBase superuser installer using `ServeEvent.InstallerFunc`.
+- Added option to unset/overwrite the default HanzoBase superuser installer using `ServeEvent.InstallerFunc`.
 
 - Added `app.FindCachedCollectionReferences(collection, excludeIds)` to speedup records cascade delete almost twice for projects with many collections.
 
@@ -73,7 +73,7 @@
 ## v0.23.11
 
 - Upgraded `golang.org/x/net` to 0.33.0 to fix [CVE-2024-45338](https://www.cve.org/CVERecord?id=CVE-2024-45338).
-  _PocketBase uses the vulnerable functions primarily for the auto html->text mail generation, but most applications shouldn't be affected unless you are manually embedding unrestricted user provided value in your mail templates._
+  _HanzoBase uses the vulnerable functions primarily for the auto html->text mail generation, but most applications shouldn't be affected unless you are manually embedding unrestricted user provided value in your mail templates._
 
 
 ## v0.23.10
@@ -81,7 +81,7 @@
 - Renew the superuser file token cache when clicking on the thumb preview or download link ([#6137](https://github.com/hanzoai/backendPB/discussions/6137)).
 
 - Upgraded `modernc.org/sqlite` to 1.34.3 to fix "disk io" error on arm64 systems.
-    _If you are extending PocketBase with Go and upgrading with `go get -u` make sure to manually set in your go.mod the `modernc.org/libc` indirect dependency to v1.55.3, aka. the exact same version the driver is using._
+    _If you are extending HanzoBase with Go and upgrading with `go get -u` make sure to manually set in your go.mod the `modernc.org/libc` indirect dependency to v1.55.3, aka. the exact same version the driver is using._
 
 
 ## v0.23.9
@@ -163,12 +163,12 @@
 ## v0.23.0
 
 > [!NOTE]
-> You don't have to upgrade to PocketBase v0.23.0 if you are not planning further developing
+> You don't have to upgrade to HanzoBase v0.23.0 if you are not planning further developing
 > your existing app and/or are satisfied with the v0.22.x features set. There are no identified critical issues
-> with PocketBase v0.22.x yet and in the case of critical bugs and security vulnerabilities, the fixes
+> with HanzoBase v0.22.x yet and in the case of critical bugs and security vulnerabilities, the fixes
 > will be backported for at least until Q1 of 2025 (_if not longer_).
 >
-> **If you don't plan upgrading make sure to pin the SDKs version to their latest PocketBase v0.22.x compatible:**
+> **If you don't plan upgrading make sure to pin the SDKs version to their latest HanzoBase v0.22.x compatible:**
 > - JS SDK: `<0.22.0`
 > - Dart SDK: `<0.19.0`
 
@@ -176,14 +176,14 @@
 > This release introduces many Go/JSVM and Web APIs breaking changes!
 >
 > Existing `hb_data` will be automatically upgraded with the start of the new executable,
-> but custom Go or JSVM (`pb_hooks`, `pb_migrations`) and JS/Dart SDK code will have to be migrated manually.
+> but custom Go or JSVM (`hb_hooks`, `hb_migrations`) and JS/Dart SDK code will have to be migrated manually.
 > Please refer to the below upgrade guides:
 > - Go:   https://hanzo.ai/v023upgrade/go/.
 > - JSVM: https://hanzo.ai/v023upgrade/jsvm/.
 >
-> If you had already switched to some of the earlier `<v0.23.0-rc14` versions and have generated a full collections snapshot migration (aka. `./pocketbase migrate collections`), then you may have to regenerate the migration file to ensure that it includes the latest changes.
+> If you had already switched to some of the earlier `<v0.23.0-rc14` versions and have generated a full collections snapshot migration (aka. `./hanzobase migrate collections`), then you may have to regenerate the migration file to ensure that it includes the latest changes.
 
-PocketBase v0.23.0 is a major refactor of the internals with the overall goal of making PocketBase an easier to use Go framework.
+HanzoBase v0.23.0 is a major refactor of the internals with the overall goal of making HanzoBase an easier to use Go framework.
 There are a lot of changes but to highlight some of the most notable ones:
 
 - New and more [detailed documentation](https://hanzo.ai/docs/).
@@ -222,8 +222,8 @@ There are a lot of changes but to highlight some of the most notable ones:
 
 #### SDKs changes
 
-- [JS SDK v0.22.0](https://github.com/pocketbase/js-sdk/blob/master/CHANGELOG.md)
-- [Dart SDK v0.19.0](https://github.com/pocketbase/dart-sdk/blob/master/CHANGELOG.md)
+- [JS SDK v0.22.0](https://github.com/hanzobase/js-sdk/blob/master/CHANGELOG.md)
+- [Dart SDK v0.19.0](https://github.com/hanzobase/dart-sdk/blob/master/CHANGELOG.md)
 
 #### Web APIs changes
 

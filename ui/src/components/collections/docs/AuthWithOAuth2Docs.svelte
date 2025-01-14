@@ -65,9 +65,9 @@
 
 <SdkTabs
     js={`
-        import PocketBase from 'pocketbase';
+        import HanzoBase from 'hanzobase';
 
-        const pb = new PocketBase('${backendAbsUrl}');
+        const pb = new HanzoBase('${backendAbsUrl}');
 
         ...
 
@@ -91,7 +91,7 @@
         import 'package:hanzoai/backendPB.dart';
         import 'package:url_launcher/url_launcher.dart';
 
-        final pb = PocketBase('${backendAbsUrl}');
+        final pb = HanzoBase('${backendAbsUrl}');
 
         ...
 

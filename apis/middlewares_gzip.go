@@ -2,7 +2,7 @@ package apis
 
 // -------------------------------------------------------------------
 // This middleware is ported from echo/middleware to minimize the breaking
-// changes and differences in the API behavior from earlier PocketBase versions
+// changes and differences in the API behavior from earlier HanzoBase versions
 // (https://github.com/labstack/echo/blob/ec5b858dab6105ab4c3ed2627d1ebdfb6ae1ecb8/middleware/compress.go).
 // -------------------------------------------------------------------
 

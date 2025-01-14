@@ -84,11 +84,11 @@
         <SdkTabs
             class="m-b-0"
             js={`
-                import PocketBase from 'pocketbase';
+                import HanzoBase from 'hanzobase';
 
                 const token = "...";
 
-                const pb = new PocketBase('${backendAbsUrl}');
+                const pb = new HanzoBase('${backendAbsUrl}');
 
                 pb.authStore.save(token, null);
             `}
@@ -97,7 +97,7 @@
 
                 final token = "...";
 
-                final pb = PocketBase('${backendAbsUrl}');
+                final pb = HanzoBase('${backendAbsUrl}');
 
                 pb.authStore.save(token, null);
             `}

@@ -20,7 +20,7 @@
         <p>
             All rules follow the
             <a href={import.meta.env.PB_RULES_SYNTAX_DOCS} target="_blank" rel="noopener noreferrer">
-                PocketBase filter syntax and operators
+                HanzoBase filter syntax and operators
             </a>.
         </p>
         <button

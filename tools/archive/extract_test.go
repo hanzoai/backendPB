@@ -13,8 +13,8 @@ func TestExtractFailure(t *testing.T) {
 	testDir := createTestDir(t)
 	defer os.RemoveAll(testDir)
 
-	missingZipPath := filepath.Join(os.TempDir(), "pb_missing_test.zip")
-	extractedPath := filepath.Join(os.TempDir(), "pb_zip_extract")
+	missingZipPath := filepath.Join(os.TempDir(), "hb_missing_test.zip")
+	extractedPath := filepath.Join(os.TempDir(), "hb_zip_extract")
 	defer os.RemoveAll(extractedPath)
 
 	if err := archive.Extract(missingZipPath, extractedPath); err == nil {
@@ -30,10 +30,10 @@ func TestExtractSuccess(t *testing.T) {
 	testDir := createTestDir(t)
 	defer os.RemoveAll(testDir)
 
-	zipPath := filepath.Join(os.TempDir(), "pb_test.zip")
+	zipPath := filepath.Join(os.TempDir(), "hb_test.zip")
 	defer os.RemoveAll(zipPath)
 
-	extractedPath := filepath.Join(os.TempDir(), "pb_zip_extract")
+	extractedPath := filepath.Join(os.TempDir(), "hb_zip_extract")
 	defer os.RemoveAll(extractedPath)
 
 	// zip testDir content (with exclude)

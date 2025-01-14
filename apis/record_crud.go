@@ -105,13 +105,13 @@ func recordsList(e *core.RequestEvent) error {
 		// While technically the below doesn't fully guarantee protection against filter timing attacks, in practice combined with the network latency it makes them even less feasible.
 		// A properly configured rate limiter or individual fields Hidden checks are better suited if you are really concerned about eventual information disclosure by side-channel attacks.
 		//
-		// In all cases it doesn't really matter that much because it doesn't affect the builtin PocketBase security sensitive fields (e.g. password and tokenKey) since they
+		// In all cases it doesn't really matter that much because it doesn't affect the builtin HanzoBase security sensitive fields (e.g. password and tokenKey) since they
 		// are not client-side filterable and in the few places where they need to be compared against an external value, a constant time check is used.
 		if !e.HasSuperuserAuth() &&
 			(collection.ListRule != nil && *collection.ListRule != "") &&
 			(requestInfo.Query["filter"] != "") &&
 			len(e.Records) == 0 &&
-			checkRateLimit(e.RequestEvent, "@pb_list_timing_check_"+collection.Id, listTimingRateLimitRule) != nil {
+			checkRateLimit(e.RequestEvent, "@hb_list_timing_check_"+collection.Id, listTimingRateLimitRule) != nil {
 			e.App.Logger().Debug("Randomized throttle because of too many failed searches", "collectionId", collection.Id)
 			randomizedThrottle(150)
 		}
@@ -266,7 +266,7 @@ func recordCreate(optFinalizer func(data any) error) func(e *core.RequestEvent) 
 			if !hasSuperuserAuth && e.Collection.CreateRule != nil {
 				dummyRecord := e.Record.Clone()
 
-				dummyRandomPart := "__pb_create__" + security.PseudorandomString(6)
+				dummyRandomPart := "__hb_create__" + security.PseudorandomString(6)
 
 				// set an id if it doesn't have already
 				// (the value doesn't matter; it is used only to minimize the breaking changes with earlier versions)
@@ -288,7 +288,7 @@ func recordCreate(optFinalizer func(data any) error) func(e *core.RequestEvent) 
 				var param string
 				for k, v := range dummyExport {
 					k = inflector.Columnify(k) // columnify is just as extra measure in case of custom fields
-					param = "__pb_create__" + k
+					param = "__hb_create__" + k
 					dummyParams[param] = v
 					selects = append(selects, "{:"+param+"} AS [["+k+"]]")
 				}

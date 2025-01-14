@@ -22,13 +22,13 @@ import (
 
 var _ core.App = (*HanzoBase)(nil)
 
-// Version of PocketBase
+// Version of HanzoBase
 var Version = "(untracked)"
 
-// PocketBase defines a PocketBase app launcher.
+// HanzoBase defines a HanzoBase app launcher.
 //
 // It implements [core.App] via embedding and all of the app interface methods
-// could be accessed directly through the instance (eg. PocketBase.DataDir()).
+// could be accessed directly through the instance (eg. HanzoBase.DataDir()).
 type HanzoBase struct {
 	core.App
 
@@ -212,13 +212,13 @@ func (hb *HanzoBase) Execute() error {
 }
 
 // eagerParseFlags parses the global app flags before calling pb.RootCmd.Execute().
-// so we can have all PocketBase flags ready for use on initialization.
+// so we can have all HanzoBase flags ready for use on initialization.
 func (hb *HanzoBase) eagerParseFlags(config *Config) error {
 	hb.RootCmd.PersistentFlags().StringVar(
 		&hb.dataDirFlag,
 		"dir",
 		config.DefaultDataDir,
-		"the PocketBase data directory",
+		"the HanzoBase data directory",
 	)
 
 	hb.RootCmd.PersistentFlags().StringVar(

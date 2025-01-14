@@ -1,7 +1,7 @@
 <script>
     import CodeBlock from "@/components/base/CodeBlock.svelte";
 
-    const SDK_PREFERENCE_KEY = "pb_sdk_preference";
+    const SDK_PREFERENCE_KEY = "hb_sdk_preference";
 
     let classes = "m-b-sm";
     export { classes as class }; // export reserved keyword

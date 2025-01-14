@@ -70,7 +70,7 @@ func (form *TestS3Filesystem) Submit() error {
 	}
 	defer fsys.Close()
 
-	testPrefix := "pb_settings_test_" + security.PseudorandomString(5)
+	testPrefix := "hb_settings_test_" + security.PseudorandomString(5)
 	testFileKey := testPrefix + "/test.txt"
 
 	// try to upload a test file

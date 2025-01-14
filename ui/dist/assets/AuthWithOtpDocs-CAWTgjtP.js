@@ -33,9 +33,9 @@ import{S as be,i as _e,s as ve,W as ge,X as V,h as d,j as T,z as R,c as x,k as g
                   "data": {}
                 }
             `}]),[l,h,i,c]}class lt extends be{constructor(t){super(),_e(this,t,tt,et,ve,{collection:0})}}function Ve(a,t,e){const l=a.slice();return l[5]=t[e],l[7]=e,l}function Ee(a,t,e){const l=a.slice();return l[5]=t[e],l[7]=e,l}function Je(a){let t,e,l,h,i;function c(){return a[4](a[7])}return{c(){t=d("button"),e=d("div"),e.textContent=`${a[5].title}`,l=T(),g(e,"class","txt"),g(t,"class","tab-item"),J(t,"active",a[1]==a[7])},m(n,m){b(n,t,m),s(t,e),s(t,l),h||(i=$e(t,"click",c),h=!0)},p(n,m){a=n,m&2&&J(t,"active",a[1]==a[7])},d(n){n&&_(t),h=!1,i()}}}function Ne(a){let t,e,l,h;var i=a[5].component;function c(n,m){return{props:{collection:n[0]}}}return i&&(e=Be(i,c(a))),{c(){t=d("div"),e&&x(e.$$.fragment),l=T(),g(t,"class","tab-item"),J(t,"active",a[1]==a[7])},m(n,m){b(n,t,m),e&&ee(e,t,null),s(t,l),h=!0},p(n,m){if(i!==(i=n[5].component)){if(e){ue();const v=e;j(v.$$.fragment,1,0,()=>{te(v,1)}),he()}i?(e=Be(i,c(n)),x(e.$$.fragment),E(e.$$.fragment,1),ee(e,t,l)):e=null}else if(i){const v={};m&1&&(v.collection=n[0]),e.$set(v)}(!h||m&2)&&J(t,"active",n[1]==n[7])},i(n){h||(e&&E(e.$$.fragment,n),h=!0)},o(n){e&&j(e.$$.fragment,n),h=!1},d(n){n&&_(t),e&&te(e)}}}function ot(a){var Y,A,G,N;let t,e,l=a[0].name+"",h,i,c,n,m,v,C,F,D,I,M,Q,B,H;v=new ze({props:{js:`
-        import PocketBase from 'pocketbase';
+        import HanzoBase from 'hanzobase';
 
-        const pb = new PocketBase('${a[2]}');
+        const pb = new HanzoBase('${a[2]}');
 
         ...
 
@@ -60,7 +60,7 @@ import{S as be,i as _e,s as ve,W as ge,X as V,h as d,j as T,z as R,c as x,k as g
     `,dart:`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = PocketBase('${a[2]}');
+        final pb = HanzoBase('${a[2]}');
 
         ...
 
@@ -84,9 +84,9 @@ import{S as be,i as _e,s as ve,W as ge,X as V,h as d,j as T,z as R,c as x,k as g
         pb.authStore.clear();
     `}});let y=V(a[3]),O=[];for(let o=0;o<y.length;o+=1)O[o]=Je(Ee(a,y,o));let q=V(a[3]),k=[];for(let o=0;o<q.length;o+=1)k[o]=Ne(Ve(a,q,o));const L=o=>j(k[o],1,1,()=>{k[o]=null});return{c(){t=d("h3"),e=R("Auth with OTP ("),h=R(l),i=R(")"),c=T(),n=d("div"),n.innerHTML=`<p>Authenticate with an one-time password (OTP).</p> <p>Note that when requesting an OTP we return an <code>otpId</code> even if a user with the provided email
         doesn&#39;t exist as a very basic enumeration protection.</p>`,m=T(),x(v.$$.fragment),C=T(),F=d("h6"),F.textContent="API details",D=T(),I=d("div"),M=d("div");for(let o=0;o<O.length;o+=1)O[o].c();Q=T(),B=d("div");for(let o=0;o<k.length;o+=1)k[o].c();g(t,"class","m-b-sm"),g(n,"class","content txt-lg m-b-sm"),g(F,"class","m-b-xs"),g(M,"class","tabs-header compact"),g(B,"class","tabs-content"),g(I,"class","tabs")},m(o,$){b(o,t,$),s(t,e),s(t,h),s(t,i),b(o,c,$),b(o,n,$),b(o,m,$),ee(v,o,$),b(o,C,$),b(o,F,$),b(o,D,$),b(o,I,$),s(I,M);for(let P=0;P<O.length;P+=1)O[P]&&O[P].m(M,null);s(I,Q),s(I,B);for(let P=0;P<k.length;P+=1)k[P]&&k[P].m(B,null);H=!0},p(o,[$]){var X,u,p,S;(!H||$&1)&&l!==(l=o[0].name+"")&&ce(h,l);const P={};if($&5&&(P.js=`
-        import PocketBase from 'pocketbase';
+        import HanzoBase from 'hanzobase';
 
-        const pb = new PocketBase('${o[2]}');
+        const pb = new HanzoBase('${o[2]}');
 
         ...
 
@@ -111,7 +111,7 @@ import{S as be,i as _e,s as ve,W as ge,X as V,h as d,j as T,z as R,c as x,k as g
     `),$&5&&(P.dart=`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = PocketBase('${o[2]}');
+        final pb = HanzoBase('${o[2]}');
 
         ...
 

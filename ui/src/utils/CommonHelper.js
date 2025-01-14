@@ -1251,7 +1251,7 @@ export default class CommonHelper {
         let url = window.location.href.substring(0, window.location.href.indexOf("/_")) || fallback || '/';
 
         // for broader compatibility replace localhost with 127.0.0.1
-        // (see https://github.com/pocketbase/js-sdk/issues/21)
+        // (see https://github.com/hanzobase/js-sdk/issues/21)
         return url.replace('//localhost', '//127.0.0.1');
     }
 
@@ -1457,7 +1457,7 @@ export default class CommonHelper {
             max_height: 700,
             autoresize_bottom_margin: 30,
             convert_unsafe_embeds: true, // GHSA-5359
-            skin: "pocketbase",
+            skin: "hanzobase",
             content_style: "body { font-size: 14px }",
             plugins: [
                 "autoresize",

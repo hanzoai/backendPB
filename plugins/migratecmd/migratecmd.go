@@ -1,4 +1,4 @@
-// Package migratecmd adds a new "migrate" command support to a PocketBase instance.
+// Package migratecmd adds a new "migrate" command support to a HanzoBase instance.
 //
 // It also comes with automigrations support and templates generation
 // (both for JS and GO migration files).
@@ -8,7 +8,7 @@
 //	migratecmd.MustRegister(app, app.RootCmd, migratecmd.Config{
 //		TemplateLang: migratecmd.TemplateLangJS, // default to migratecmd.TemplateLangGo
 //		Automigrate:  true,
-//		Dir:          "/custom/migrations/dir", // optional template migrations path; default to "pb_migrations" (for JS) and "migrations" (for Go)
+//		Dir:          "/custom/migrations/dir", // optional template migrations path; default to "hb_migrations" (for JS) and "migrations" (for Go)
 //	})
 //
 //	Note: To allow running JS migrations you'll need to enable first
@@ -33,7 +33,7 @@ import (
 type Config struct {
 	// Dir specifies the directory with the user defined migrations.
 	//
-	// If not set it fallbacks to a relative "hb_data/../pb_migrations" (for js)
+	// If not set it fallbacks to a relative "hb_data/../hb_migrations" (for js)
 	// or "hb_data/../migrations" (for go) directory.
 	Dir string
 
@@ -67,7 +67,7 @@ func Register(app core.App, rootCmd *cobra.Command, config Config) error {
 
 	if p.config.Dir == "" {
 		if p.config.TemplateLang == TemplateLangJS {
-			p.config.Dir = filepath.Join(p.app.DataDir(), "../pb_migrations")
+			p.config.Dir = filepath.Join(p.app.DataDir(), "../hb_migrations")
 		} else {
 			p.config.Dir = filepath.Join(p.app.DataDir(), "../migrations")
 		}

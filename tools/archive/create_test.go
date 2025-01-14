@@ -12,7 +12,7 @@ func TestCreateFailure(t *testing.T) {
 	testDir := createTestDir(t)
 	defer os.RemoveAll(testDir)
 
-	zipPath := filepath.Join(os.TempDir(), "pb_test.zip")
+	zipPath := filepath.Join(os.TempDir(), "hb_test.zip")
 	defer os.RemoveAll(zipPath)
 
 	missingDir := filepath.Join(os.TempDir(), "missing")
@@ -30,7 +30,7 @@ func TestCreateSuccess(t *testing.T) {
 	testDir := createTestDir(t)
 	defer os.RemoveAll(testDir)
 
-	zipName := "pb_test.zip"
+	zipName := "hb_test.zip"
 	zipPath := filepath.Join(os.TempDir(), zipName)
 	defer os.RemoveAll(zipPath)
 
@@ -59,7 +59,7 @@ func TestCreateSuccess(t *testing.T) {
 // note: make sure to call os.RemoveAll(dir) after you are done
 // working with the created test dir.
 func createTestDir(t *testing.T) string {
-	dir, err := os.MkdirTemp(os.TempDir(), "pb_zip_test")
+	dir, err := os.MkdirTemp(os.TempDir(), "hb_zip_test")
 	if err != nil {
 		t.Fatal(err)
 	}

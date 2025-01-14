@@ -5,7 +5,7 @@
 ## v0.22.29
 
 - (_Backported from v0.23.11_) Upgraded `golang.org/x/net` to 0.33.0 to fix [CVE-2024-45338](https://www.cve.org/CVERecord?id=CVE-2024-45338).
-  _PocketBase uses the vulnerable functions primarily for the auto html->text mail generation, but most applications shouldn't be affected unless you are manually embedding unrestricted user provided value in your mail templates._
+  _HanzoBase uses the vulnerable functions primarily for the auto html->text mail generation, but most applications shouldn't be affected unless you are manually embedding unrestricted user provided value in your mail templates._
 
 
 ## v0.22.28
@@ -13,7 +13,7 @@
 - (_Backported from v0.23.10_) Renew the superuser file token cache when clicking on the thumb preview or download link ([#6137](https://github.com/hanzoai/backendPB/discussions/6137)).
 
 - (_Backported from v0.23.10_) Upgraded `modernc.org/sqlite` to 1.34.3 to fix "disk io" error on arm64 systems.
-  _If you are extending PocketBase with Go and upgrading with `go get -u` make sure to manually set in your go.mod the `modernc.org/libc` indirect dependency to v1.55.3, aka. the exact same version the driver is using._
+  _If you are extending HanzoBase with Go and upgrading with `go get -u` make sure to manually set in your go.mod the `modernc.org/libc` indirect dependency to v1.55.3, aka. the exact same version the driver is using._
 
 
 ## v0.22.27
@@ -51,7 +51,7 @@
 
 - Added deprecation log in case Instagram OAuth2 is used (_related to [#5652](https://github.com/hanzoai/backendPB/discussions/5652)_).
 
-- Added `update` command warning to prevent unnecessary downloading PocketBase v0.23.0 since it will contain breaking changes.
+- Added `update` command warning to prevent unnecessary downloading HanzoBase v0.23.0 since it will contain breaking changes.
 
 - Added global JSVM `toString()` helper (_successor of `readerToString()`_) to stringify any value (bool, number, multi-byte array, io.Reader, etc.).
   _`readerToString` is still available but it is marked as deprecated. You can also use `toString` as replacement for  of `String.fromCharCode` to properly stringify multi-byte unicode characters like emojis._
@@ -136,8 +136,8 @@
     A possible attack scenario could be:
     - a malicious actor register with the targeted user's email (it is unverified)
     - at some later point in time the targeted user stumble on your app and decides to sign-up with OAuth2 (_this step could be also initiated by the attacker by sending an invite email to the targeted user_)
-    - on successful OAuth2 auth we search for an existing PocketBase user matching with the OAuth2 user's email and associate them
-    - because we haven't changed the password of the existing PocketBase user during the linking, the malicious actor has access to the targeted user account and will be able to login with the initially created email/password
+    - on successful OAuth2 auth we search for an existing HanzoBase user matching with the OAuth2 user's email and associate them
+    - because we haven't changed the password of the existing HanzoBase user during the linking, the malicious actor has access to the targeted user account and will be able to login with the initially created email/password
 
     To prevent this for happening we now reset the password for this specific case if the previously created user wasn't verified (an exception to this is if the linking is explicit/manual, aka. when you send `Authorization:TOKEN` with the OAuth2 auth call).
 
@@ -221,13 +221,13 @@
   <details>
     <summary><b><i>More details</i></b></summary>
 
-    This was initially reported as security issue (_thanks Harvey Spec_) but in the PocketBase context it is not something that can be exploited without an admin intervention and since the general expectations are that the PocketBase admins can do anything and they are the one who manage their server, this should be treated with the same diligence when using `scp`/`rsync`/`rclone`/etc. with untrusted file sources.
+    This was initially reported as security issue (_thanks Harvey Spec_) but in the HanzoBase context it is not something that can be exploited without an admin intervention and since the general expectations are that the HanzoBase admins can do anything and they are the one who manage their server, this should be treated with the same diligence when using `scp`/`rsync`/`rclone`/etc. with untrusted file sources.
 
     It is not possible (_or at least I'm not aware how to do that easily_) to perform virus/malicious content scanning on the uploaded backup archive files and some caution is always required when using the Admin UI or running shell commands, hence the backup-restore warning text.
 
     **Or in other words, if someone sends you a file and tell you to upload it to your server (either as backup zip or manually via scp) obviously you shouldn't do that unless you really trust them.**
 
-    PocketBase is like any other regular application that you run on your server and there is no builtin "sandbox" for what the PocketBase process can execute. This is left to the developers to restrict on application or OS level depending on their needs. If you are self-hosting PocketBase you usually don't have to do that, but if you are offering PocketBase as a service and allow strangers to run their own PocketBase instances on your server then you'll need to implement the isolation mechanisms on your own.
+    HanzoBase is like any other regular application that you run on your server and there is no builtin "sandbox" for what the HanzoBase process can execute. This is left to the developers to restrict on application or OS level depending on their needs. If you are self-hosting HanzoBase you usually don't have to do that, but if you are offering HanzoBase as a service and allow strangers to run their own HanzoBase instances on your server then you'll need to implement the isolation mechanisms on your own.
   </details>
 
 
@@ -345,7 +345,7 @@
   _If the user email has changed after issuing the reset token (eg. updated by an admin), then the `verified` user state remains unchanged._
 
 - Added support for loading a serialized json payload for `multipart/form-data` requests using the special `@jsonPayload` key.
-  _This is intended to be used primarily by the SDKs to resolve [js-sdk#274](https://github.com/pocketbase/js-sdk/issues/274)._
+  _This is intended to be used primarily by the SDKs to resolve [js-sdk#274](https://github.com/hanzobase/js-sdk/issues/274)._
 
 - Added graceful OAuth2 redirect error handling ([#4177](https://github.com/hanzoai/backendPB/issues/4177)).
   _Previously on redirect error we were returning directly a standard json error response. Now on redirect error we'll redirect to a generic OAuth2 failure screen (similar to the success one) and will attempt to auto close the OAuth2 popup._
@@ -580,7 +580,7 @@
 
 ## v0.19.3
 
-- Added the release notes to the console output of `./pocketbase update` ([#3685](https://github.com/hanzoai/backendPB/discussions/3685)).
+- Added the release notes to the console output of `./hanzobase update` ([#3685](https://github.com/hanzoai/backendPB/discussions/3685)).
 
 - Added missing documentation for the JSVM `$mails.*` bindings.
 
@@ -726,7 +726,7 @@
 
 - Simplified the `serve` command to accept domain name(s) as argument to reduce any additional manual hosts setup that sometimes previously was needed when deploying on production ([#3190](https://github.com/hanzoai/backendPB/discussions/3190)).
   ```sh
-  ./pocketbase serve yourdomain.com
+  ./hanzobase serve yourdomain.com
   ```
 
 - Added `fields` wildcard (`*`) support.
@@ -913,11 +913,11 @@
 
 ## v0.17.0
 
-- New more detailed guides for using PocketBase as framework (both Go and JS).
-  _If you find any typos or issues with the docs please report them in https://github.com/pocketbase/site._
+- New more detailed guides for using HanzoBase as framework (both Go and JS).
+  _If you find any typos or issues with the docs please report them in https://github.com/hanzobase/site._
 
 - Added new experimental JavaScript app hooks binding via [goja](https://github.com/dop251/goja).
-  They are available by default with the prebuilt executable if you create `*.pb.js` file(s) in the `pb_hooks` directory.
+  They are available by default with the prebuilt executable if you create `*.pb.js` file(s) in the `hb_hooks` directory.
   Lower your expectations because the integration comes with some limitations. For more details please check the [Extend with JavaScript](https://hanzo.ai/docs/js-overview/) guide.
   Optionally, you can also enable the JS app hooks as part of a custom Go build for dynamic scripting but you need to register the `jsvm` plugin manually:
   ```go
@@ -976,8 +976,8 @@
 
 - ⚠️ Renamed `*Options{}` to `Config{}` for consistency and replaced the unnecessary pointers with their value equivalent to keep the applied configuration defaults isolated within their function calls:
   ```go
-  old: pocketbase.NewWithConfig(config *pocketbase.Config) *pocketbase.PocketBase
-  new: pocketbase.NewWithConfig(config pocketbase.Config) *pocketbase.PocketBase
+  old: hanzobase.NewWithConfig(config *hanzobase.Config) *hanzobase.HanzoBase
+  new: hanzobase.NewWithConfig(config hanzobase.Config) *hanzobase.HanzoBase
 
   old: core.NewBaseApp(config *core.BaseAppConfig) *core.BaseApp
   new: core.NewBaseApp(config core.BaseAppConfig) *core.BaseApp
@@ -1139,18 +1139,18 @@
   })
   ```
 
-- Added new `./pocketbase update` command to selfupdate the prebuilt executable (with option to generate a backup of your `hb_data`).
+- Added new `./hanzobase update` command to selfupdate the prebuilt executable (with option to generate a backup of your `hb_data`).
 
-- Added new `./pocketbase admin` console command:
+- Added new `./hanzobase admin` console command:
   ```sh
   // creates new admin account
-  ./pocketbase admin create test@example.com 123456890
+  ./hanzobase admin create test@example.com 123456890
 
   // changes the password of an existing admin account
-  ./pocketbase admin update test@example.com 0987654321
+  ./hanzobase admin update test@example.com 0987654321
 
   // deletes single admin account (if exists)
-  ./pocketbase admin delete test@example.com
+  ./hanzobase admin delete test@example.com
   ```
 
 - Added `apis.Serve(app, options)` helper to allow starting the API server programmatically.
@@ -1175,4 +1175,4 @@
 
 - Added support for multiple relations sort in the Admin UI.
 
-- Added `meta.isNew` to the OAuth2 auth JSON response to indicate a newly OAuth2 created PocketBase user.
+- Added `meta.isNew` to the OAuth2 auth JSON response to indicate a newly OAuth2 created HanzoBase user.

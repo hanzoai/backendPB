@@ -94,7 +94,7 @@ func (form *TestEmailSend) Submit() error {
 		if field.GetHidden() {
 			continue
 		}
-		record.Set(field.GetName(), "__pb_test_"+field.GetName()+"__")
+		record.Set(field.GetName(), "__hb_test_"+field.GetName()+"__")
 	}
 	record.RefreshTokenKey()
 	record.SetEmail(form.Email)

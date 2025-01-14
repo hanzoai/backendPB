@@ -184,7 +184,7 @@ func TestRecordCrudExternalAuthCreate(t *testing.T) {
 	body := func() *strings.Reader {
 		return strings.NewReader(`{
 			"recordRef":     "4q1xlclmfloku33",
-			"collectionRef": "_pb_users_auth_",
+			"collectionRef": "_hb_users_auth_",
 			"provider":      "github",
 			"providerId":    "abc"
 		}`)

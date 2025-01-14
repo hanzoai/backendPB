@@ -174,7 +174,7 @@ func (f *TextField) ValidateValue(ctx context.Context, app App, record *Record) 
 			if oldVal != "" {
 				// no need to further validate because the id can't be updated
 				// and because the id could have been inserted manually by migration from another system
-				// that may not comply with the user defined PocketBase validations
+				// that may not comply with the user defined HanzoBase validations
 				return nil
 			}
 		} else {

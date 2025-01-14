@@ -41,7 +41,7 @@ func TestBaseAppLoggerLevelDevPrint(t *testing.T) {
 
 	for _, s := range scenarios {
 		t.Run(s.name, func(t *testing.T) {
-			const testDataDir = "./pb_base_app_test_data_dir/"
+			const testDataDir = "./hb_base_app_test_data_dir/"
 			defer os.RemoveAll(testDataDir)
 
 			app := NewBaseApp(BaseAppConfig{

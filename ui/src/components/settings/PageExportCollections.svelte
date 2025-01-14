@@ -53,7 +53,7 @@
     }
 
     function download() {
-        CommonHelper.downloadJson(Object.values(bulkSelected), "pb_schema");
+        CommonHelper.downloadJson(Object.values(bulkSelected), "hb_schema");
     }
 
     function copy() {
@@ -110,7 +110,7 @@
                 <div class="content txt-xl m-b-base">
                     <p>
                         Below you'll find your current collections configuration that you could import in
-                        another PocketBase environment.
+                        another HanzoBase environment.
                     </p>
                 </div>
 

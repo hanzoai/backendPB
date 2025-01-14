@@ -1,4 +1,4 @@
-import PocketBase, { LocalAuthStore, isTokenExpired } from "pocketbase";
+import HanzoBase, { LocalAuthStore, isTokenExpired } from "hanzobase";
 // ---
 import { protectedFilesCollectionsCache } from "@/stores/collections";
 import { setErrors } from "@/stores/errors";
@@ -8,14 +8,14 @@ import CommonHelper from "@/utils/CommonHelper";
 import { replace } from "svelte-spa-router";
 import { get } from "svelte/store";
 
-const superuserFileTokenKey = "pb_superuser_file_token";
+const superuserFileTokenKey = "hb_superuser_file_token";
 
 /**
  * Clears the authorized state and redirects to the login page.
  *
  * @param {Boolean} [redirect] Whether to redirect to the login page.
  */
-PocketBase.prototype.logout = function (redirect = true) {
+HanzoBase.prototype.logout = function (redirect = true) {
     this.authStore.clear();
 
     if (redirect) {
@@ -30,7 +30,7 @@ PocketBase.prototype.logout = function (redirect = true) {
  * @param  {Boolean} notify     Whether to add a toast notification.
  * @param  {String}  defaultMsg Default toast notification message if the error doesn't have one.
  */
-PocketBase.prototype.error = function (err, notify = true, defaultMsg = "") {
+HanzoBase.prototype.error = function (err, notify = true, defaultMsg = "") {
     if (!err || !(err instanceof Error) || err.isAbort) {
         return;
     }
@@ -65,7 +65,7 @@ PocketBase.prototype.error = function (err, notify = true, defaultMsg = "") {
 /**
  * @return {Promise<String>}
  */
-PocketBase.prototype.getSuperuserFileToken = async function (collectionId = "") {
+HanzoBase.prototype.getSuperuserFileToken = async function (collectionId = "") {
     let needToken = true;
 
     if (collectionId) {
@@ -103,7 +103,7 @@ class AppAuthStore extends LocalAuthStore {
     /**
      * @inheritdoc
      */
-    constructor(storageKey = "__pb_superuser_auth__") {
+    constructor(storageKey = "__hb_superuser_auth__") {
         super(storageKey);
 
         this.save(this.token, this.record);
@@ -130,7 +130,7 @@ class AppAuthStore extends LocalAuthStore {
     }
 }
 
-const pb = new PocketBase(import.meta.env.PB_BACKEND_URL, new AppAuthStore());
+const pb = new HanzoBase(import.meta.env.PB_BACKEND_URL, new AppAuthStore());
 
 if (pb.authStore.isValid) {
     pb.collection(pb.authStore.record.collectionName)

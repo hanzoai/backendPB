@@ -426,7 +426,7 @@ func TestRequireSameCollectionContextAuth(t *testing.T) {
 		{
 			Name:   "guest",
 			Method: http.MethodGet,
-			URL:    "/my/test/_pb_users_auth_",
+			URL:    "/my/test/_hb_users_auth_",
 			BeforeTestFunc: func(t testing.TB, app *tests.TestApp, e *core.ServeEvent) {
 				e.Router.GET("/my/test/{collection}", func(e *core.RequestEvent) error {
 					return e.String(200, "test123")
@@ -439,7 +439,7 @@ func TestRequireSameCollectionContextAuth(t *testing.T) {
 		{
 			Name:   "expired/invalid token",
 			Method: http.MethodGet,
-			URL:    "/my/test/_pb_users_auth_",
+			URL:    "/my/test/_hb_users_auth_",
 			Headers: map[string]string{
 				"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjRxMXhsY2xtZmxva3UzMyIsInR5cGUiOiJhdXRoIiwiY29sbGVjdGlvbklkIjoiX3BiX3VzZXJzX2F1dGhfIiwiZXhwIjoxNjQwOTkxNjYxLCJyZWZyZXNoYWJsZSI6dHJ1ZX0.2D3tmqPn3vc5LoqqCz8V-iCDVXo9soYiH0d32G7FQT4",
 			},
@@ -471,7 +471,7 @@ func TestRequireSameCollectionContextAuth(t *testing.T) {
 		{
 			Name:   "valid record auth token (same collection)",
 			Method: http.MethodGet,
-			URL:    "/my/test/_pb_users_auth_",
+			URL:    "/my/test/_hb_users_auth_",
 			Headers: map[string]string{
 				"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjRxMXhsY2xtZmxva3UzMyIsInR5cGUiOiJhdXRoIiwiY29sbGVjdGlvbklkIjoiX3BiX3VzZXJzX2F1dGhfIiwiZXhwIjoyNTI0NjA0NDYxLCJyZWZyZXNoYWJsZSI6dHJ1ZX0.ZT3F0Z3iM-xbGgSG3LEKiEzHrPHr8t8IuHLZGGNuxLo",
 			},
@@ -486,7 +486,7 @@ func TestRequireSameCollectionContextAuth(t *testing.T) {
 		{
 			Name:   "valid record auth token (non-matching/missing collection param)",
 			Method: http.MethodGet,
-			URL:    "/my/test/_pb_users_auth_",
+			URL:    "/my/test/_hb_users_auth_",
 			Headers: map[string]string{
 				"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjRxMXhsY2xtZmxva3UzMyIsInR5cGUiOiJhdXRoIiwiY29sbGVjdGlvbklkIjoiX3BiX3VzZXJzX2F1dGhfIiwiZXhwIjoyNTI0NjA0NDYxLCJyZWZyZXNoYWJsZSI6dHJ1ZX0.ZT3F0Z3iM-xbGgSG3LEKiEzHrPHr8t8IuHLZGGNuxLo",
 			},
@@ -502,7 +502,7 @@ func TestRequireSameCollectionContextAuth(t *testing.T) {
 		{
 			Name:   "valid record auth token (matching custom collection param)",
 			Method: http.MethodGet,
-			URL:    "/my/test/_pb_users_auth_",
+			URL:    "/my/test/_hb_users_auth_",
 			Headers: map[string]string{
 				"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjRxMXhsY2xtZmxva3UzMyIsInR5cGUiOiJhdXRoIiwiY29sbGVjdGlvbklkIjoiX3BiX3VzZXJzX2F1dGhfIiwiZXhwIjoyNTI0NjA0NDYxLCJyZWZyZXNoYWJsZSI6dHJ1ZX0.ZT3F0Z3iM-xbGgSG3LEKiEzHrPHr8t8IuHLZGGNuxLo",
 			},
@@ -518,7 +518,7 @@ func TestRequireSameCollectionContextAuth(t *testing.T) {
 		{
 			Name:   "superuser no exception check",
 			Method: http.MethodGet,
-			URL:    "/my/test/_pb_users_auth_",
+			URL:    "/my/test/_hb_users_auth_",
 			Headers: map[string]string{
 				"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6InN5d2JoZWNuaDQ2cmhtMCIsInR5cGUiOiJhdXRoIiwiY29sbGVjdGlvbklkIjoicGJjXzMxNDI2MzU4MjMiLCJleHAiOjI1MjQ2MDQ0NjEsInJlZnJlc2hhYmxlIjp0cnVlfQ.UXgO3j-0BumcugrFjbd7j0M4MQvbrLggLlcu_YNGjoY",
 			},

@@ -37,7 +37,7 @@ const (
 
 	LocalStorageDirName       string = "storage"
 	LocalBackupsDirName       string = "backups"
-	LocalTempDirName          string = ".pb_temp_to_delete" // temp hb_data sub directory that will be deleted on each app.Bootstrap()
+	LocalTempDirName          string = ".hb_temp_to_delete" // temp hb_data sub directory that will be deleted on each app.Bootstrap()
 	LocalAutocertCacheDirName string = ".autocert_cache"
 )
 
@@ -66,7 +66,7 @@ type BaseAppConfig struct {
 // ensures that the BaseApp implements the App interface.
 var _ App = (*BaseApp)(nil)
 
-// BaseApp implements core.App and defines the base PocketBase app structure.
+// BaseApp implements core.App and defines the base HanzoBase app structure.
 type BaseApp struct {
 	config              *BaseAppConfig
 	txInfo              *txAppInfo

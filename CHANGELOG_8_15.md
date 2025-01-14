@@ -447,8 +447,8 @@
 
 - Added `:each` modifier support for the multi-`select` request data and collection field.
   ```js
-  // check if all selected rows has "pb_" prefix
-  roles:each ~ 'pb_%'
+  // check if all selected rows has "hb_" prefix
+  roles:each ~ 'hb_%'
   ```
 
 - Improved the Admin UI filters autocomplete.
@@ -527,7 +527,7 @@
 
 - Refactored the `core.app.Bootstrap()` to be called before starting the cobra commands ([#1267](https://github.com/hanzoai/backendPB/discussions/1267)).
 
-- ⚠️ Changed `pocketbase.NewWithConfig(config Config)` to `pocketbase.NewWithConfig(config *Config)` and added 4 new config settings:
+- ⚠️ Changed `hanzobase.NewWithConfig(config Config)` to `hanzobase.NewWithConfig(config *Config)` and added 4 new config settings:
   ```go
   DataMaxOpenConns int // default to core.DefaultDataMaxOpenConns
   DataMaxIdleConns int // default to core.DefaultDataMaxIdleConns
@@ -638,9 +638,9 @@
   initializing default settings, running data imports, etc., with a JavaScript API very similar to the Go one (_more documentation will be available soon_).
 
   The `migrate` command is available by default for the prebuilt executable,
-  but if you use PocketBase as framework you need register it manually:
+  but if you use HanzoBase as framework you need register it manually:
   ```go
-  migrationsDir := "" // default to "pb_migrations" (for js) and "migrations" (for go)
+  migrationsDir := "" // default to "hb_migrations" (for js) and "migrations" (for go)
 
   // load js files if you want to allow loading external JavaScript migrations
   jsvm.MustRegisterMigrations(app, &jsvm.MigrationsOptions{
@@ -658,14 +658,14 @@
   **The refactoring also comes with automigrations support.**
 
   If `Automigrate` is enabled (`true` by default for the prebuilt executable; can be disabled with `--automigrate=0`),
-  PocketBase will generate seamlessly in the background JS (or Go) migration file with your collection changes.
+  HanzoBase will generate seamlessly in the background JS (or Go) migration file with your collection changes.
   **The directory with the JS migrations can be committed to your git repo.**
   All migrations (Go and JS) are automatically executed on server start.
   Also note that the auto generated migrations are granural (in contrast to the `migrate collections` snapshot command)
   and allow multiple developers to do changes on the collections independently (even editing the same collection) miniziming the eventual merge conflicts.
   Here is a sample JS migration file that will be generated if you for example edit a single collection name:
   ```js
-  // pb_migrations/1669663597_updated_posts_old.js
+  // hb_migrations/1669663597_updated_posts_old.js
   migrate((db) => {
     // up
     const dao = new Dao(db)
@@ -753,7 +753,7 @@ In addition to the `Users` and `profiles` merge, this release comes with several
 
 - Improved memory usage on large file uploads [#835](https://github.com/hanzoai/backendPB/discussions/835).
 
-- More detailed API preview docs and site documentation (the repo is located at https://github.com/pocketbase/site).
+- More detailed API preview docs and site documentation (the repo is located at https://github.com/hanzobase/site).
 
 - Other minor performance improvements (mostly related to the search apis).
 
@@ -774,10 +774,10 @@ The easiest way to apply them is to use the new temporary `upgrade` command:
 cp -r ./hb_data ./hb_data_backup
 
 # run the upgrade command
-./pocketbase08 upgrade
+./hanzobase08 upgrade
 
 # start the application as usual
-./pocketbase08 serve
+./hanzobase08 serve
 ```
 
 The upgrade command:
@@ -807,17 +807,17 @@ The upgrade command:
 
 Please check the individual SDK package changelog and apply the necessary changes in your code:
 
-- [**JavaScript SDK changelog**](https://github.com/pocketbase/js-sdk/blob/master/CHANGELOG.md)
+- [**JavaScript SDK changelog**](https://github.com/hanzobase/js-sdk/blob/master/CHANGELOG.md)
   ```sh
-  npm install pocketbase@latest --save
+  npm install hanzobase@latest --save
   ```
 
-- [**Dart SDK changelog**](https://github.com/pocketbase/dart-sdk/blob/master/CHANGELOG.md)
+- [**Dart SDK changelog**](https://github.com/hanzobase/dart-sdk/blob/master/CHANGELOG.md)
 
   ```sh
-  dart pub add pocketbase:^0.5.0
+  dart pub add hanzobase:^0.5.0
   # or with Flutter:
-  flutter pub add pocketbase:^0.5.0
+  flutter pub add hanzobase:^0.5.0
   ```
 
 #### API
@@ -1030,7 +1030,7 @@ Please check the individual SDK package changelog and apply the necessary change
 
 #### Internals
 
-> _**You don't have to read this if you are not using PocketBase as framework.**_
+> _**You don't have to read this if you are not using HanzoBase as framework.**_
 
 - Removed `forms.New*WithConfig()` factories to minimize ambiguities.
   If you need to pass a transaction Dao you can use the new `SetDao(dao)` method available to the form instances.

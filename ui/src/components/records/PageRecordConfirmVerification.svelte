@@ -1,7 +1,7 @@
 <script>
     import FullPage from "@/components/base/FullPage.svelte";
     import ApiClient from "@/utils/ApiClient";
-    import PocketBase, { getTokenPayload, isTokenExpired } from "pocketbase";
+    import HanzoBase, { getTokenPayload, isTokenExpired } from "hanzobase";
 
     export let params;
 
@@ -21,7 +21,7 @@
         isConfirming = true;
 
         // init a custom client to avoid interfering with the superuser state
-        const client = new PocketBase(import.meta.env.PB_BACKEND_URL);
+        const client = new HanzoBase(import.meta.env.PB_BACKEND_URL);
 
         try {
             const payload = getTokenPayload(params?.token);
@@ -46,7 +46,7 @@
         isResending = true;
 
         // init a custom client to avoid interfering with the superuser state
-        const client = new PocketBase(import.meta.env.PB_BACKEND_URL);
+        const client = new HanzoBase(import.meta.env.PB_BACKEND_URL);
 
         try {
             const payload = getTokenPayload(params?.token);

@@ -1,5 +1,5 @@
 // Package jsvm implements pluggable utilities for binding a JS goja runtime
-// to the PocketBase instance (loading migrations, attaching to app hooks, etc.).
+// to the HanzoBase instance (loading migrations, attaching to app hooks, etc.).
 //
 // Example:
 //
@@ -50,7 +50,7 @@ type Config struct {
 
 	// HooksDir specifies the JS app hooks directory.
 	//
-	// If not set it fallbacks to a relative "hb_data/../pb_hooks" directory.
+	// If not set it fallbacks to a relative "hb_data/../hb_hooks" directory.
 	HooksDir string
 
 	// HooksFilesPattern specifies a regular expression pattern that
@@ -69,7 +69,7 @@ type Config struct {
 
 	// MigrationsDir specifies the JS migrations directory.
 	//
-	// If not set it fallbacks to a relative "hb_data/../pb_migrations" directory.
+	// If not set it fallbacks to a relative "hb_data/../hb_migrations" directory.
 	MigrationsDir string
 
 	// If not set it fallbacks to `^.*(\.js|\.ts)$`, aka. any MigrationDir file
@@ -108,11 +108,11 @@ func Register(app core.App, config Config) error {
 	p := &plugin{app: app, config: config}
 
 	if p.config.HooksDir == "" {
-		p.config.HooksDir = filepath.Join(app.DataDir(), "../pb_hooks")
+		p.config.HooksDir = filepath.Join(app.DataDir(), "../hb_hooks")
 	}
 
 	if p.config.MigrationsDir == "" {
-		p.config.MigrationsDir = filepath.Join(app.DataDir(), "../pb_migrations")
+		p.config.MigrationsDir = filepath.Join(app.DataDir(), "../hb_migrations")
 	}
 
 	if p.config.HooksFilesPattern == "" {

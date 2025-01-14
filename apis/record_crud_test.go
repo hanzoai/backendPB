@@ -1254,7 +1254,7 @@ func TestRecordCrudDelete(t *testing.T) {
 				"OnRecordUpdateExecute":      1,
 			},
 			AfterTestFunc: func(t testing.TB, app *tests.TestApp, res *http.Response) {
-				ensureDeletedFiles(app, "_pb_users_auth_", "4q1xlclmfloku33")
+				ensureDeletedFiles(app, "_hb_users_auth_", "4q1xlclmfloku33")
 
 				// check if all the external auths records were deleted
 				collection, _ := app.FindCollectionByNameOrId("users")
@@ -1379,7 +1379,7 @@ func TestRecordCrudDelete(t *testing.T) {
 					t.Errorf("Expected record %s to be cascade deleted", recId)
 				}
 				ensureDeletedFiles(app, "wsmn24bux7wo113", recId)
-				ensureDeletedFiles(app, "_pb_users_auth_", "oap640cot4yru2s")
+				ensureDeletedFiles(app, "_hb_users_auth_", "oap640cot4yru2s")
 			},
 		},
 

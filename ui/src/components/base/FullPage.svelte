@@ -11,7 +11,7 @@
                 <figure class="logo">
                     <img
                         src="{import.meta.env.BASE_URL}images/logo.svg"
-                        alt="PocketBase logo"
+                        alt="HanzoBase logo"
                         width="40"
                         height="40"
                     />

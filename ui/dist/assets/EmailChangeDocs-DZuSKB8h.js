@@ -33,9 +33,9 @@ import{S as se,i as oe,s as ie,X as I,h as p,j as C,z as U,k as b,n as g,o as u,
                   "data": {}
                 }
             `}]),[l,d,i,r]}class Ge extends se{constructor(e){super(),oe(this,e,Ue,Le,ie,{collection:0})}}function qe(n,e,t){const l=n.slice();return l[5]=e[t],l[7]=t,l}function Te(n,e,t){const l=n.slice();return l[5]=e[t],l[7]=t,l}function Ae(n){let e,t,l,d,i;function r(){return n[4](n[7])}return{c(){e=p("button"),t=p("div"),t.textContent=`${n[5].title}`,l=C(),b(t,"class","txt"),b(e,"class","tab-item"),K(e,"active",n[1]==n[7])},m(a,m){g(a,e,m),u(e,t),u(e,l),d||(i=ce(e,"click",r),d=!0)},p(a,m){n=a,m&2&&K(e,"active",n[1]==n[7])},d(a){a&&v(e),d=!1,i()}}}function Pe(n){let e,t,l,d;var i=n[5].component;function r(a,m){return{props:{collection:a[0]}}}return i&&(t=be(i,r(n))),{c(){e=p("div"),t&&x(t.$$.fragment),l=C(),b(e,"class","tab-item"),K(e,"active",n[1]==n[7])},m(a,m){g(a,e,m),t&&ee(t,e,null),u(e,l),d=!0},p(a,m){if(i!==(i=a[5].component)){if(t){ne();const k=t;X(k.$$.fragment,1,0,()=>{te(k,1)}),ae()}i?(t=be(i,r(a)),x(t.$$.fragment),V(t.$$.fragment,1),ee(t,e,l)):t=null}else if(i){const k={};m&1&&(k.collection=a[0]),t.$set(k)}(!d||m&2)&&K(e,"active",a[1]==a[7])},i(a){d||(t&&V(t.$$.fragment,a),d=!0)},o(a){t&&X(t.$$.fragment,a),d=!1},d(a){a&&v(e),t&&te(t)}}}function Ie(n){var c,f,s,h,R,re;let e,t,l=n[0].name+"",d,i,r,a,m,k,A,Y=n[0].name+"",W,J,L,z,B,D,S,H,q,O,P,j,T,N;D=new Me({props:{js:`
-        import PocketBase from 'pocketbase';
+        import HanzoBase from 'hanzobase';
 
-        const pb = new PocketBase('${n[2]}');
+        const pb = new HanzoBase('${n[2]}');
 
         ...
 
@@ -55,7 +55,7 @@ import{S as se,i as oe,s as ie,X as I,h as p,j as C,z as U,k as b,n as g,o as u,
     `,dart:`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = PocketBase('${n[2]}');
+        final pb = HanzoBase('${n[2]}');
 
         ...
 
@@ -76,9 +76,9 @@ import{S as se,i as oe,s as ie,X as I,h as p,j as C,z as U,k as b,n as g,o as u,
         );
     `}});let w=I(n[3]),E=[];for(let o=0;o<w.length;o+=1)E[o]=Ae(Te(n,w,o));let M=I(n[3]),_=[];for(let o=0;o<M.length;o+=1)_[o]=Pe(qe(n,M,o));const Z=o=>X(_[o],1,1,()=>{_[o]=null});return{c(){e=p("h3"),t=U("Email change ("),d=U(l),i=U(")"),r=C(),a=p("div"),m=p("p"),k=U("Sends "),A=p("strong"),W=U(Y),J=U(" email change request."),L=C(),z=p("p"),z.textContent=`On successful email change all previously issued auth tokens for the specific record will be
         automatically invalidated.`,B=C(),x(D.$$.fragment),S=C(),H=p("h6"),H.textContent="API details",q=C(),O=p("div"),P=p("div");for(let o=0;o<E.length;o+=1)E[o].c();j=C(),T=p("div");for(let o=0;o<_.length;o+=1)_[o].c();b(e,"class","m-b-sm"),b(a,"class","content txt-lg m-b-sm"),b(H,"class","m-b-xs"),b(P,"class","tabs-header compact"),b(T,"class","tabs-content"),b(O,"class","tabs")},m(o,y){g(o,e,y),u(e,t),u(e,d),u(e,i),g(o,r,y),g(o,a,y),u(a,m),u(m,k),u(m,A),u(A,W),u(m,J),u(a,L),u(a,z),g(o,B,y),ee(D,o,y),g(o,S,y),g(o,H,y),g(o,q,y),g(o,O,y),u(O,P);for(let G=0;G<E.length;G+=1)E[G]&&E[G].m(P,null);u(O,j),u(O,T);for(let G=0;G<_.length;G+=1)_[G]&&_[G].m(T,null);N=!0},p(o,[y]){var de,ue,fe,me,he,pe;(!N||y&1)&&l!==(l=o[0].name+"")&&F(d,l),(!N||y&1)&&Y!==(Y=o[0].name+"")&&F(W,Y);const G={};if(y&5&&(G.js=`
-        import PocketBase from 'pocketbase';
+        import HanzoBase from 'hanzobase';
 
-        const pb = new PocketBase('${o[2]}');
+        const pb = new HanzoBase('${o[2]}');
 
         ...
 
@@ -98,7 +98,7 @@ import{S as se,i as oe,s as ie,X as I,h as p,j as C,z as U,k as b,n as g,o as u,
     `),y&5&&(G.dart=`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = PocketBase('${o[2]}');
+        final pb = HanzoBase('${o[2]}');
 
         ...
 

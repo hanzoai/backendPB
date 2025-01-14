@@ -86,9 +86,9 @@
 <!-- prettier-ignore -->
 <SdkTabs
     js={`
-import PocketBase from 'pocketbase';
+import HanzoBase from 'hanzobase';
 
-const pb = new PocketBase('${backendAbsUrl}');
+const pb = new HanzoBase('${backendAbsUrl}');
 
 ...
 
@@ -105,7 +105,7 @@ await pb.collection('${collection?.name}').requestVerification('test@example.com
     dart={`
 import 'package:hanzoai/backendPB.dart';
 
-final pb = PocketBase('${backendAbsUrl}');
+final pb = HanzoBase('${backendAbsUrl}');
 
 ...
 

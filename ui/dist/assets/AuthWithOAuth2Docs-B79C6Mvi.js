@@ -1,7 +1,7 @@
 import{S as Ee,i as Je,s as xe,V as ze,W as Ve,X as Q,h as o,z as _,j as h,c as G,k as p,n as r,o as a,m as I,H as pe,Y as Ue,Z as Ne,E as Qe,_ as Ge,G as Ie,t as V,a as E,v as c,d as K,J as Be,p as Ke,l as X,q as Xe}from"./index-SKn09NMF.js";import{F as Ye}from"./FieldsQueryParam-NXRpAlxi.js";function Fe(s,l,n){const i=s.slice();return i[5]=l[n],i}function He(s,l,n){const i=s.slice();return i[5]=l[n],i}function Le(s,l){let n,i=l[5].code+"",f,g,d,b;function k(){return l[4](l[5])}return{key:s,first:null,c(){n=o("button"),f=_(i),g=h(),p(n,"class","tab-item"),X(n,"active",l[1]===l[5].code),this.first=n},m(v,O){r(v,n,O),a(n,f),a(n,g),d||(b=Xe(n,"click",k),d=!0)},p(v,O){l=v,O&4&&i!==(i=l[5].code+"")&&pe(f,i),O&6&&X(n,"active",l[1]===l[5].code)},d(v){v&&c(n),d=!1,b()}}}function je(s,l){let n,i,f,g;return i=new Ve({props:{content:l[5].body}}),{key:s,first:null,c(){n=o("div"),G(i.$$.fragment),f=h(),p(n,"class","tab-item"),X(n,"active",l[1]===l[5].code),this.first=n},m(d,b){r(d,n,b),I(i,n,null),a(n,f),g=!0},p(d,b){l=d;const k={};b&4&&(k.content=l[5].body),i.$set(k),(!g||b&6)&&X(n,"active",l[1]===l[5].code)},i(d){g||(V(i.$$.fragment,d),g=!0)},o(d){E(i.$$.fragment,d),g=!1},d(d){d&&c(n),K(i)}}}function Ze(s){let l,n,i=s[0].name+"",f,g,d,b,k,v,O,D,Y,A,J,be,x,P,me,Z,z=s[0].name+"",ee,fe,te,M,ae,W,le,U,ne,y,oe,ge,B,S,se,_e,ie,ke,m,ve,C,we,$e,Oe,re,Ae,ce,ye,Se,Te,de,Ce,qe,q,ue,F,he,T,H,$=[],Re=new Map,De,L,w=[],Pe=new Map,R;v=new ze({props:{js:`
-        import PocketBase from 'pocketbase';
+        import HanzoBase from 'hanzobase';
 
-        const pb = new PocketBase('${s[3]}');
+        const pb = new HanzoBase('${s[3]}');
 
         ...
 
@@ -24,7 +24,7 @@ import{S as Ee,i as Je,s as xe,V as ze,W as Ve,X as Q,h as o,z as _,j as h,c as 
         import 'package:hanzoai/backendPB.dart';
         import 'package:url_launcher/url_launcher.dart';
 
-        final pb = PocketBase('${s[3]}');
+        final pb = HanzoBase('${s[3]}');
 
         ...
 
@@ -57,9 +57,9 @@ import{S as Ee,i as Je,s as xe,V as ze,W as Ve,X as Q,h as o,z as _,j as h,c as 
                 `),re=o("code"),re.textContent="expand",Ae=_(" property (eg. "),ce=o("code"),ce.textContent='"expand": {"relField1": {...}, ...}',ye=_(`).
                 `),Se=o("br"),Te=_(`
                 Only the relations to which the request user has permissions to `),de=o("strong"),de.textContent="view",Ce=_(" will be expanded."),qe=h(),G(q.$$.fragment),ue=h(),F=o("div"),F.textContent="Responses",he=h(),T=o("div"),H=o("div");for(let e=0;e<$.length;e+=1)$[e].c();De=h(),L=o("div");for(let e=0;e<w.length;e+=1)w[e].c();p(l,"class","m-b-sm"),p(b,"class","content txt-lg m-b-sm"),p(D,"class","m-b-xs"),p(J,"class","label label-primary"),p(x,"class","content"),p(A,"class","alert alert-success"),p(M,"class","section-title"),p(W,"class","table-compact table-border m-b-base"),p(U,"class","section-title"),p(y,"class","table-compact table-border m-b-base"),p(F,"class","section-title"),p(H,"class","tabs-header compact combined left"),p(L,"class","tabs-content"),p(T,"class","tabs")},m(e,t){r(e,l,t),a(l,n),a(l,f),a(l,g),r(e,d,t),r(e,b,t),r(e,k,t),I(v,e,t),r(e,O,t),r(e,D,t),r(e,Y,t),r(e,A,t),a(A,J),a(A,be),a(A,x),a(x,P),a(P,me),a(P,Z),a(Z,ee),a(P,fe),r(e,te,t),r(e,M,t),r(e,ae,t),r(e,W,t),r(e,le,t),r(e,U,t),r(e,ne,t),r(e,y,t),a(y,oe),a(y,ge),a(y,B),a(B,S),a(S,se),a(S,_e),a(S,ie),a(S,ke),a(S,m),a(m,ve),I(C,m,null),a(m,we),a(m,$e),a(m,Oe),a(m,re),a(m,Ae),a(m,ce),a(m,ye),a(m,Se),a(m,Te),a(m,de),a(m,Ce),a(B,qe),I(q,B,null),r(e,ue,t),r(e,F,t),r(e,he,t),r(e,T,t),a(T,H);for(let u=0;u<$.length;u+=1)$[u]&&$[u].m(H,null);a(T,De),a(T,L);for(let u=0;u<w.length;u+=1)w[u]&&w[u].m(L,null);R=!0},p(e,[t]){(!R||t&1)&&i!==(i=e[0].name+"")&&pe(f,i);const u={};t&9&&(u.js=`
-        import PocketBase from 'pocketbase';
+        import HanzoBase from 'hanzobase';
 
-        const pb = new PocketBase('${e[3]}');
+        const pb = new HanzoBase('${e[3]}');
 
         ...
 
@@ -82,7 +82,7 @@ import{S as Ee,i as Je,s as xe,V as ze,W as Ve,X as Q,h as o,z as _,j as h,c as 
         import 'package:hanzoai/backendPB.dart';
         import 'package:url_launcher/url_launcher.dart';
 
-        final pb = PocketBase('${e[3]}');
+        final pb = HanzoBase('${e[3]}');
 
         ...
 

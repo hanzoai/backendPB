@@ -54,8 +54,8 @@ func TestCreateBackup(t *testing.T) {
 	}
 
 	expectedFiles := []string{
-		`^pb_backup_` + expectedAppNamePrefix + `_\w+\.zip$`,
-		`^pb_backup_` + expectedAppNamePrefix + `_\w+\.zip.attrs$`,
+		`^hb_backup_` + expectedAppNamePrefix + `_\w+\.zip$`,
+		`^hb_backup_` + expectedAppNamePrefix + `_\w+\.zip.attrs$`,
 		"custom",
 		"custom.attrs",
 	}

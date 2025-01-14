@@ -50,7 +50,7 @@ func NewRouter(app core.App) (*router.Router[*core.RequestEvent], error) {
 	return pbRouter, nil
 }
 
-// WrapStdHandler wraps Go [http.Handler] into a PocketBase handler func.
+// WrapStdHandler wraps Go [http.Handler] into a HanzoBase handler func.
 func WrapStdHandler(h http.Handler) func(*core.RequestEvent) error {
 	return func(e *core.RequestEvent) error {
 		h.ServeHTTP(e.Response, e.Request)
@@ -58,7 +58,7 @@ func WrapStdHandler(h http.Handler) func(*core.RequestEvent) error {
 	}
 }
 
-// WrapStdMiddleware wraps Go [func(http.Handler) http.Handle] into a PocketBase middleware func.
+// WrapStdMiddleware wraps Go [func(http.Handler) http.Handle] into a HanzoBase middleware func.
 func WrapStdMiddleware(m func(http.Handler) http.Handler) func(*core.RequestEvent) error {
 	return func(e *core.RequestEvent) (err error) {
 		m(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -98,7 +98,7 @@ func MustSubFS(fsys fs.FS, dir string) fs.FS {
 //
 // Example:
 //
-//	fsys := os.DirFS("./pb_public")
+//	fsys := os.DirFS("./hb_public")
 //	router.GET("/files/{path...}", apis.Static(fsys, false))
 func Static(fsys fs.FS, indexFallback bool) func(*core.RequestEvent) error {
 	if fsys == nil {

@@ -36,7 +36,7 @@ const heading = `
  * })
  * ` + "```" + `
  *
- * _Note that this method is available only in pb_hooks context._
+ * _Note that this method is available only in hb_hooks context._
  *
  * @group HanzoBase
  */
@@ -55,7 +55,7 @@ declare function cronAdd(
  * cronRemove("hello")
  * ` + "```" + `
  *
- * _Note that this method is available only in pb_hooks context._
+ * _Note that this method is available only in hb_hooks context._
  *
  * @group HanzoBase
  */
@@ -76,7 +76,7 @@ declare function cronRemove(jobId: string): void;
  * }, $apis.requireAuth())
  * ` + "```" + `
  *
- * _Note that this method is available only in pb_hooks context._
+ * _Note that this method is available only in hb_hooks context._
  *
  * @group HanzoBase
  */
@@ -100,7 +100,7 @@ declare function routerAdd(
  * })
  * ` + "```" + `
  *
- * _Note that this method is available only in pb_hooks context._
+ * _Note that this method is available only in hb_hooks context._
  *
  * @group HanzoBase
  */
@@ -111,7 +111,7 @@ declare function routerUse(...middlewares: Array<string|((e: core.RequestEvent) 
 // -------------------------------------------------------------------
 
 /**
- * Global helper variable that contains the absolute path to the app pb_hooks directory.
+ * Global helper variable that contains the absolute path to the app hb_hooks directory.
  *
  * @group HanzoBase
  */
@@ -132,15 +132,15 @@ type CoreApp = excludeHooks<ORIGINAL_CORE_APP>
 type HanzoBase = excludeHooks<ORIGINAL_HANZOBASE>
 
 /**
- * ` + "`$app`" + ` is the current running PocketBase instance that is globally
+ * ` + "`$app`" + ` is the current running HanzoBase instance that is globally
  * available in each .pb.js file.
  *
- * _Note that this variable is available only in pb_hooks context._
+ * _Note that this variable is available only in hb_hooks context._
  *
  * @namespace
  * @group HanzoBase
  */
-declare var $app: PocketBase
+declare var $app: HanzoBase
 
 /**
  * ` + "`$template`" + ` is a global helper to load and cache HTML templates on the fly.
@@ -157,7 +157,7 @@ declare var $app: PocketBase
  * ).render({"name": "John"})
  * ` + "```" + `
  *
- * _Note that this method is available only in pb_hooks context._
+ * _Note that this method is available only in hb_hooks context._
  *
  * @namespace
  * @group HanzoBase
@@ -326,7 +326,7 @@ interface Collection extends core.Collection{
  * })
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class Collection implements core.Collection {
   constructor(data?: Partial<Collection>)
@@ -336,7 +336,7 @@ interface FieldsList extends core.FieldsList{} // merge
 /**
  * FieldsList model class, usually used to define the Collection.fields.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class FieldsList implements core.FieldsList {
   constructor(data?: Partial<core.FieldsList>)
@@ -346,7 +346,7 @@ interface Field extends core.Field{} // merge
 /**
  * Field model class, usually used as part of the FieldsList model.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class Field implements core.Field {
   constructor(data?: Partial<core.Field>)
@@ -356,7 +356,7 @@ interface NumberField extends core.NumberField{} // merge
 /**
  * {@inheritDoc core.NumberField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class NumberField implements core.NumberField {
   constructor(data?: Partial<core.NumberField>)
@@ -366,7 +366,7 @@ interface BoolField extends core.BoolField{} // merge
 /**
  * {@inheritDoc core.BoolField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class BoolField implements core.BoolField {
   constructor(data?: Partial<core.BoolField>)
@@ -376,7 +376,7 @@ interface TextField extends core.TextField{} // merge
 /**
  * {@inheritDoc core.TextField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class TextField implements core.TextField {
   constructor(data?: Partial<core.TextField>)
@@ -386,7 +386,7 @@ interface URLField extends core.URLField{} // merge
 /**
  * {@inheritDoc core.URLField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class URLField implements core.URLField {
   constructor(data?: Partial<core.URLField>)
@@ -396,7 +396,7 @@ interface EmailField extends core.EmailField{} // merge
 /**
  * {@inheritDoc core.EmailField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class EmailField implements core.EmailField {
   constructor(data?: Partial<core.EmailField>)
@@ -406,7 +406,7 @@ interface EditorField extends core.EditorField{} // merge
 /**
  * {@inheritDoc core.EditorField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class EditorField implements core.EditorField {
   constructor(data?: Partial<core.EditorField>)
@@ -416,7 +416,7 @@ interface PasswordField extends core.PasswordField{} // merge
 /**
  * {@inheritDoc core.PasswordField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class PasswordField implements core.PasswordField {
   constructor(data?: Partial<core.PasswordField>)
@@ -426,7 +426,7 @@ interface DateField extends core.DateField{} // merge
 /**
  * {@inheritDoc core.DateField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class DateField implements core.DateField {
   constructor(data?: Partial<core.DateField>)
@@ -436,7 +436,7 @@ interface AutodateField extends core.AutodateField{} // merge
 /**
  * {@inheritDoc core.AutodateField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class AutodateField implements core.AutodateField {
   constructor(data?: Partial<core.AutodateField>)
@@ -446,7 +446,7 @@ interface JSONField extends core.JSONField{} // merge
 /**
  * {@inheritDoc core.JSONField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class JSONField implements core.JSONField {
   constructor(data?: Partial<core.JSONField>)
@@ -456,7 +456,7 @@ interface RelationField extends core.RelationField{} // merge
 /**
  * {@inheritDoc core.RelationField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class RelationField implements core.RelationField {
   constructor(data?: Partial<core.RelationField>)
@@ -466,7 +466,7 @@ interface SelectField extends core.SelectField{} // merge
 /**
  * {@inheritDoc core.SelectField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class SelectField implements core.SelectField {
   constructor(data?: Partial<core.SelectField>)
@@ -476,7 +476,7 @@ interface FileField extends core.FileField{} // merge
 /**
  * {@inheritDoc core.FileField}
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class FileField implements core.FileField {
   constructor(data?: Partial<core.FileField>)
@@ -500,7 +500,7 @@ interface MailerMessage extends mailer.Message{} // merge
  * $app.newMailClient().send(message)
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class MailerMessage implements mailer.Message {
   constructor(message?: Partial<mailer.Message>)
@@ -521,7 +521,7 @@ interface Command extends cobra.Command{} // merge
  * $app.rootCmd.addCommand(command);
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class Command implements cobra.Command {
   constructor(cmd?: Partial<cobra.Command>)
@@ -547,7 +547,7 @@ declare class Command implements cobra.Command {
  * const canAccess = $app.canAccessRecord(record, info, "@request.auth.id != '' && @request.body.name = 123")
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare const RequestInfo: {
   new(info?: Partial<core.RequestInfo>): core.RequestInfo
@@ -569,7 +569,7 @@ declare const RequestInfo: {
  * }, -10))
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class Middleware {
   constructor(
@@ -591,7 +591,7 @@ interface DateTime extends types.DateTime{} // merge
  * const dt1 = new DateTime('2023-07-01 00:00:00.000Z')
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class DateTime implements types.DateTime {
   constructor(date?: string)
@@ -606,7 +606,7 @@ interface ValidationError extends ozzo_validation.Error{} // merge
  * new ValidationError("invalid_title", "Title is not valid")
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class ValidationError implements ozzo_validation.Error {
   constructor(code?: string, message?: string)
@@ -636,7 +636,7 @@ interface Cookie extends http.Cookie{} // merge
  * })
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class Cookie implements http.Cookie {
   constructor(options?: Partial<http.Cookie>)
@@ -657,7 +657,7 @@ interface SubscriptionMessage extends subscriptions.Message{} // merge
  * })
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class SubscriptionMessage implements subscriptions.Message {
   constructor(options?: Partial<subscriptions.Message>)
@@ -671,7 +671,7 @@ declare class SubscriptionMessage implements subscriptions.Message {
  * ` + "`$dbx`" + ` defines common utility for working with the DB abstraction.
  * For examples and guides please check the [Database guide](https://hanzo.ai/docs/js-database).
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare namespace $dbx {
   /**
@@ -705,7 +705,7 @@ declare namespace $dbx {
  * ` + "`" + `$mails` + "`" + ` defines helpers to send common
  * auth records emails like verification, password reset, etc.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare namespace $mails {
   let sendRecordPasswordReset: mails.sendRecordPasswordReset
@@ -722,7 +722,7 @@ declare namespace $mails {
  * ` + "`" + `$security` + "`" + ` defines low level helpers for creating
  * and parsing JWTs, random string generation, AES encryption, etc.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare namespace $security {
   let randomString:                   security.randomString
@@ -761,9 +761,9 @@ declare namespace $security {
 
 /**
  * ` + "`" + `$filesystem` + "`" + ` defines common helpers for working
- * with the PocketBase filesystem abstraction.
+ * with the HanzoBase filesystem abstraction.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare namespace $filesystem {
   let fileFromPath:      filesystem.newFileFromPath
@@ -795,7 +795,7 @@ declare namespace $filesystem {
  * ` + "`$filepath`" + ` defines common helpers for manipulating filename
  * paths in a way compatible with the target operating system-defined file paths.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare namespace $filepath {
   export let base:      filepath.base
@@ -823,7 +823,7 @@ declare namespace $filepath {
  * ` + "`$os`" + ` defines common helpers for working with the OS level primitives
  * (eg. deleting directories, executing shell commands, etc.).
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare namespace $os {
   /**
@@ -874,7 +874,7 @@ declare namespace $os {
 interface AppleClientSecretCreateForm extends forms.AppleClientSecretCreate{} // merge
 /**
  * @inheritDoc
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class AppleClientSecretCreateForm implements forms.AppleClientSecretCreate {
   constructor(app: CoreApp)
@@ -883,7 +883,7 @@ declare class AppleClientSecretCreateForm implements forms.AppleClientSecretCrea
 interface RecordUpsertForm extends forms.RecordUpsert{} // merge
 /**
  * @inheritDoc
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class RecordUpsertForm implements forms.RecordUpsert {
   constructor(app: CoreApp, record: core.Record)
@@ -892,7 +892,7 @@ declare class RecordUpsertForm implements forms.RecordUpsert {
 interface TestEmailSendForm extends forms.TestEmailSend{} // merge
 /**
  * @inheritDoc
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class TestEmailSendForm implements forms.TestEmailSend {
   constructor(app: CoreApp)
@@ -901,7 +901,7 @@ declare class TestEmailSendForm implements forms.TestEmailSend {
 interface TestS3FilesystemForm extends forms.TestS3Filesystem{} // merge
 /**
  * @inheritDoc
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class TestS3FilesystemForm implements forms.TestS3Filesystem {
   constructor(app: CoreApp)
@@ -915,7 +915,7 @@ interface ApiError extends router.ApiError{} // merge
 /**
  * @inheritDoc
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class ApiError implements router.ApiError {
   constructor(status?: number, message?: string, data?: any)
@@ -925,7 +925,7 @@ interface NotFoundError extends router.ApiError{} // merge
 /**
  * NotFounderor returns 404 ApiError.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class NotFoundError implements router.ApiError {
   constructor(message?: string, data?: any)
@@ -935,7 +935,7 @@ interface BadRequestError extends router.ApiError{} // merge
 /**
  * BadRequestError returns 400 ApiError.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class BadRequestError implements router.ApiError {
   constructor(message?: string, data?: any)
@@ -945,7 +945,7 @@ interface ForbiddenError extends router.ApiError{} // merge
 /**
  * ForbiddenError returns 403 ApiError.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class ForbiddenError implements router.ApiError {
   constructor(message?: string, data?: any)
@@ -955,7 +955,7 @@ interface UnauthorizedError extends router.ApiError{} // merge
 /**
  * UnauthorizedError returns 401 ApiError.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class UnauthorizedError implements router.ApiError {
   constructor(message?: string, data?: any)
@@ -965,7 +965,7 @@ interface TooManyRequestsError extends router.ApiError{} // merge
 /**
  * TooManyRequestsError returns 429 ApiError.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class TooManyRequestsError implements router.ApiError {
   constructor(message?: string, data?: any)
@@ -975,16 +975,16 @@ interface InternalServerError extends router.ApiError{} // merge
 /**
  * InternalServerError returns 429 ApiError.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class InternalServerError implements router.ApiError {
   constructor(message?: string, data?: any)
 }
 
 /**
- * ` + "`" + `$apis` + "`" + ` defines commonly used PocketBase api helpers and middlewares.
+ * ` + "`" + `$apis` + "`" + ` defines commonly used HanzoBase api helpers and middlewares.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare namespace $apis {
   /**
@@ -1031,7 +1031,7 @@ interface FormData {
 /**
  * ` + "`" + `$http` + "`" + ` defines common methods for working with HTTP requests.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare namespace $http {
   /**
@@ -1079,9 +1079,9 @@ declare namespace $http {
 /**
  * Migrate defines a single migration upgrade/downgrade action.
  *
- * _Note that this method is available only in pb_migrations context._
+ * _Note that this method is available only in hb_migrations context._
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare function migrate(
   up: (txApp: CoreApp) => void,
@@ -1152,9 +1152,9 @@ func main() {
 
 	// replace the original app interfaces with their non-"on*"" hooks equivalents
 	result = strings.ReplaceAll(result, "core.App", "CoreApp")
-	result = strings.ReplaceAll(result, "pocketbase.PocketBase", "PocketBase")
+	result = strings.ReplaceAll(result, "hanzobase.HanzoBase", "HanzoBase")
 	result = strings.ReplaceAll(result, "ORIGINAL_CORE_APP", "core.App")
-	result = strings.ReplaceAll(result, "ORIGINAL_POCKETBASE", "pocketbase.PocketBase")
+	result = strings.ReplaceAll(result, "ORIGINAL_POCKETBASE", "hanzobase.HanzoBase")
 
 	// prepend a timestamp with the generation time
 	// so that it can be compared without reading the entire file
@@ -1194,7 +1194,7 @@ func hooksDeclarations() string {
 		eventTypeName := strings.TrimPrefix(addHanlder.In(0).String(), "*")
 
 		jsName := mapper.MethodName(appType, method)
-		result.WriteString("/** @group PocketBase */")
+		result.WriteString("/** @group HanzoBase */")
 		result.WriteString("declare function ")
 		result.WriteString(jsName)
 		result.WriteString("(handler: (e: ")
