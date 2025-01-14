@@ -1,7 +1,7 @@
 import{S as St,i as Lt,s as jt,V as At,W as It,X as Z,h as o,z as _,j as i,c as Re,k as b,n as d,o as t,m as Te,C as Mt,D as Nt,H as Ut,Y as Pt,Z as zt,E as Jt,_ as Wt,G as Gt,t as Q,a as x,v as u,d as Pe,J as Ft,p as Kt,l as ee,q as Vt}from"./index-SKn09NMF.js";function Bt(a,s,n){const c=a.slice();return c[6]=s[n],c}function Et(a,s,n){const c=a.slice();return c[6]=s[n],c}function Ot(a,s){let n,c,y;function f(){return s[5](s[6])}return{key:a,first:null,c(){n=o("button"),n.textContent=`${s[6].code} `,b(n,"class","tab-item"),ee(n,"active",s[1]===s[6].code),this.first=n},m(r,h){d(r,n,h),c||(y=Vt(n,"click",f),c=!0)},p(r,h){s=r,h&10&&ee(n,"active",s[1]===s[6].code)},d(r){r&&u(n),c=!1,y()}}}function Ht(a,s){let n,c,y,f;return c=new It({props:{content:s[6].body}}),{key:a,first:null,c(){n=o("div"),Re(c.$$.fragment),y=i(),b(n,"class","tab-item"),ee(n,"active",s[1]===s[6].code),this.first=n},m(r,h){d(r,n,h),Te(c,n,null),t(n,y),f=!0},p(r,h){s=r,(!f||h&10)&&ee(n,"active",s[1]===s[6].code)},i(r){f||(Q(c.$$.fragment,r),f=!0)},o(r){x(c.$$.fragment,r),f=!1},d(r){r&&u(n),Pe(c)}}}function Xt(a){var pt,mt,bt,ht,ft,_t,yt,kt;let s,n,c=a[0].name+"",y,f,r,h,F,g,U,Fe,P,B,Be,E,Ee,Oe,te,le,q,oe,O,ae,H,se,I,ne,z,ie,w,ce,He,re,S,J,Ie,k,W,Se,de,Le,C,G,je,ue,Ae,K,Me,pe,Ne,D,Ue,me,ze,Je,We,V,Ge,X,Ke,be,Ve,he,Xe,fe,Ye,p,_e,Ze,ye,Qe,ke,xe,$e,et,ge,tt,ve,lt,ot,at,Ce,st,R,De,L,qe,T,j,v=[],nt=new Map,it,A,$=[],ct=new Map,M,we,rt;q=new At({props:{js:`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${a[2]}');
+        const hb = new HanzoBase('${a[2]}');
 
         ...
 
@@ -16,7 +16,7 @@ import{S as St,i as Lt,s as jt,V as At,W as It,X as Z,h as o,z as _,j as i,c as 
     `,dart:`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${a[2]}');
+        final hb = HanzoBase('${a[2]}');
 
         ...
 
@@ -74,7 +74,7 @@ import{S as St,i as Lt,s as jt,V as At,W as It,X as Z,h as o,z as _,j as i,c as 
                     `),Re(R.$$.fragment),De=i(),L=o("div"),L.textContent="Responses",qe=i(),T=o("div"),j=o("div");for(let e=0;e<v.length;e+=1)v[e].c();it=i(),A=o("div");for(let e=0;e<$.length;e+=1)$[e].c();b(s,"class","m-b-sm"),b(h,"class","content txt-lg m-b-sm"),b(U,"class","icon"),b(E,"href","/settings"),b(P,"class","content"),b(g,"class","alert alert-warning"),b(O,"class","m-b-xs"),b(H,"class","api-route alert alert-success"),b(I,"class","section-title"),b(J,"valign","top"),b(W,"class","label"),b(V,"class","txt-hint"),b(w,"class","table-compact table-border m-t-xs m-b-base"),b(L,"class","section-title"),b(j,"class","tabs-header compact combined left"),b(A,"class","tabs-content"),b(T,"class","tabs")},m(e,l){d(e,s,l),t(s,n),t(s,y),t(s,f),d(e,r,l),d(e,h,l),d(e,F,l),d(e,g,l),t(g,U),t(g,Fe),t(g,P),t(P,B),t(B,Be),t(B,E),t(B,Ee),t(P,Oe),t(P,te),d(e,le,l),Te(q,e,l),d(e,oe,l),d(e,O,l),d(e,ae,l),d(e,H,l),d(e,se,l),d(e,I,l),d(e,ne,l),d(e,z,l),d(e,ie,l),d(e,w,l),t(w,ce),t(w,He),t(w,re),t(re,S),t(S,J),t(S,Ie),t(S,k),t(k,W),t(k,Se),t(k,de),t(k,Le),t(k,C),t(C,G),t(G,je),t(G,ue),t(C,Ae),t(C,K),t(K,Me),t(K,pe),t(C,Ne),t(C,D),t(D,Ue),t(D,me),t(D,ze),t(D,Je),t(D,We),t(D,V),t(C,Ge),t(C,X),t(X,Ke),t(X,be),t(k,Ve),t(k,he),t(k,Xe),t(k,fe),t(k,Ye),t(k,p),t(p,_e),t(p,Ze),t(p,ye),t(p,Qe),t(p,ke),t(p,xe),t(p,$e),t(p,et),t(p,ge),t(p,tt),t(p,ve),t(p,lt),t(p,ot),t(p,at),t(p,Ce),t(p,st),Te(R,p,null),d(e,De,l),d(e,L,l),d(e,qe,l),d(e,T,l),t(T,j);for(let m=0;m<v.length;m+=1)v[m]&&v[m].m(j,null);t(T,it),t(T,A);for(let m=0;m<$.length;m+=1)$[m]&&$[m].m(A,null);M=!0,we||(rt=Mt(Nt.call(null,E)),we=!0)},p(e,[l]){var gt,vt,Ct,Dt,qt,wt,Rt,Tt;(!M||l&1)&&c!==(c=e[0].name+"")&&Ut(y,c);const m={};l&5&&(m.js=`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${e[2]}');
+        const hb = new HanzoBase('${e[2]}');
 
         ...
 
@@ -89,7 +89,7 @@ import{S as St,i as Lt,s as jt,V as At,W as It,X as Z,h as o,z as _,j as i,c as 
     `),l&5&&(m.dart=`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${e[2]}');
+        final hb = HanzoBase('${e[2]}');
 
         ...
 

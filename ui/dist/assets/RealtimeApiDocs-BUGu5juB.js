@@ -1,7 +1,7 @@
 import{S as re,i as ae,s as be,V as pe,W as ue,J as P,h as p,z as y,j as a,c as se,k as u,n as s,o as I,m as ne,H as me,t as ie,a as ce,v as n,d as le,p as de}from"./index-SKn09NMF.js";function he(o){var B,U,W,H,L,A,T,j,q,J,M,N;let i,m,c=o[0].name+"",b,d,k,h,D,f,_,l,S,$,C,g,E,v,w,r,R;return l=new pe({props:{js:`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${o[1]}');
+        const hb = new HanzoBase('${o[1]}');
 
         ...
 
@@ -27,7 +27,7 @@ import{S as re,i as ae,s as be,V as pe,W as ue,J as P,h as p,z as y,j as a,c as 
     `,dart:`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${o[1]}');
+        final hb = HanzoBase('${o[1]}');
 
         ...
 
@@ -58,7 +58,7 @@ import{S as re,i as ae,s as be,V as pe,W as ue,J as P,h as p,z as y,j as a,c as 
             event message.</p></div>`,_=a(),se(l.$$.fragment),S=a(),$=p("h6"),$.textContent="API details",C=a(),g=p("div"),g.innerHTML='<strong class="label label-primary">SSE</strong> <div class="content"><p>/api/realtime</p></div>',E=a(),v=p("div"),v.textContent="Event data format",w=a(),se(r.$$.fragment),u(i,"class","m-b-sm"),u(h,"class","content txt-lg m-b-sm"),u(f,"class","alert alert-info m-t-10 m-b-sm"),u($,"class","m-b-xs"),u(g,"class","alert"),u(v,"class","section-title")},m(e,t){s(e,i,t),I(i,m),I(i,b),I(i,d),s(e,k,t),s(e,h,t),s(e,D,t),s(e,f,t),s(e,_,t),ne(l,e,t),s(e,S,t),s(e,$,t),s(e,C,t),s(e,g,t),s(e,E,t),s(e,v,t),s(e,w,t),ne(r,e,t),R=!0},p(e,[t]){var z,Y,F,G,K,Q,X,Z,x,ee,te,oe;(!R||t&1)&&c!==(c=e[0].name+"")&&me(b,c);const O={};t&3&&(O.js=`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${e[1]}');
+        const hb = new HanzoBase('${e[1]}');
 
         ...
 
@@ -84,7 +84,7 @@ import{S as re,i as ae,s as be,V as pe,W as ue,J as P,h as p,z as y,j as a,c as 
     `),t&3&&(O.dart=`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${e[1]}');
+        final hb = HanzoBase('${e[1]}');
 
         ...
 

@@ -130,7 +130,7 @@ class AppAuthStore extends LocalAuthStore {
     }
 }
 
-const pb = new HanzoBase(import.meta.env.PB_BACKEND_URL, new AppAuthStore());
+const hb = new HanzoBase(import.meta.env.PB_BACKEND_URL, new AppAuthStore());
 
 if (pb.authStore.isValid) {
     pb.collection(pb.authStore.record.collectionName)

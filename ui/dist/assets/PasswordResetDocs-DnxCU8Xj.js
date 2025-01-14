@@ -23,7 +23,7 @@ import{S as se,i as ne,s as oe,X as K,h as p,j as S,z as D,k,n as b,o as u,H as 
             `}]),[n,d,c,r]}class Be extends se{constructor(t){super(),ne(this,t,Me,De,oe,{collection:0})}}function $e(o,t,e){const n=o.slice();return n[5]=t[e],n[7]=e,n}function Re(o,t,e){const n=o.slice();return n[5]=t[e],n[7]=e,n}function Pe(o){let t,e,n,d,c;function r(){return o[4](o[7])}return{c(){t=p("button"),e=p("div"),e.textContent=`${o[5].title}`,n=S(),k(e,"class","txt"),k(t,"class","tab-item"),j(t,"active",o[1]==o[7])},m(a,f){b(a,t,f),u(t,e),u(t,n),d||(c=ae(t,"click",r),d=!0)},p(a,f){o=a,f&2&&j(t,"active",o[1]==o[7])},d(a){a&&v(t),d=!1,c()}}}function Se(o){let t,e,n,d;var c=o[5].component;function r(a,f){return{props:{collection:a[0]}}}return c&&(e=pe(c,r(o))),{c(){t=p("div"),e&&Z(e.$$.fragment),n=S(),k(t,"class","tab-item"),j(t,"active",o[1]==o[7])},m(a,f){b(a,t,f),e&&Q(e,t,null),u(t,n),d=!0},p(a,f){if(c!==(c=a[5].component)){if(e){te();const g=e;J(g.$$.fragment,1,0,()=>{x(g,1)}),le()}c?(e=pe(c,r(a)),Z(e.$$.fragment),G(e.$$.fragment,1),Q(e,t,n)):e=null}else if(c){const g={};f&1&&(g.collection=a[0]),e.$set(g)}(!d||f&2)&&j(t,"active",a[1]==a[7])},i(a){d||(e&&G(e.$$.fragment,a),d=!0)},o(a){e&&J(e.$$.fragment,a),d=!1},d(a){a&&v(t),e&&x(e)}}}function Ie(o){var l,s,_,ie;let t,e,n=o[0].name+"",d,c,r,a,f,g,y,F=o[0].name+"",C,z,A,L,O,W,T,q,R,M,U,N,h,H;W=new qe({props:{js:`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${o[2]}');
+        const hb = new HanzoBase('${o[2]}');
 
         ...
 
@@ -42,7 +42,7 @@ import{S as se,i as ne,s as oe,X as K,h as p,j as S,z as D,k,n as b,o as u,H as 
     `,dart:`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${o[2]}');
+        final hb = HanzoBase('${o[2]}');
 
         ...
 
@@ -62,7 +62,7 @@ import{S as se,i as ne,s as oe,X as K,h as p,j as S,z as D,k,n as b,o as u,H as 
         automatically invalidated.`,O=S(),Z(W.$$.fragment),T=S(),q=p("h6"),q.textContent="API details",R=S(),M=p("div"),U=p("div");for(let i=0;i<P.length;i+=1)P[i].c();N=S(),h=p("div");for(let i=0;i<m.length;i+=1)m[i].c();k(t,"class","m-b-sm"),k(a,"class","content txt-lg m-b-sm"),k(q,"class","m-b-xs"),k(U,"class","tabs-header compact"),k(h,"class","tabs-content"),k(M,"class","tabs")},m(i,$){b(i,t,$),u(t,e),u(t,d),u(t,c),b(i,r,$),b(i,a,$),u(a,f),u(f,g),u(f,y),u(y,C),u(f,z),u(a,A),u(a,L),b(i,O,$),Q(W,i,$),b(i,T,$),b(i,q,$),b(i,R,$),b(i,M,$),u(M,U);for(let I=0;I<P.length;I+=1)P[I]&&P[I].m(U,null);u(M,N),u(M,h);for(let I=0;I<m.length;I+=1)m[I]&&m[I].m(h,null);H=!0},p(i,[$]){var ce,re,de,ue;(!H||$&1)&&n!==(n=i[0].name+"")&&X(d,n),(!H||$&1)&&F!==(F=i[0].name+"")&&X(C,F);const I={};if($&5&&(I.js=`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${i[2]}');
+        const hb = new HanzoBase('${i[2]}');
 
         ...
 
@@ -81,7 +81,7 @@ import{S as se,i as ne,s as oe,X as K,h as p,j as S,z as D,k,n as b,o as u,H as 
     `),$&5&&(I.dart=`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${i[2]}');
+        final hb = HanzoBase('${i[2]}');
 
         ...
 

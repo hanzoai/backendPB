@@ -88,7 +88,7 @@
 
                 const token = "...";
 
-                const pb = new HanzoBase('${backendAbsUrl}');
+                const hb = new HanzoBase('${backendAbsUrl}');
 
                 pb.authStore.save(token, null);
             `}
@@ -97,7 +97,7 @@
 
                 final token = "...";
 
-                final pb = HanzoBase('${backendAbsUrl}');
+                final hb = HanzoBase('${backendAbsUrl}');
 
                 pb.authStore.save(token, null);
             `}

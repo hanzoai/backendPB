@@ -1,7 +1,7 @@
 import{S as Ue,i as xe,s as Ke,V as Qe,W as Ne,X as K,h as s,z as k,j as p,c as Q,k as b,n as d,o,m as W,H as de,Y as Le,Z as We,E as Ge,_ as Ie,G as Xe,t as V,a as z,v as u,d as G,J as Oe,p as Ye,l as I,q as Ze}from"./index-SKn09NMF.js";import{F as et}from"./FieldsQueryParam-NXRpAlxi.js";function Ve(r,a,l){const n=r.slice();return n[5]=a[l],n}function ze(r,a,l){const n=r.slice();return n[5]=a[l],n}function je(r,a){let l,n=a[5].code+"",m,_,i,h;function g(){return a[4](a[5])}return{key:r,first:null,c(){l=s("button"),m=k(n),_=p(),b(l,"class","tab-item"),I(l,"active",a[1]===a[5].code),this.first=l},m(v,w){d(v,l,w),o(l,m),o(l,_),i||(h=Ze(l,"click",g),i=!0)},p(v,w){a=v,w&4&&n!==(n=a[5].code+"")&&de(m,n),w&6&&I(l,"active",a[1]===a[5].code)},d(v){v&&u(l),i=!1,h()}}}function Je(r,a){let l,n,m,_;return n=new Ne({props:{content:a[5].body}}),{key:r,first:null,c(){l=s("div"),Q(n.$$.fragment),m=p(),b(l,"class","tab-item"),I(l,"active",a[1]===a[5].code),this.first=l},m(i,h){d(i,l,h),W(n,l,null),o(l,m),_=!0},p(i,h){a=i;const g={};h&4&&(g.content=a[5].body),n.$set(g),(!_||h&6)&&I(l,"active",a[1]===a[5].code)},i(i){_||(V(n.$$.fragment,i),_=!0)},o(i){z(n.$$.fragment,i),_=!1},d(i){i&&u(l),G(n)}}}function tt(r){var De,Fe;let a,l,n=r[0].name+"",m,_,i,h,g,v,w,B,X,S,j,ue,J,M,pe,Y,N=r[0].name+"",Z,he,fe,U,ee,D,te,T,oe,be,F,C,ae,me,le,_e,f,ke,P,ge,ve,$e,se,ye,ne,Se,we,Te,re,Ce,Re,q,ie,H,ce,R,E,y=[],Pe=new Map,qe,L,$=[],Ae=new Map,A;v=new Qe({props:{js:`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${r[3]}');
+        const hb = new HanzoBase('${r[3]}');
 
         ...
 
@@ -14,7 +14,7 @@ import{S as Ue,i as xe,s as Ke,V as Qe,W as Ne,X as K,h as s,z as k,j as p,c as 
     `,dart:`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${r[3]}');
+        final hb = HanzoBase('${r[3]}');
 
         ...
 
@@ -35,7 +35,7 @@ import{S as Ue,i as xe,s as Ke,V as Qe,W as Ne,X as K,h as s,z as k,j as p,c as 
                 Only the relations to which the request user has permissions to `),re=s("strong"),re.textContent="view",Ce=k(" will be expanded."),Re=p(),Q(q.$$.fragment),ie=p(),H=s("div"),H.textContent="Responses",ce=p(),R=s("div"),E=s("div");for(let e=0;e<y.length;e+=1)y[e].c();qe=p(),L=s("div");for(let e=0;e<$.length;e+=1)$[e].c();b(a,"class","m-b-sm"),b(h,"class","content txt-lg m-b-sm"),b(B,"class","m-b-xs"),b(j,"class","label label-primary"),b(J,"class","content"),b(U,"class","txt-hint txt-sm txt-right"),b(S,"class","alert alert-success"),b(D,"class","section-title"),b(T,"class","table-compact table-border m-b-base"),b(H,"class","section-title"),b(E,"class","tabs-header compact combined left"),b(L,"class","tabs-content"),b(R,"class","tabs")},m(e,t){d(e,a,t),o(a,l),o(a,m),o(a,_),d(e,i,t),d(e,h,t),d(e,g,t),W(v,e,t),d(e,w,t),d(e,B,t),d(e,X,t),d(e,S,t),o(S,j),o(S,ue),o(S,J),o(J,M),o(M,pe),o(M,Y),o(Y,Z),o(M,he),o(S,fe),o(S,U),d(e,ee,t),d(e,D,t),d(e,te,t),d(e,T,t),o(T,oe),o(T,be),o(T,F),o(F,C),o(C,ae),o(C,me),o(C,le),o(C,_e),o(C,f),o(f,ke),W(P,f,null),o(f,ge),o(f,ve),o(f,$e),o(f,se),o(f,ye),o(f,ne),o(f,Se),o(f,we),o(f,Te),o(f,re),o(f,Ce),o(F,Re),W(q,F,null),d(e,ie,t),d(e,H,t),d(e,ce,t),d(e,R,t),o(R,E);for(let c=0;c<y.length;c+=1)y[c]&&y[c].m(E,null);o(R,qe),o(R,L);for(let c=0;c<$.length;c+=1)$[c]&&$[c].m(L,null);A=!0},p(e,[t]){var He,Ee;(!A||t&1)&&n!==(n=e[0].name+"")&&de(m,n);const c={};t&9&&(c.js=`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${e[3]}');
+        const hb = new HanzoBase('${e[3]}');
 
         ...
 
@@ -48,7 +48,7 @@ import{S as Ue,i as xe,s as Ke,V as Qe,W as Ne,X as K,h as s,z as k,j as p,c as 
     `),t&9&&(c.dart=`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${e[3]}');
+        final hb = HanzoBase('${e[3]}');
 
         ...
 

@@ -42,7 +42,7 @@
     js={`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${backendAbsUrl}');
+        const hb = new HanzoBase('${backendAbsUrl}');
 
         ...
 
@@ -69,7 +69,7 @@
     dart={`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${backendAbsUrl}');
+        final hb = HanzoBase('${backendAbsUrl}');
 
         ...
 

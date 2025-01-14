@@ -1,7 +1,7 @@
 import{S as lt,i as st,s as nt,V as ot,W as tt,X as K,h as o,z as _,j as b,c as W,k as m,n as r,o as l,m as X,H as ve,Y as Qe,Z as at,E as it,_ as rt,G as dt,t as U,a as V,v as d,d as Y,J as Ke,p as ct,l as Z,q as pt}from"./index-SKn09NMF.js";import{F as ut}from"./FieldsQueryParam-NXRpAlxi.js";function We(a,s,n){const i=a.slice();return i[6]=s[n],i}function Xe(a,s,n){const i=a.slice();return i[6]=s[n],i}function Ye(a){let s;return{c(){s=o("p"),s.innerHTML="Requires superuser <code>Authorization:TOKEN</code> header",m(s,"class","txt-hint txt-sm txt-right")},m(n,i){r(n,s,i)},d(n){n&&d(s)}}}function Ze(a,s){let n,i,v;function p(){return s[5](s[6])}return{key:a,first:null,c(){n=o("button"),n.textContent=`${s[6].code} `,m(n,"class","tab-item"),Z(n,"active",s[2]===s[6].code),this.first=n},m(c,f){r(c,n,f),i||(v=pt(n,"click",p),i=!0)},p(c,f){s=c,f&20&&Z(n,"active",s[2]===s[6].code)},d(c){c&&d(n),i=!1,v()}}}function et(a,s){let n,i,v,p;return i=new tt({props:{content:s[6].body}}),{key:a,first:null,c(){n=o("div"),W(i.$$.fragment),v=b(),m(n,"class","tab-item"),Z(n,"active",s[2]===s[6].code),this.first=n},m(c,f){r(c,n,f),X(i,n,null),l(n,v),p=!0},p(c,f){s=c,(!p||f&20)&&Z(n,"active",s[2]===s[6].code)},i(c){p||(U(i.$$.fragment,c),p=!0)},o(c){V(i.$$.fragment,c),p=!1},d(c){c&&d(n),Y(i)}}}function ft(a){var ze,Ge;let s,n,i=a[0].name+"",v,p,c,f,w,C,ee,z=a[0].name+"",te,$e,le,F,se,S,ne,$,G,ye,J,T,we,oe,N=a[0].name+"",ae,Ce,ie,Fe,re,q,de,x,ce,A,pe,R,ue,Re,H,O,fe,Oe,be,De,h,Pe,E,Te,Ee,Be,me,Se,_e,qe,xe,Ae,he,He,Ie,B,ke,I,ge,D,M,y=[],Me=new Map,Le,L,k=[],je=new Map,P;F=new ot({props:{js:`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${a[3]}');
+        const hb = new HanzoBase('${a[3]}');
 
         ...
 
@@ -11,7 +11,7 @@ import{S as lt,i as st,s as nt,V as ot,W as tt,X as K,h as o,z as _,j as b,c as 
     `,dart:`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${a[3]}');
+        final hb = HanzoBase('${a[3]}');
 
         ...
 
@@ -27,7 +27,7 @@ import{S as lt,i as st,s as nt,V as ot,W as tt,X as K,h as o,z as _,j as b,c as 
                 Only the relations to which the request user has permissions to `),he=o("strong"),he.textContent="view",He=_(" will be expanded."),Ie=b(),W(B.$$.fragment),ke=b(),I=o("div"),I.textContent="Responses",ge=b(),D=o("div"),M=o("div");for(let e=0;e<y.length;e+=1)y[e].c();Le=b(),L=o("div");for(let e=0;e<k.length;e+=1)k[e].c();m(s,"class","m-b-sm"),m(f,"class","content txt-lg m-b-sm"),m(S,"class","m-b-xs"),m(G,"class","label label-primary"),m(J,"class","content"),m($,"class","alert alert-info"),m(q,"class","section-title"),m(x,"class","table-compact table-border m-b-base"),m(A,"class","section-title"),m(R,"class","table-compact table-border m-b-base"),m(I,"class","section-title"),m(M,"class","tabs-header compact combined left"),m(L,"class","tabs-content"),m(D,"class","tabs")},m(e,t){r(e,s,t),l(s,n),l(s,v),l(s,p),r(e,c,t),r(e,f,t),l(f,w),l(w,C),l(w,ee),l(ee,te),l(w,$e),r(e,le,t),X(F,e,t),r(e,se,t),r(e,S,t),r(e,ne,t),r(e,$,t),l($,G),l($,ye),l($,J),l(J,T),l(T,we),l(T,oe),l(oe,ae),l(T,Ce),l(T,ie),l($,Fe),g&&g.m($,null),r(e,re,t),r(e,q,t),r(e,de,t),r(e,x,t),r(e,ce,t),r(e,A,t),r(e,pe,t),r(e,R,t),l(R,ue),l(R,Re),l(R,H),l(H,O),l(O,fe),l(O,Oe),l(O,be),l(O,De),l(O,h),l(h,Pe),X(E,h,null),l(h,Te),l(h,Ee),l(h,Be),l(h,me),l(h,Se),l(h,_e),l(h,qe),l(h,xe),l(h,Ae),l(h,he),l(h,He),l(H,Ie),X(B,H,null),r(e,ke,t),r(e,I,t),r(e,ge,t),r(e,D,t),l(D,M);for(let u=0;u<y.length;u+=1)y[u]&&y[u].m(M,null);l(D,Le),l(D,L);for(let u=0;u<k.length;u+=1)k[u]&&k[u].m(L,null);P=!0},p(e,[t]){var Je,Ne;(!P||t&1)&&i!==(i=e[0].name+"")&&ve(v,i),(!P||t&1)&&z!==(z=e[0].name+"")&&ve(te,z);const u={};t&9&&(u.js=`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${e[3]}');
+        const hb = new HanzoBase('${e[3]}');
 
         ...
 
@@ -37,7 +37,7 @@ import{S as lt,i as st,s as nt,V as ot,W as tt,X as K,h as o,z as _,j as b,c as 
     `),t&9&&(u.dart=`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${e[3]}');
+        final hb = HanzoBase('${e[3]}');
 
         ...
 

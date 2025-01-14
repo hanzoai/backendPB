@@ -13,7 +13,7 @@ import{S as Ot,i as St,s as Mt,V as $t,J as x,X as ie,W as Tt,h as i,z as h,j as
                         Set to `),m=i("code"),m.textContent="null",p=h(" to delete already uploaded file(s).")},m(c,u){o(c,e,u),o(c,t,u),o(c,a,u),o(c,m,u),o(c,p,u)},p:de,d(c){c&&(r(e),r(t),r(a),r(m),r(p))}}}function It(d){let e;return{c(){e=h("URL address.")},m(t,a){o(t,e,a)},p:de,d(t){t&&r(e)}}}function Jt(d){let e;return{c(){e=h("Email address.")},m(t,a){o(t,e,a)},p:de,d(t){t&&r(e)}}}function Ut(d){let e;return{c(){e=h("JSON array or object.")},m(t,a){o(t,e,a)},p:de,d(t){t&&r(e)}}}function Vt(d){let e;return{c(){e=h("Number value.")},m(t,a){o(t,e,a)},p:de,d(t){t&&r(e)}}}function xt(d){let e;return{c(){e=h("Plain text value.")},m(t,a){o(t,e,a)},p:de,d(t){t&&r(e)}}}function vt(d,e){let t,a,m,p,c,u=e[15].name+"",b,O,T,M,H=x.getFieldValueType(e[15])+"",S,E,q,D;function J(v,w){return v[15].required?Nt:Bt}let I=J(e),$=I(e);function R(v,w){if(v[15].type==="text")return xt;if(v[15].type==="number")return Vt;if(v[15].type==="json")return Ut;if(v[15].type==="email")return Jt;if(v[15].type==="url")return It;if(v[15].type==="file")return Et;if(v[15].type==="relation")return At}let L=R(e),g=L&&L(e);return{key:d,first:null,c(){t=i("tr"),a=i("td"),m=i("div"),$.c(),p=f(),c=i("span"),b=h(u),O=f(),T=i("td"),M=i("span"),S=h(H),E=f(),q=i("td"),g&&g.c(),D=f(),k(m,"class","inline-flex"),k(M,"class","label"),this.first=t},m(v,w){o(v,t,w),n(t,a),n(a,m),$.m(m,null),n(m,p),n(m,c),n(c,b),n(t,O),n(t,T),n(T,M),n(M,S),n(t,E),n(t,q),g&&g.m(q,null),n(t,D)},p(v,w){e=v,I!==(I=J(e))&&($.d(1),$=I(e),$&&($.c(),$.m(m,p))),w&64&&u!==(u=e[15].name+"")&&te(b,u),w&64&&H!==(H=x.getFieldValueType(e[15])+"")&&te(S,H),L===(L=R(e))&&g?g.p(e,w):(g&&g.d(1),g=L&&L(e),g&&(g.c(),g.m(q,null)))},d(v){v&&r(t),$.d(),g&&g.d()}}}function wt(d,e){let t,a=e[10].code+"",m,p,c,u;function b(){return e[9](e[10])}return{key:d,first:null,c(){t=i("button"),m=h(a),p=f(),k(t,"class","tab-item"),Te(t,"active",e[2]===e[10].code),this.first=t},m(O,T){o(O,t,T),n(t,m),n(t,p),c||(u=Lt(t,"click",b),c=!0)},p(O,T){e=O,T&8&&a!==(a=e[10].code+"")&&te(m,a),T&12&&Te(t,"active",e[2]===e[10].code)},d(O){O&&r(t),c=!1,u()}}}function Ct(d,e){let t,a,m,p;return a=new Tt({props:{content:e[10].body}}),{key:d,first:null,c(){t=i("div"),ve(a.$$.fragment),m=f(),k(t,"class","tab-item"),Te(t,"active",e[2]===e[10].code),this.first=t},m(c,u){o(c,t,u),we(a,t,null),n(t,m),p=!0},p(c,u){e=c;const b={};u&8&&(b.content=e[10].body),a.$set(b),(!p||u&12)&&Te(t,"active",e[2]===e[10].code)},i(c){p||(he(a.$$.fragment,c),p=!0)},o(c){ye(a.$$.fragment,c),p=!1},d(c){c&&r(t),Ce(a)}}}function zt(d){var ct,ut;let e,t,a=d[0].name+"",m,p,c,u,b,O,T,M=d[0].name+"",H,S,E,q,D,J,I,$,R,L,g,v,w,z,Q,F,_,C,le,W=d[0].name+"",ne,Ue,Oe,Ve,Se,oe,Me,re,$e,ce,qe,Y,Re,xe,G,He,U=[],ze=new Map,De,ue,Le,K,Pe,Qe,pe,X,Fe,We,je,Ye,j,Ge,ae,Ke,Xe,Ze,Be,et,Ne,tt,Ae,lt,nt,se,Ee,fe,Ie,Z,be,V=[],at=new Map,st,me,B=[],it=new Map,ee,N=d[1]&&yt();R=new $t({props:{js:`
 import HanzoBase from 'hanzobase';
 
-const pb = new HanzoBase('${d[5]}');
+const hb = new HanzoBase('${d[5]}');
 
 ...
 
@@ -24,7 +24,7 @@ const record = await pb.collection('${(ct=d[0])==null?void 0:ct.name}').update('
     `,dart:`
 import 'package:hanzoai/backendPB.dart';
 
-final pb = HanzoBase('${d[5]}');
+final hb = HanzoBase('${d[5]}');
 
 ...
 
@@ -45,7 +45,7 @@ final record = await pb.collection('${(ut=d[0])==null?void 0:ut.name}').update('
                 the relations that the user has permissions to `),Ae=i("strong"),Ae.textContent="view",lt=h(" will be expanded."),nt=f(),ve(se.$$.fragment),Ee=f(),fe=i("div"),fe.textContent="Responses",Ie=f(),Z=i("div"),be=i("div");for(let l=0;l<V.length;l+=1)V[l].c();st=f(),me=i("div");for(let l=0;l<B.length;l+=1)B[l].c();k(e,"class","m-b-sm"),k(u,"class","content txt-lg m-b-sm"),k(g,"class","m-b-xs"),k(z,"class","label label-primary"),k(F,"class","content"),k(w,"class","alert alert-warning"),k(oe,"class","section-title"),k(re,"class","table-compact table-border m-b-base"),k(ce,"class","section-title"),k(Y,"class","table-compact table-border m-b-base"),k(ue,"class","section-title"),k(K,"class","table-compact table-border m-b-lg"),k(fe,"class","section-title"),k(be,"class","tabs-header compact combined left"),k(me,"class","tabs-content"),k(Z,"class","tabs")},m(l,s){o(l,e,s),n(e,t),n(e,m),n(e,p),o(l,c,s),o(l,u,s),n(u,b),n(b,O),n(b,T),n(T,H),n(b,S),n(u,E),n(u,q),n(u,D),n(u,J),n(u,I),N&&N.m(u,null),o(l,$,s),we(R,l,s),o(l,L,s),o(l,g,s),o(l,v,s),o(l,w,s),n(w,z),n(w,Q),n(w,F),n(F,_),n(_,C),n(_,le),n(le,ne),n(_,Ue),n(_,Oe),n(w,Ve),A&&A.m(w,null),o(l,Se,s),o(l,oe,s),o(l,Me,s),o(l,re,s),o(l,$e,s),o(l,ce,s),o(l,qe,s),o(l,Y,s),n(Y,Re),n(Y,xe),n(Y,G),P&&P.m(G,null),n(G,He);for(let y=0;y<U.length;y+=1)U[y]&&U[y].m(G,null);o(l,De,s),o(l,ue,s),o(l,Le,s),o(l,K,s),n(K,Pe),n(K,Qe),n(K,pe),n(pe,X),n(X,Fe),n(X,We),n(X,je),n(X,Ye),n(X,j),n(j,Ge),we(ae,j,null),n(j,Ke),n(j,Xe),n(j,Ze),n(j,Be),n(j,et),n(j,Ne),n(j,tt),n(j,Ae),n(j,lt),n(pe,nt),we(se,pe,null),o(l,Ee,s),o(l,fe,s),o(l,Ie,s),o(l,Z,s),n(Z,be);for(let y=0;y<V.length;y+=1)V[y]&&V[y].m(be,null);n(Z,st),n(Z,me);for(let y=0;y<B.length;y+=1)B[y]&&B[y].m(me,null);ee=!0},p(l,[s]){var pt,ft;(!ee||s&1)&&a!==(a=l[0].name+"")&&te(m,a),(!ee||s&1)&&M!==(M=l[0].name+"")&&te(H,M),l[1]?N||(N=yt(),N.c(),N.m(u,null)):N&&(N.d(1),N=null);const y={};s&49&&(y.js=`
 import HanzoBase from 'hanzobase';
 
-const pb = new HanzoBase('${l[5]}');
+const hb = new HanzoBase('${l[5]}');
 
 ...
 
@@ -56,7 +56,7 @@ const record = await pb.collection('${(pt=l[0])==null?void 0:pt.name}').update('
     `),s&49&&(y.dart=`
 import 'package:hanzoai/backendPB.dart';
 
-final pb = HanzoBase('${l[5]}');
+final hb = HanzoBase('${l[5]}');
 
 ...
 

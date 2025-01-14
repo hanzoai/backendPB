@@ -23,7 +23,7 @@ import{S as le,i as ne,s as ie,X as F,h as m,j as y,z as M,k as v,n as b,o as d,
             `}]),[o,f,c,r]}class Me extends le{constructor(t){super(),ne(this,t,Oe,Ee,ie,{collection:0})}}function ke(s,t,e){const o=s.slice();return o[5]=t[e],o[7]=e,o}function $e(s,t,e){const o=s.slice();return o[5]=t[e],o[7]=e,o}function we(s){let t,e,o,f,c;function r(){return s[4](s[7])}return{c(){t=m("button"),e=m("div"),e.textContent=`${s[5].title}`,o=y(),v(e,"class","txt"),v(t,"class","tab-item"),H(t,"active",s[1]==s[7])},m(a,u){b(a,t,u),d(t,e),d(t,o),f||(c=oe(t,"click",r),f=!0)},p(a,u){s=a,u&2&&H(t,"active",s[1]==s[7])},d(a){a&&h(t),f=!1,c()}}}function ye(s){let t,e,o,f;var c=s[5].component;function r(a,u){return{props:{collection:a[0]}}}return c&&(e=de(c,r(s))),{c(){t=m("div"),e&&Y(e.$$.fragment),o=y(),v(t,"class","tab-item"),H(t,"active",s[1]==s[7])},m(a,u){b(a,t,u),e&&Z(e,t,null),d(t,o),f=!0},p(a,u){if(c!==(c=a[5].component)){if(e){ee();const g=e;U(g.$$.fragment,1,0,()=>{Q(g,1)}),te()}c?(e=de(c,r(a)),Y(e.$$.fragment),L(e.$$.fragment,1),Z(e,t,o)):e=null}else if(c){const g={};u&1&&(g.collection=a[0]),e.$set(g)}(!f||u&2)&&H(t,"active",a[1]==a[7])},i(a){f||(e&&L(e.$$.fragment,a),f=!0)},o(a){e&&U(e.$$.fragment,a),f=!1},d(a){a&&h(t),e&&Q(e)}}}function Ne(s){var O,G,l,i;let t,e,o=s[0].name+"",f,c,r,a,u,g,q,D=s[0].name+"",P,j,R,B,E,N,C,V,$,z,K,I;B=new Ve({props:{js:`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${s[2]}');
+        const hb = new HanzoBase('${s[2]}');
 
         ...
 
@@ -37,7 +37,7 @@ import{S as le,i as ne,s as ie,X as F,h as m,j as y,z as M,k as v,n as b,o as d,
     `,dart:`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${s[2]}');
+        final hb = HanzoBase('${s[2]}');
 
         ...
 
@@ -51,7 +51,7 @@ import{S as le,i as ne,s as ie,X as F,h as m,j as y,z as M,k as v,n as b,o as d,
     `}});let p=F(s[3]),T=[];for(let n=0;n<p.length;n+=1)T[n]=we($e(s,p,n));let A=F(s[3]),_=[];for(let n=0;n<A.length;n+=1)_[n]=ye(ke(s,A,n));const J=n=>U(_[n],1,1,()=>{_[n]=null});return{c(){t=m("h3"),e=M("Account verification ("),f=M(o),c=M(")"),r=y(),a=m("div"),u=m("p"),g=M("Sends "),q=m("strong"),P=M(D),j=M(" account verification request."),R=y(),Y(B.$$.fragment),E=y(),N=m("h6"),N.textContent="API details",C=y(),V=m("div"),$=m("div");for(let n=0;n<T.length;n+=1)T[n].c();z=y(),K=m("div");for(let n=0;n<_.length;n+=1)_[n].c();v(t,"class","m-b-sm"),v(a,"class","content txt-lg m-b-sm"),v(N,"class","m-b-xs"),v($,"class","tabs-header compact"),v(K,"class","tabs-content"),v(V,"class","tabs")},m(n,w){b(n,t,w),d(t,e),d(t,f),d(t,c),b(n,r,w),b(n,a,w),d(a,u),d(u,g),d(u,q),d(q,P),d(u,j),b(n,R,w),Z(B,n,w),b(n,E,w),b(n,N,w),b(n,C,w),b(n,V,w),d(V,$);for(let S=0;S<T.length;S+=1)T[S]&&T[S].m($,null);d(V,z),d(V,K);for(let S=0;S<_.length;S+=1)_[S]&&_[S].m(K,null);I=!0},p(n,[w]){var se,ae,ce,re;(!I||w&1)&&o!==(o=n[0].name+"")&&W(f,o),(!I||w&1)&&D!==(D=n[0].name+"")&&W(P,D);const S={};if(w&5&&(S.js=`
         import HanzoBase from 'hanzobase';
 
-        const pb = new HanzoBase('${n[2]}');
+        const hb = new HanzoBase('${n[2]}');
 
         ...
 
@@ -65,7 +65,7 @@ import{S as le,i as ne,s as ie,X as F,h as m,j as y,z as M,k as v,n as b,o as d,
     `),w&5&&(S.dart=`
         import 'package:hanzoai/backendPB.dart';
 
-        final pb = HanzoBase('${n[2]}');
+        final hb = HanzoBase('${n[2]}');
 
         ...
 
