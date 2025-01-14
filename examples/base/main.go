@@ -36,7 +36,7 @@ func main() {
 		&hooksWatch,
 		"hooksWatch",
 		true,
-		"auto restart the app on pb_hooks file change",
+		"auto restart the app on hb_hooks file change",
 	)
 
 	var hooksPool int
@@ -85,7 +85,7 @@ func main() {
 	// Plugins and hooks:
 	// ---------------------------------------------------------------
 
-	// load jsvm (pb_hooks and pb_migrations)
+	// load jsvm (hb_hooks and hb_migrations)
 	jsvm.MustRegister(app, jsvm.Config{
 		MigrationsDir: migrationsDir,
 		HooksDir:      hooksDir,
@@ -121,12 +121,12 @@ func main() {
 	}
 }
 
-// the default pb_public dir location is relative to the executable
+// the default hb_public dir location is relative to the executable
 func defaultPublicDir() string {
 	if strings.HasPrefix(os.Args[0], os.TempDir()) {
 		// most likely ran with go run
-		return "./pb_public"
+		return "./hb_public"
 	}
 
-	return filepath.Join(os.Args[0], "../pb_public")
+	return filepath.Join(os.Args[0], "../hb_public")
 }
