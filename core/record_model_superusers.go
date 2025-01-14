@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/hanzoai/backendPB/tools/hook"
-	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPB/tools/router"
 )
 
 const CollectionNameSuperusers = "_superusers"

@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	"github.com/hanzoai/backendPB/tools/dbutils"
-	"github.com/hanzoai/backendPBls/hook"
-	"github.com/hanzoai/backendPBls/security"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/security"
+	"github.com/hanzoai/backendPB/tools/types"
 	"github.com/hanzoai/dbx"
 	"github.com/spf13/cast"
 )

@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"github.com/hanzoai/backendPB/tools/inflector"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/security"
 	"github.com/spf13/cast"
 )
 

@@ -8,9 +8,9 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 	"github.com/hanzoai/backendPB/tools/auth"
-	"github.com/hanzoai/backendPBls/list"
-	"github.com/hanzoai/backendPBls/security"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/list"
+	"github.com/hanzoai/backendPB/tools/security"
+	"github.com/hanzoai/backendPB/tools/types"
 	"github.com/spf13/cast"
 )
 

@@ -6,8 +6,8 @@ import (
 	"slices"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/auth"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/auth"
+	"github.com/hanzoai/backendPB/tools/security"
 	"golang.org/x/oauth2"
 )
 

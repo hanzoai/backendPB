@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBts"
-	"github.com/hanzoai/backendPBls/subscriptions"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/backendPB/tools/subscriptions"
 )
 
 func TestRecordAuthWithOAuth2Redirect(t *testing.T) {

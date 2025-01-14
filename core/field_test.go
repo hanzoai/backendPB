@@ -7,7 +7,7 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPB/tests"
 )
 
 func testFieldBaseMethods(t *testing.T, fieldType string) {

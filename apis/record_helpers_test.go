@@ -10,10 +10,10 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/apis"
-	"github.com/hanzoai/backendPBe"
-	"github.com/hanzoai/backendPBts"
-	"github.com/hanzoai/backendPBls/router"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/backendPB/tools/router"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 func TestEnrichRecords(t *testing.T) {

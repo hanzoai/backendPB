@@ -11,7 +11,7 @@ import (
 
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/hanzoai/backendPB/forms"
-	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPB/tests"
 )
 
 func TestAppleClientSecretCreateValidateAndSubmit(t *testing.T) {

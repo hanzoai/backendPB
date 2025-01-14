@@ -5,7 +5,7 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/security"
 )
 
 func recordConfirmEmailChange(e *core.RequestEvent) error {

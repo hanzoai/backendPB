@@ -11,9 +11,9 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBgins/jsvm"
-	"github.com/hanzoai/backendPBls/list"
-	"github.com/pocketbase/tygoja"
+	"github.com/hanzoai/backendPB/plugins/jsvm"
+	"github.com/hanzoai/backendPB/tools/list"
+	"github.com/hanzoai/tygojaPB"
 )
 
 const heading = `
@@ -38,7 +38,7 @@ const heading = `
  *
  * _Note that this method is available only in pb_hooks context._
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare function cronAdd(
   jobId:    string,
@@ -57,7 +57,7 @@ declare function cronAdd(
  *
  * _Note that this method is available only in pb_hooks context._
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare function cronRemove(jobId: string): void;
 
@@ -78,7 +78,7 @@ declare function cronRemove(jobId: string): void;
  *
  * _Note that this method is available only in pb_hooks context._
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare function routerAdd(
   method: string,
@@ -102,7 +102,7 @@ declare function routerAdd(
  *
  * _Note that this method is available only in pb_hooks context._
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare function routerUse(...middlewares: Array<string|((e: core.RequestEvent) => void)|Middleware>): void;
 
@@ -113,7 +113,7 @@ declare function routerUse(...middlewares: Array<string|((e: core.RequestEvent) 
 /**
  * Global helper variable that contains the absolute path to the app pb_hooks directory.
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare var __hooks: string
 
@@ -128,8 +128,8 @@ type excludeHooks<Type> = {
 // core.App without the on* hook methods
 type CoreApp = excludeHooks<ORIGINAL_CORE_APP>
 
-// pocketbase.PocketBase without the on* hook methods
-type PocketBase = excludeHooks<ORIGINAL_POCKETBASE>
+// hanzobase.HanzoBase without the on* hook methods
+type HanzoBase = excludeHooks<ORIGINAL_HANZOBASE>
 
 /**
  * ` + "`$app`" + ` is the current running PocketBase instance that is globally
@@ -138,7 +138,7 @@ type PocketBase = excludeHooks<ORIGINAL_POCKETBASE>
  * _Note that this variable is available only in pb_hooks context._
  *
  * @namespace
- * @group PocketBase
+ * @group HanzoBase
  */
 declare var $app: PocketBase
 
@@ -160,7 +160,7 @@ declare var $app: PocketBase
  * _Note that this method is available only in pb_hooks context._
  *
  * @namespace
- * @group PocketBase
+ * @group HanzoBase
  */
 declare var $template: template.Registry
 
@@ -168,7 +168,7 @@ declare var $template: template.Registry
  * This method is superseded by toString.
  *
  * @deprecated
- * @group PocketBase
+ * @group HanzoBase
  */
 declare function readerToString(reader: any, maxBytes?: number): string;
 
@@ -190,7 +190,7 @@ declare function readerToString(reader: any, maxBytes?: number): string;
  * const ex2 = toString([104 101 108 108 111])
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare function toString(val: any, maxBytes?: number): string;
 
@@ -204,7 +204,7 @@ declare function toString(val: any, maxBytes?: number): string;
  * sleep(250) // sleeps for 250ms
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare function sleep(milliseconds: number): void;
 
@@ -220,7 +220,7 @@ declare function sleep(milliseconds: number): void;
  * $app.recordQuery("articles").limit(10).all(records)
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare function arrayOf<T>(model: T): Array<T>;
 
@@ -242,7 +242,7 @@ declare function arrayOf<T>(model: T): Array<T>;
  * })
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class DynamicModel {
   constructor(shape?: { [key:string]: any })
@@ -269,7 +269,7 @@ interface Context extends context.Context{} // merge
  * console.log(sub.value("b")) // 456
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare class Context implements context.Context {
   constructor(parentCtx?: Context, key?: any, value?: any)
@@ -289,7 +289,7 @@ declare class Context implements context.Context {
  * record.set("description", "...")
  * ` + "```" + `
  *
- * @group PocketBase
+ * @group HanzoBase
  */
 declare const Record: {
   new(collection?: core.Collection, data?: { [key:string]: any }): core.Record
@@ -1094,7 +1094,7 @@ var mapper = &jsvm.FieldMapper{}
 func main() {
 	declarations := heading + hooksDeclarations()
 
-	gen := tygoja.New(tygoja.Config{
+	gen := tygojaPB.New(tygojaPB.Config{
 		Packages: map[string][]string{
 			"github.com/go-ozzo/ozzo-validation/v4":         {"Error"},
 			"github.com/hanzoai/dbx":                        {"*"},

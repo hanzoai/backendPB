@@ -5,8 +5,8 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBms"
-	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPB/forms"
+	"github.com/hanzoai/backendPB/tools/router"
 )
 
 // bindSettingsApi registers the settings api endpoints.

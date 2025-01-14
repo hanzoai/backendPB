@@ -6,9 +6,9 @@ import (
 	"strings"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/cron"
-	"github.com/hanzoai/backendPBls/router"
-	"github.com/hanzoai/backendPBls/routine"
+	"github.com/hanzoai/backendPB/tools/cron"
+	"github.com/hanzoai/backendPB/tools/router"
+	"github.com/hanzoai/backendPB/tools/routine"
 )
 
 // bindCronApi registers the crons api endpoint.

@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/cmd"
-	"github.com/hanzoai/backendPBe"
-	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tests"
 )
 
 func TestSuperuserUpsertCommand(t *testing.T) {

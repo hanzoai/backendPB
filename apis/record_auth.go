@@ -2,7 +2,7 @@ package apis
 
 import (
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPB/tools/router"
 )
 
 // bindRecordAuthApi registers the auth record api endpoints and

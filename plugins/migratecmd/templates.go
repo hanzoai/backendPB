@@ -20,7 +20,7 @@ const (
 	// note: this usually should be configurable similar to the jsvm plugin,
 	// but for simplicity is static as users can easily change the
 	// reference path if they use custom dirs structure
-	jsTypesDirective = `/// <reference path="../pb_data/types.d.ts" />` + "\n"
+	jsTypesDirective = `/// <reference path="../hb_data/types.d.ts" />` + "\n"
 )
 
 var ErrEmptyTemplate = errors.New("empty template")
@@ -302,7 +302,7 @@ func (p *plugin) goBlankTemplate() (string, error) {
 	const template = `package %s
 
 import (
-	"github.com/hanzoai/backendPBe"
+	"github.com/hanzoai/backendPB/core"
 	m "github.com/hanzoai/backendPBrations"
 )
 
@@ -344,7 +344,7 @@ func (p *plugin) goSnapshotTemplate(collections []*core.Collection) (string, err
 	const template = `package %s
 
 import (
-	"github.com/hanzoai/backendPBe"
+	"github.com/hanzoai/backendPB/core"
 	m "github.com/hanzoai/backendPBrations"
 )
 
@@ -385,7 +385,7 @@ func (p *plugin) goCreateTemplate(collection *core.Collection) (string, error) {
 import (
 	"encoding/json"
 
-	"github.com/hanzoai/backendPBe"
+	"github.com/hanzoai/backendPB/core"
 	m "github.com/hanzoai/backendPBrations"
 )
 
@@ -438,7 +438,7 @@ func (p *plugin) goDeleteTemplate(collection *core.Collection) (string, error) {
 import (
 	"encoding/json"
 
-	"github.com/hanzoai/backendPBe"
+	"github.com/hanzoai/backendPB/core"
 	m "github.com/hanzoai/backendPBrations"
 )
 
@@ -624,7 +624,7 @@ func (p *plugin) goDiffTemplate(new *core.Collection, old *core.Collection) (str
 		imports += "\n\t\"encoding/json\"\n"
 	}
 
-	imports += "\n\t\"github.com/hanzoai/backendPBe\""
+	imports += "\n\t\"github.com/hanzoai/backendPB/core\""
 	imports += "\n\tm \"github.com/hanzoai/backendPBrations\""
 	// ---
 

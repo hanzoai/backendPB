@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/tools/list"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 func TestSubtractSliceString(t *testing.T) {

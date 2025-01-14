@@ -8,7 +8,7 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/hanzoai/backendPB/core/validators"
-	"github.com/hanzoai/backendPBls/list"
+	"github.com/hanzoai/backendPB/tools/list"
 )
 
 var fieldNameRegex = regexp.MustCompile(`^\w+$`)

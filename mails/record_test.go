@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/mails"
-	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPB/tests"
 )
 
 func TestSendRecordAuthAlert(t *testing.T) {

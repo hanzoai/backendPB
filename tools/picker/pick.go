@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/hanzoai/backendPB/tools/search"
-	"github.com/hanzoai/backendPBls/tokenizer"
+	"github.com/hanzoai/backendPB/tools/tokenizer"
 )
 
 // Pick converts data into a []any, map[string]any, etc. (using json marshal->unmarshal)

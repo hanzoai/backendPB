@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBts"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 func TestReloadSettings(t *testing.T) {

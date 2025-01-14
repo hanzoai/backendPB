@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPB/tests"
 )
 
 func TestRecordRequestVerification(t *testing.T) {

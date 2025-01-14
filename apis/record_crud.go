@@ -11,12 +11,12 @@ import (
 
 	"github.com/hanzoai/backendPB/core"
 	"github.com/hanzoai/backendPB/forms"
-	"github.com/hanzoai/backendPBls/filesystem"
-	"github.com/hanzoai/backendPBls/inflector"
-	"github.com/hanzoai/backendPBls/list"
-	"github.com/hanzoai/backendPBls/router"
-	"github.com/hanzoai/backendPBls/search"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/filesystem"
+	"github.com/hanzoai/backendPB/tools/inflector"
+	"github.com/hanzoai/backendPB/tools/list"
+	"github.com/hanzoai/backendPB/tools/router"
+	"github.com/hanzoai/backendPB/tools/search"
+	"github.com/hanzoai/backendPB/tools/security"
 	"github.com/hanzoai/dbx"
 )
 

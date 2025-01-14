@@ -139,7 +139,7 @@ func TestSkipBootstrap(t *testing.T) {
 		os.Args = originalArgs
 	}()
 
-	tempDir := filepath.Join(os.TempDir(), "temp_pb_data")
+	tempDir := filepath.Join(os.TempDir(), "temp_hb_data")
 	defer os.RemoveAll(tempDir)
 
 	// already bootstrapped

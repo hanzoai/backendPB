@@ -6,7 +6,7 @@ import (
 	"runtime"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 // Register is a short alias for `AppMigrations.Register()`

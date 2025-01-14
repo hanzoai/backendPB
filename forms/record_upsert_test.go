@@ -11,9 +11,9 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBms"
-	"github.com/hanzoai/backendPBts"
-	"github.com/hanzoai/backendPBls/filesystem"
+	"github.com/hanzoai/backendPB/forms"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/backendPB/tools/filesystem"
 )
 
 func TestRecordUpsertLoad(t *testing.T) {

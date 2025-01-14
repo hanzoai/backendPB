@@ -17,11 +17,11 @@ import (
 	"github.com/dop251/goja"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/hanzoai/backendPB/apis"
-	"github.com/hanzoai/backendPBe"
-	"github.com/hanzoai/backendPBts"
-	"github.com/hanzoai/backendPBls/filesystem"
-	"github.com/hanzoai/backendPBls/mailer"
-	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/backendPB/tools/filesystem"
+	"github.com/hanzoai/backendPB/tools/mailer"
+	"github.com/hanzoai/backendPB/tools/router"
 	"github.com/spf13/cast"
 )
 

@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"github.com/hanzoai/backendPB/tools/inflector"
-	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPB/tools/router"
 )
 
 // Common request store keys used by the middlewares and api handlers.

@@ -8,9 +8,9 @@ import (
 	"strings"
 
 	"github.com/hanzoai/backendPB/tools/dbutils"
-	"github.com/hanzoai/backendPBls/inflector"
-	"github.com/hanzoai/backendPBls/security"
-	"github.com/hanzoai/backendPBls/tokenizer"
+	"github.com/hanzoai/backendPB/tools/inflector"
+	"github.com/hanzoai/backendPB/tools/security"
+	"github.com/hanzoai/backendPB/tools/tokenizer"
 	"github.com/hanzoai/dbx"
 )
 

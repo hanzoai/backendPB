@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/hanzoai/backendPB/tools/dbutils"
-	"github.com/hanzoai/backendPBls/list"
+	"github.com/hanzoai/backendPB/tools/list"
 	"github.com/hanzoai/dbx"
 )
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hanzoai/backendPB/apis"
 	"github.com/hanzoai/backendPB/core"
 	"github.com/hanzoai/backendPB/tests"
-	"github.com/hanzoai/backendPBls/subscriptions"
+	"github.com/hanzoai/backendPB/tools/subscriptions"
 	"github.com/hanzoai/dbx"
 )
 

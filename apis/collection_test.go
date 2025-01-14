@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hanzoai/backendPB
+	"github.com/hanzoai/backendPB/core"
 	"github.com/hanzoai/backendPB/tests"
-	"github.com/hanzoai/backendPB
+	"github.com/hanzoai/backendPB/tools/list"
 )
 
 func TestCollectionsList(t *testing.T) {

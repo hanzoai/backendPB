@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/hanzoai/backendPB/apis"
-	"github.com/hanzoai/backendPBe"
+	"github.com/hanzoai/backendPB/core"
 	"github.com/spf13/cobra"
 )
 

@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/subscriptions"
+	"github.com/hanzoai/backendPB/tools/subscriptions"
 )
 
 const (

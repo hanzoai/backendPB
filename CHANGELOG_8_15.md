@@ -770,8 +770,8 @@ The merge of users and profiles comes with several required db changes.
 The easiest way to apply them is to use the new temporary `upgrade` command:
 
 ```sh
-# make sure to have a copy of your pb_data in case something fails
-cp -r ./pb_data ./pb_data_backup
+# make sure to have a copy of your hb_data in case something fails
+cp -r ./hb_data ./hb_data_backup
 
 # run the upgrade command
 ./pocketbase08 upgrade

@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/router"
-	"github.com/hanzoai/backendPBls/search"
+	"github.com/hanzoai/backendPB/tools/router"
+	"github.com/hanzoai/backendPB/tools/search"
 	"github.com/hanzoai/dbx"
 )
 

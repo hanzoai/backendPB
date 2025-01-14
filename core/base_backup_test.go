@@ -10,9 +10,9 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBts"
-	"github.com/hanzoai/backendPBls/archive"
-	"github.com/hanzoai/backendPBls/list"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/backendPB/tools/archive"
+	"github.com/hanzoai/backendPB/tools/list"
 )
 
 func TestCreateBackup(t *testing.T) {

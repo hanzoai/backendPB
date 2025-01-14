@@ -13,12 +13,12 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/hanzoai/backendPB/core/validators"
-	"github.com/hanzoai/backendPBls/filesystem"
-	"github.com/hanzoai/backendPBls/hook"
-	"github.com/hanzoai/backendPBls/inflector"
-	"github.com/hanzoai/backendPBls/list"
-	"github.com/hanzoai/backendPBls/store"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/filesystem"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/inflector"
+	"github.com/hanzoai/backendPB/tools/list"
+	"github.com/hanzoai/backendPB/tools/store"
+	"github.com/hanzoai/backendPB/tools/types"
 	"github.com/hanzoai/dbx"
 	"github.com/spf13/cast"
 )

@@ -23,7 +23,7 @@ import (
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/fatih/color"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/archive"
+	"github.com/hanzoai/backendPB/tools/archive"
 	"github.com/spf13/cobra"
 )
 
@@ -140,7 +140,7 @@ func (p *plugin) updateCmd() *cobra.Command {
 		&withBackup,
 		"backup",
 		true,
-		"Creates a pb_data backup at the end of the update process",
+		"Creates a hb_data backup at the end of the update process",
 	)
 
 	return command
@@ -235,7 +235,7 @@ func (p *plugin) update(withBackup bool) error {
 	}
 
 	if withBackup {
-		color.Yellow("Creating pb_data backup...")
+		color.Yellow("Creating hb_data backup...")
 
 		backupName := fmt.Sprintf("@update_%s.zip", latest.Tag)
 		if err := p.app.CreateBackup(p.config.Context, backupName); err != nil {

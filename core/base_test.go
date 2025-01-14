@@ -12,8 +12,8 @@ import (
 
 	"github.com/hanzoai/backendPB/core"
 	"github.com/hanzoai/backendPB/tests"
-	"github.com/hanzoai/backendPBls/logger"
-	"github.com/hanzoai/backendPBls/mailer"
+	"github.com/hanzoai/backendPB/tools/logger"
+	"github.com/hanzoai/backendPB/tools/mailer"
 	"github.com/hanzoai/dbx"
 )
 

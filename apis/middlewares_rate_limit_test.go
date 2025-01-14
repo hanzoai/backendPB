@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/apis"
-	"github.com/hanzoai/backendPBe"
-	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tests"
 )
 
 func TestDefaultRateLimitMiddleware(t *testing.T) {

@@ -10,10 +10,10 @@ import (
 
 	"github.com/hanzoai/backendPB/core"
 	"github.com/hanzoai/backendPB/mails"
-	"github.com/hanzoai/backendPBls/router"
-	"github.com/hanzoai/backendPBls/routine"
-	"github.com/hanzoai/backendPBls/search"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/router"
+	"github.com/hanzoai/backendPB/tools/routine"
+	"github.com/hanzoai/backendPB/tools/search"
+	"github.com/hanzoai/backendPB/tools/security"
 	"github.com/hanzoai/dbx"
 )
 

@@ -18,8 +18,8 @@ import (
 	"sync"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/hook"
-	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/router"
 )
 
 const (

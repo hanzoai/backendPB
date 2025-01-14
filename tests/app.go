@@ -10,9 +10,9 @@ import (
 	"sync"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/hook"
+	"github.com/hanzoai/backendPB/tools/hook"
 
-	_ "github.com/hanzoai/backendPBrations"
+	_ "github.com/hanzoai/backendPB/migrations"
 )
 
 // TestApp is a wrapper app instance used for testing.

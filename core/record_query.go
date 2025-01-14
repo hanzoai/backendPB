@@ -9,9 +9,9 @@ import (
 	"strings"
 
 	"github.com/hanzoai/backendPB/tools/inflector"
-	"github.com/hanzoai/backendPBls/list"
-	"github.com/hanzoai/backendPBls/search"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/list"
+	"github.com/hanzoai/backendPB/tools/search"
+	"github.com/hanzoai/backendPB/tools/security"
 	"github.com/hanzoai/dbx"
 )
 

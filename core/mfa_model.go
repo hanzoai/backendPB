@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/tools/hook"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 const (

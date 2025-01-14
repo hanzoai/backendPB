@@ -7,7 +7,7 @@ import (
 	"github.com/fatih/color"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/security"
 	"github.com/spf13/cobra"
 )
 

@@ -12,9 +12,9 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/auth"
-	"github.com/hanzoai/backendPBls/dbutils"
-	"github.com/hanzoai/backendPBls/filesystem"
+	"github.com/hanzoai/backendPB/tools/auth"
+	"github.com/hanzoai/backendPB/tools/dbutils"
+	"github.com/hanzoai/backendPB/tools/filesystem"
 	"github.com/hanzoai/dbx"
 	"golang.org/x/oauth2"
 )

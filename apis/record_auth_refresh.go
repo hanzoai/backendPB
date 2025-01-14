@@ -2,7 +2,7 @@ package apis
 
 import (
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/security"
 	"github.com/spf13/cast"
 )
 

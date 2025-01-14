@@ -17,14 +17,14 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/hanzoai/backendPB/tools/cron"
-	"github.com/hanzoai/backendPBls/filesystem"
-	"github.com/hanzoai/backendPBls/hook"
-	"github.com/hanzoai/backendPBls/logger"
-	"github.com/hanzoai/backendPBls/mailer"
-	"github.com/hanzoai/backendPBls/routine"
-	"github.com/hanzoai/backendPBls/store"
-	"github.com/hanzoai/backendPBls/subscriptions"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/filesystem"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/logger"
+	"github.com/hanzoai/backendPB/tools/mailer"
+	"github.com/hanzoai/backendPB/tools/routine"
+	"github.com/hanzoai/backendPB/tools/store"
+	"github.com/hanzoai/backendPB/tools/subscriptions"
+	"github.com/hanzoai/backendPB/tools/types"
 	"github.com/hanzoai/dbx"
 )
 
@@ -37,7 +37,7 @@ const (
 
 	LocalStorageDirName       string = "storage"
 	LocalBackupsDirName       string = "backups"
-	LocalTempDirName          string = ".pb_temp_to_delete" // temp pb_data sub directory that will be deleted on each app.Bootstrap()
+	LocalTempDirName          string = ".pb_temp_to_delete" // temp hb_data sub directory that will be deleted on each app.Bootstrap()
 	LocalAutocertCacheDirName string = ".autocert_cache"
 )
 
@@ -414,7 +414,7 @@ func (app *BaseApp) Bootstrap() error {
 			return err
 		}
 
-		// try to cleanup the pb_data temp directory (if any)
+		// try to cleanup the hb_data temp directory (if any)
 		_ = os.RemoveAll(filepath.Join(app.DataDir(), LocalTempDirName))
 
 		return nil
@@ -466,12 +466,12 @@ func (app *BaseApp) ResetBootstrapState() error {
 	return nil
 }
 
-// DB returns the default app data db instance (pb_data/data.db).
+// DB returns the default app data db instance (hb_data/data.db).
 func (app *BaseApp) DB() dbx.Builder {
 	return app.concurrentDB
 }
 
-// NonconcurrentDB returns the nonconcurrent app data db instance (pb_data/data.db).
+// NonconcurrentDB returns the nonconcurrent app data db instance (hb_data/data.db).
 //
 // The returned db instance is limited only to a single open connection,
 // meaning that it can process only 1 db operation at a time (other operations will be queued up).
@@ -487,12 +487,12 @@ func (app *BaseApp) NonconcurrentDB() dbx.Builder {
 	return app.nonconcurrentDB
 }
 
-// AuxDB returns the default app auxiliary db instance (pb_data/auxiliary.db).
+// AuxDB returns the default app auxiliary db instance (hb_data/auxiliary.db).
 func (app *BaseApp) AuxDB() dbx.Builder {
 	return app.auxConcurrentDB
 }
 
-// AuxNonconcurrentDB returns the nonconcurrent app auxiliary db instance (pb_data/auxiliary.db).
+// AuxNonconcurrentDB returns the nonconcurrent app auxiliary db instance (hb_data/auxiliary.db).
 //
 // The returned db instance is limited only to a single open connection,
 // meaning that it can process only 1 db operation at a time (other operations will be queued up).

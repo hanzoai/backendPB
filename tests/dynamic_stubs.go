@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 func StubOTPRecords(app core.App) error {

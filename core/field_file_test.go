@@ -11,10 +11,10 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBts"
-	"github.com/hanzoai/backendPBls/filesystem"
-	"github.com/hanzoai/backendPBls/list"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/backendPB/tools/filesystem"
+	"github.com/hanzoai/backendPB/tools/list"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 func TestFileFieldBaseMethods(t *testing.T) {

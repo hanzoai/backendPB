@@ -25,7 +25,7 @@ import (
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/inflector"
+	"github.com/hanzoai/backendPB/tools/inflector"
 	"github.com/spf13/cobra"
 )
 
@@ -33,8 +33,8 @@ import (
 type Config struct {
 	// Dir specifies the directory with the user defined migrations.
 	//
-	// If not set it fallbacks to a relative "pb_data/../pb_migrations" (for js)
-	// or "pb_data/../migrations" (for go) directory.
+	// If not set it fallbacks to a relative "hb_data/../pb_migrations" (for js)
+	// or "hb_data/../migrations" (for go) directory.
 	Dir string
 
 	// Automigrate specifies whether to enable automigrations.

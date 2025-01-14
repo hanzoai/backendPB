@@ -21,7 +21,7 @@ import (
 	"github.com/disintegration/imaging"
 	"github.com/gabriel-vasile/mimetype"
 	"github.com/hanzoai/backendPB/tools/filesystem/internal/s3lite"
-	"github.com/hanzoai/backendPBls/list"
+	"github.com/hanzoai/backendPB/tools/list"
 	"gocloud.dev/blob"
 	"gocloud.dev/blob/fileblob"
 	"gocloud.dev/gcerrors"

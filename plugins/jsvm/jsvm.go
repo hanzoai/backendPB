@@ -29,8 +29,8 @@ import (
 	"github.com/fatih/color"
 	"github.com/fsnotify/fsnotify"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBgins/jsvm/internal/types/generated"
-	"github.com/hanzoai/backendPBls/template"
+	"github.com/hanzoai/backendPB/plugins/jsvm/internal/types/generated"
+	"github.com/hanzoai/backendPB/tools/template"
 )
 
 const typesFileName = "types.d.ts"
@@ -50,7 +50,7 @@ type Config struct {
 
 	// HooksDir specifies the JS app hooks directory.
 	//
-	// If not set it fallbacks to a relative "pb_data/../pb_hooks" directory.
+	// If not set it fallbacks to a relative "hb_data/../pb_hooks" directory.
 	HooksDir string
 
 	// HooksFilesPattern specifies a regular expression pattern that
@@ -69,7 +69,7 @@ type Config struct {
 
 	// MigrationsDir specifies the JS migrations directory.
 	//
-	// If not set it fallbacks to a relative "pb_data/../pb_migrations" directory.
+	// If not set it fallbacks to a relative "hb_data/../pb_migrations" directory.
 	MigrationsDir string
 
 	// If not set it fallbacks to `^.*(\.js|\.ts)$`, aka. any MigrationDir file
@@ -79,7 +79,7 @@ type Config struct {
 	// TypesDir specifies the directory where to store the embedded
 	// TypeScript declarations file.
 	//
-	// If not set it fallbacks to "pb_data".
+	// If not set it fallbacks to "hb_data".
 	//
 	// Note: Avoid using the same directory as the HooksDir when HooksWatch is enabled
 	// to prevent unnecessary app restarts when the types file is initially created.

@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/hanzoai/backendPB/tools/security"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 type Param struct {

@@ -6,8 +6,8 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/hanzoai/backendPB/tools/auth"
-	"github.com/hanzoai/backendPBls/hook"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 var (

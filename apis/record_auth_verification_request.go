@@ -9,8 +9,8 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls"
-	"github.com/hanzoai/backendPBls/routine"
+	"github.com/hanzoai/backendPB/mails"
+	"github.com/hanzoai/backendPB/tools/routine"
 )
 
 func recordRequestVerification(e *core.RequestEvent) error {

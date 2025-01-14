@@ -15,7 +15,7 @@ import (
 
 	"github.com/gabriel-vasile/mimetype"
 	"github.com/hanzoai/backendPB/tools/inflector"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/security"
 )
 
 // FileReader defines an interface for a file resource reader.

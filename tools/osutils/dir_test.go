@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/tools/list"
-	"github.com/hanzoai/backendPBls/osutils"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/osutils"
+	"github.com/hanzoai/backendPB/tools/security"
 )
 
 func TestMoveDirContent(t *testing.T) {

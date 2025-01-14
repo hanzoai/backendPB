@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBts"
-	"github.com/hanzoai/backendPBls/auth"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tests"
+	"github.com/hanzoai/backendPB/tools/auth"
+	"github.com/hanzoai/backendPB/tools/types"
 )
 
 func TestCollectionAuthOptionsValidate(t *testing.T) {

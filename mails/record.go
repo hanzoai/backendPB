@@ -7,8 +7,8 @@ import (
 	"slices"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/templates"
-	"github.com/hanzoai/backendPBls/mailer"
+	"github.com/hanzoai/backendPB/mails/templates"
+	"github.com/hanzoai/backendPB/tools/mailer"
 )
 
 // SendRecordAuthAlert sends a new device login alert to the specified auth record.

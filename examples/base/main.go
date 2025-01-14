@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/hanzoai/backendPB"
 	"github.com/hanzoai/backendPB/apis"
 	"github.com/hanzoai/backendPB/core"
 	"github.com/hanzoai/backendPB/plugins/ghupdate"

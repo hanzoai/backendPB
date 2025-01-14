@@ -9,11 +9,11 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/tools/cron"
-	"github.com/hanzoai/backendPBls/filesystem"
-	"github.com/hanzoai/backendPBls/hook"
-	"github.com/hanzoai/backendPBls/mailer"
-	"github.com/hanzoai/backendPBls/store"
-	"github.com/hanzoai/backendPBls/subscriptions"
+	"github.com/hanzoai/backendPB/tools/filesystem"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/mailer"
+	"github.com/hanzoai/backendPB/tools/store"
+	"github.com/hanzoai/backendPB/tools/subscriptions"
 	"github.com/hanzoai/dbx"
 )
 
@@ -101,7 +101,7 @@ type App interface {
 	// ReloadSettings reinitializes and reloads the stored application settings.
 	ReloadSettings() error
 
-	// CreateBackup creates a new backup of the current app pb_data directory.
+	// CreateBackup creates a new backup of the current app hb_data directory.
 	//
 	// Backups can be stored on S3 if it is configured in app.Settings().Backups.
 	//
@@ -113,7 +113,7 @@ type App interface {
 	// the current running application process.
 	//
 	// The safely perform the restore it is recommended to have free disk space
-	// for at least 2x the size of the restored pb_data backup.
+	// for at least 2x the size of the restored hb_data backup.
 	//
 	// Please refer to the godoc of the specific core.App implementation
 	// for details on the restore procedures.
@@ -140,10 +140,10 @@ type App interface {
 	// DB methods
 	// ---------------------------------------------------------------
 
-	// DB returns the default app data db instance (pb_data/data.db).
+	// DB returns the default app data db instance (hb_data/data.db).
 	DB() dbx.Builder
 
-	// NonconcurrentDB returns the nonconcurrent app data db instance (pb_data/data.db).
+	// NonconcurrentDB returns the nonconcurrent app data db instance (hb_data/data.db).
 	//
 	// The returned db instance is limited only to a single open connection,
 	// meaning that it can process only 1 db operation at a time (other operations will be queued up).
@@ -157,10 +157,10 @@ type App interface {
 	// In a transaction the ConcurrentDB() and NonconcurrentDB() refer to the same *dbx.TX instance.
 	NonconcurrentDB() dbx.Builder
 
-	// AuxDB returns the default app auxiliary db instance (pb_data/auxiliary.db).
+	// AuxDB returns the default app auxiliary db instance (hb_data/auxiliary.db).
 	AuxDB() dbx.Builder
 
-	// AuxNonconcurrentDB returns the nonconcurrent app auxiliary db instance (pb_data/auxiliary.db)..
+	// AuxNonconcurrentDB returns the nonconcurrent app auxiliary db instance (hb_data/auxiliary.db)..
 	//
 	// The returned db instance is limited only to a single open connection,
 	// meaning that it can process only 1 db operation at a time (other operations will be queued up).

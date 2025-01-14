@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/tools/hook"
-	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPB/tools/router"
 )
 
 func TestRouter(t *testing.T) {

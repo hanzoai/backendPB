@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBts"
+	"github.com/hanzoai/backendPB/tests"
 	"golang.org/x/crypto/bcrypt"
 )
 

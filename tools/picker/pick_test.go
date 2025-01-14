@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/hanzoai/backendPB/tools/picker"
-	"github.com/hanzoai/backendPBls/search"
+	"github.com/hanzoai/backendPB/tools/search"
 )
 
 func TestPickFields(t *testing.T) {

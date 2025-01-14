@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/apis"
-	"github.com/hanzoai/backendPBe"
-	"github.com/hanzoai/backendPBls/hook"
+	"github.com/hanzoai/backendPB/core"
+	"github.com/hanzoai/backendPB/tools/hook"
 )
 
 // ApiScenario defines a single api request test case/scenario.

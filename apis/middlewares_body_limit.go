@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/hook"
-	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/router"
 )
 
 var ErrRequestEntityTooLarge = router.NewApiError(http.StatusRequestEntityTooLarge, "Request entity too large", nil)

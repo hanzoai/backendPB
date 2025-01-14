@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/hanzoai/backendPB/tools/search"
-	"github.com/hanzoai/backendPBls/security"
+	"github.com/hanzoai/backendPB/tools/security"
 	"github.com/hanzoai/dbx"
 	"github.com/spf13/cast"
 )

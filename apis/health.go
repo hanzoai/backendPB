@@ -5,7 +5,7 @@ import (
 	"slices"
 
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/router"
+	"github.com/hanzoai/backendPB/tools/router"
 )
 
 // bindHealthApi registers the health api endpoint.

@@ -49,7 +49,7 @@ type Config struct {
 
 	// optional default values for the console flags
 	DefaultDev           bool
-	DefaultDataDir       string // if not set, it will fallback to "./pb_data"
+	DefaultDataDir       string // if not set, it will fallback to "./hb_data"
 	DefaultEncryptionEnv string
 	DefaultQueryTimeout  time.Duration // default to core.DefaultQueryTimeout (in seconds)
 
@@ -140,7 +140,7 @@ func NewWithConfig(config Config) *HanzoBase {
 	hb.RootCmd.SetHelpCommand(&cobra.Command{Hidden: true})
 
 	// https://github.com/hanzoai/backendPB/issues/6136
-	pb.OnBootstrap().Bind(&hook.Handler[*core.BootstrapEvent]{
+	hb.OnBootstrap().Bind(&hook.Handler[*core.BootstrapEvent]{
 		Id: ModerncDepsCheckHookId,
 		Func: func(be *core.BootstrapEvent) error {
 			if err := be.Next(); err != nil {
@@ -157,27 +157,27 @@ func NewWithConfig(config Config) *HanzoBase {
 		},
 	})
 
-	return pb
+	return hb
 }
 
 // Start starts the application, aka. registers the default system
-// commands (serve, superuser, version) and executes pb.RootCmd.
-func (pb *PocketBase) Start() error {
+// commands (serve, superuser, version) and executes hb.RootCmd.
+func (hb *HanzoBase) Start() error {
 	// register system commands
-	pb.RootCmd.AddCommand(cmd.NewSuperuserCommand(pb))
-	pb.RootCmd.AddCommand(cmd.NewServeCommand(pb, !pb.hideStartBanner))
+	hb.RootCmd.AddCommand(cmd.NewSuperuserCommand(hb))
+	hb.RootCmd.AddCommand(cmd.NewServeCommand(hb, !hb.hideStartBanner))
 
-	return pb.Execute()
+	return hb.Execute()
 }
 
 // Execute initializes the application (if not already) and executes
-// the pb.RootCmd with graceful shutdown support.
+// the hb.RootCmd with graceful shutdown support.
 //
-// This method differs from pb.Start() by not registering the default
+// This method differs from hb.Start() by not registering the default
 // system commands!
-func (pb *PocketBase) Execute() error {
-	if !pb.skipBootstrap() {
-		if err := pb.Bootstrap(); err != nil {
+func (hb *HanzoBase) Execute() error {
+	if !hb.skipBootstrap() {
+		if err := hb.Bootstrap(); err != nil {
 			return err
 		}
 	}
@@ -196,7 +196,7 @@ func (pb *PocketBase) Execute() error {
 	// execute the root command
 	go func() {
 		// note: leave to the commands to decide whether to print their error
-		pb.RootCmd.Execute()
+		hb.RootCmd.Execute()
 
 		done <- true
 	}()
@@ -205,44 +205,44 @@ func (pb *PocketBase) Execute() error {
 
 	// trigger cleanups
 	event := new(core.TerminateEvent)
-	event.App = pb
-	return pb.OnTerminate().Trigger(event, func(e *core.TerminateEvent) error {
+	event.App = hb
+	return hb.OnTerminate().Trigger(event, func(e *core.TerminateEvent) error {
 		return e.App.ResetBootstrapState()
 	})
 }
 
 // eagerParseFlags parses the global app flags before calling pb.RootCmd.Execute().
 // so we can have all PocketBase flags ready for use on initialization.
-func (pb *PocketBase) eagerParseFlags(config *Config) error {
-	pb.RootCmd.PersistentFlags().StringVar(
-		&pb.dataDirFlag,
+func (hb *HanzoBase) eagerParseFlags(config *Config) error {
+	hb.RootCmd.PersistentFlags().StringVar(
+		&hb.dataDirFlag,
 		"dir",
 		config.DefaultDataDir,
 		"the PocketBase data directory",
 	)
 
-	pb.RootCmd.PersistentFlags().StringVar(
-		&pb.encryptionEnvFlag,
+	hb.RootCmd.PersistentFlags().StringVar(
+		&hb.encryptionEnvFlag,
 		"encryptionEnv",
 		config.DefaultEncryptionEnv,
 		"the env variable whose value of 32 characters will be used \nas encryption key for the app settings (default none)",
 	)
 
-	pb.RootCmd.PersistentFlags().BoolVar(
-		&pb.devFlag,
+	hb.RootCmd.PersistentFlags().BoolVar(
+		&hb.devFlag,
 		"dev",
 		config.DefaultDev,
 		"enable dev mode, aka. printing logs and sql statements to the console",
 	)
 
-	pb.RootCmd.PersistentFlags().IntVar(
-		&pb.queryTimeout,
+	hb.RootCmd.PersistentFlags().IntVar(
+		&hb.queryTimeout,
 		"queryTimeout",
 		int(config.DefaultQueryTimeout.Seconds()),
 		"the default SELECT queries timeout in seconds",
 	)
 
-	return pb.RootCmd.ParseFlags(os.Args[1:])
+	return hb.RootCmd.ParseFlags(os.Args[1:])
 }
 
 // skipBootstrap eagerly checks if the app should skip the bootstrap process:
@@ -253,7 +253,7 @@ func (pb *PocketBase) eagerParseFlags(config *Config) error {
 //
 // https://github.com/hanzoissues/404
 // https://github.com/hanzodiscussions/1267
-func (pb *PocketBase) skipBootstrap() bool {
+func (hb *HanzoBase) skipBootstrap() bool {
 	flags := []string{
 		"-h",
 		"--help",
@@ -261,11 +261,11 @@ func (pb *PocketBase) skipBootstrap() bool {
 		"--version",
 	}
 
-	if pb.IsBootstrapped() {
+	if hb.IsBootstrapped() {
 		return true // already bootstrapped
 	}
 
-	cmd, _, err := pb.RootCmd.Find(os.Args[1:])
+	cmd, _, err := hb.RootCmd.Find(os.Args[1:])
 	if err != nil {
 		return true // unknown command
 	}

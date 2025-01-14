@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"github.com/hanzoai/backendPB/tools/auth"
-	"github.com/hanzoai/backendPBls/hook"
-	"github.com/hanzoai/backendPBls/mailer"
-	"github.com/hanzoai/backendPBls/router"
-	"github.com/hanzoai/backendPBls/search"
-	"github.com/hanzoai/backendPBls/subscriptions"
+	"github.com/hanzoai/backendPB/tools/hook"
+	"github.com/hanzoai/backendPB/tools/mailer"
+	"github.com/hanzoai/backendPB/tools/router"
+	"github.com/hanzoai/backendPB/tools/search"
+	"github.com/hanzoai/backendPB/tools/subscriptions"
 	"golang.org/x/crypto/acme/autocert"
 )
 

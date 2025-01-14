@@ -9,8 +9,8 @@ import (
 
 	"github.com/hanzoai/backendPB/core"
 	"github.com/hanzoai/backendPB/tests"
-	"github.com/hanzoai/backendPBls/dbutils"
-	"github.com/hanzoai/backendPBls/types"
+	"github.com/hanzoai/backendPB/tools/dbutils"
+	"github.com/hanzoai/backendPB/tools/types"
 	"github.com/hanzoai/dbx"
 )
 

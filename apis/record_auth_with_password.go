@@ -7,7 +7,7 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 	"github.com/hanzoai/backendPB/core"
-	"github.com/hanzoai/backendPBls/list"
+	"github.com/hanzoai/backendPB/tools/list"
 )
 
 func recordAuthWithPassword(e *core.RequestEvent) error {

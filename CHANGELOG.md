@@ -175,7 +175,7 @@
 > [!CAUTION]
 > This release introduces many Go/JSVM and Web APIs breaking changes!
 >
-> Existing `pb_data` will be automatically upgraded with the start of the new executable,
+> Existing `hb_data` will be automatically upgraded with the start of the new executable,
 > but custom Go or JSVM (`pb_hooks`, `pb_migrations`) and JS/Dart SDK code will have to be migrated manually.
 > Please refer to the below upgrade guides:
 > - Go:   https://hanzo.ai/v023upgrade/go/.

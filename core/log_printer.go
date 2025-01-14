@@ -7,7 +7,7 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/hanzoai/backendPB/tools/logger"
-	"github.com/hanzoai/backendPBls/store"
+	"github.com/hanzoai/backendPB/tools/store"
 	"github.com/spf13/cast"
 )
 
